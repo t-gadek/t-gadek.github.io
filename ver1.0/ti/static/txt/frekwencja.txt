@@ -1,0 +1,11 @@
+Student,2023-10-02,2023-10-09,2023-10-16,2023-10-23,2023-10-30,2023-11-06,2023-11-13,2023-11-20,2023-11-27,2023-12-04
+Jan Kowalski,obecny,obecny,nieobecny,obecny,obecny,obecny,nieobecny,obecny,obecny,nieobecny
+Anna Nowak,obecny,obecny,obecny,obecny,obecny,obecny,obecny,obecny,obecny,obecny
+Piotr Wiśniewski,nieobecny,obecny,obecny,nieobecny,obecny,nieobecny,obecny,obecny,nieobecny,obecny
+Maria Dąbrowska,obecny,nieobecny,obecny,obecny,nieobecny,obecny,nieobecny,obecny,obecny,nieobecny
+Andrzej Lewandowski,obecny,obecny,nieobecny,nieobecny,obecny,obecny,nieobecny,nieobecny,obecny,obecny
+Katarzyna Wójcik,obecny,obecny,obecny,obecny,obecny,obecny,obecny,obecny,obecny,obecny
+Tomasz Kamiński,nieobecny,nieobecny,obecny,obecny,nieobecny,nieobecny,obecny,obecny,nieobecny,nieobecny
+Magdalena Kowalczyk,obecny,obecny,nieobecny,obecny,obecny,obecny,nieobecny,obecny,obecny,obecny
+Marek Zieliński,obecny,nieobecny,obecny,nieobecny,obecny,nieobecny,obecny,nieobecny,obecny,nieobecny
+Ewa Szymańska,obecny,obecny,obecny,obecny,nieobecny,obecny,obecny,obecny,obecny,nieobecny

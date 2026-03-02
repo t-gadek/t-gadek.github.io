@@ -4,15 +4,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona w budowie</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+        content="CLEAN CODE - Twórz oprogramowanie, które rozumieją ludzie, a nie komputery. TDD - Bądź profesjonalny i testuj własny kod. CODE KATA - Ćwicz do bólu, aż pojawi się pamięć mięśniowa.">
+    <meta name="author" content="Tomasz Gądek">
+    <title>Tomasz Gądek | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="icon" href="./img/favicon.png" type="image/png">
 </head>
 
 <body>
-    <div class="container">
-        <div class="icon">🔨</div>
-        <h1>Strona w budowie...</h1>
+
+    <div class="glass-container">
+        <header>
+            <h1>Tomasz Gądek</h1>
+            <p>Katedra Informatyki | AT Tarnów</p>
+        </header>
+
+        <section id="bio">
+            <h2>O mnie</h2>
+            <p>
+                Nazywam się <a href="https://www.linkedin.com/in/tomasz-g%C4%85dek-51b853b4/">Tomasz Gądek</a>.
+                Jestem programistą, twórcą kursów IT/AI oraz
+                wykładowcą akademickim. Prowadzę zajęcia z języków znacznikowych, narzędzi i
+                środowisk programistycznych oraz testowania i jakości oprogramowania. Na tej stronie
+                znajdziesz materiały, które pomogą Ci rozwijać umiejętności w tych obszarach.
+            </p>
+        </section>
+
+        <section id="courses-section">
+            <h2>Materiały dydaktyczne</h2>
+
+            <div class="course-tiles">
+                <div class="course-tile" data-course="tijo"
+                    style="background-image: url('https://via.placeholder.com/300x200?text=TiJO');">
+                    <p>Testowanie i Jakość Oprogramowania</p>
+                </div>
+                <div class="course-tile" data-course="nisp"
+                    style="background-image: url('https://via.placeholder.com/300x200?text=NiSP');">
+                    <p>Narzędzia i Środowiska Programistyczne</p>
+                </div>
+                <div class="course-tile" data-course="ti"
+                    style="background-image: url('https://via.placeholder.com/300x200?text=TI');">
+                    <p>Technologia Informacyjna</p>
+                </div>
+            </div>
+
+            <div id="tijo" class="course-info" style="display: none;">
+                <ul>
+                    <li><a href="./tijo/tijo_lecture01.pdf">W#01: Wprowadzenie.</a></li>
+                    <li><a href="./tijo/tijo_lecture02.pdf">W#02: Python.</a></li>
+                    <!-- * * * -->
+                    <li><a href="./tijo/assert-and-aaa.html">L#01: Asercja, Arrange-Act-Assert (AAA).</a></li>
+                </ul>
+            </div>
+
+            <div id="nisp" class="course-info" style="display: none;">
+                <ul>
+                    <li><a href="./nisp/nisp-lab01.pdf">L#01: Wprowadzenie. Podstawy programowania w języku Kotlin.</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="ti" class="course-info" style="display: none;">
+                <ul>
+                    <li><a href="#">L#01: Brak danych.</a></li>
+                </ul>
+            </div>
+
+            <script src="./js/courses-filter.js"></script>
+        </section>
+
+        <!-- dodaj sekcję z ważnymi informacjami -->
+        <!--<section id="important-info">
+            <h2>Ważne informacje</h2>
+            <ul>
+                <li>Wszystkie materiały dydaktyczne dostępne są w systemie Moodle.</li>
+                <li>Wszystkie konsultacje odbywają się w pokoju C100d lub online.</li>
+                <li>W razie problemów z dostępem do systemu Moodle, proszę o kontakt z administratorem.</li>
+            </ul>
+        </section>-->
+
+        <section id="contact">
+            <h2>Konsultacje i kontakt</h2>
+            <p>
+                Jeśli masz pytania lub potrzebujesz dodatkowych wyjaśnień, zapraszam na konsultacje.
+                Spotkania odbywają się stacjonarnie (pokój C100d) lub zdalnie, we wtorki w godzinach 13:00 - 14:00.
+            </p>
+            <p><strong>Proszę o wcześniejsze ustalenie terminu spotkania drogą mailową.</strong></p>
+            <p>
+                Wszelkie zapytania można kierować na mój adres
+                e-mail: <a href="mailto:t_gadek@atar.edu.pl">t_gadek@atar.edu.pl</a>.
+            </p>
+        </section>
+
+
     </div>
+
+    <footer>
+        <p>&copy; 2026 Tomasz Gądek. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
 </body>
 
 </html>

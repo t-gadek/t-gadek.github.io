@@ -1,0 +1,21 @@
+Imię,Nazwisko,Waga (kg),Wzrost (m)
+Jan,Kowalski,80,1,80
+Anna,Nowak,65,1,65
+Piotr,Wiśniewski,90,1,85
+Maria,Dąbrowska,70,1,70
+Andrzej,Lewandowski,85,1,90
+Katarzyna,Wójcik,60,1,60
+Tomasz,Kamiński,75,1,75
+Magdalena,Kowalczyk,68,1,68
+Marek,Zieliński,95,1,95
+Ewa,Szymańska,72,1,72
+Krzysztof,Jankowski,88,1,88
+Alicja,Mazur,63,1,63
+Paweł,Krawczyk,92,1,92
+Beata,Gajewska,67,1,67
+Adam,Rutkowski,82,1,82
+Karolina,Sokołowska,58,1,58
+Rafał,Pawlak,98,1,98
+Agata,Lis,78,1,78
+Michał,Woźniak,83,1,83
+Sylwia,Kozłowska,69,1,69

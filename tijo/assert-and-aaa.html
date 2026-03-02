@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="W trakcie tego laboratorium zapoznamy się z fundamentalnymi mechanizmami weryfikacji poprawności oprogramowania. Zrozumienie działania asercji oraz poprawnej struktury testu jest kluczowe dla tworzenia oprogramowania wysokiej jakości.">
+    <meta name="keywords" content="testowanie, jakość oprogramowania, asercja, arrange-act-assert, AAA">
+    <meta name="author" content="Tomasz Gądek">
+    <title>TiJO | Asercja, AAA</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+    <div class="glass-container">
+        <h1>Testowanie i Jakość Oprogramowania</h1>
+        <p><strong>L#01:</strong> Asercja, Arrange-Act-Assert (AAA).</p>
+
+        <h2>Wprowadzenie</h2>
+        <p>
+            W trakcie tego laboratorium zapoznamy się z fundamentalnymi mechanizmami weryfikacji poprawności
+            oprogramowania.
+            Zrozumienie działania asercji oraz poprawnej struktury testu jest kluczowe dla tworzenia oprogramowania
+            wysokiej jakości.
+        </p>
+
+        <h2>Cel</h2>
+        <p>
+            Głównym celem laboratorium jest opanowanie umiejętności pisania testów jednostkowych przy użyciu asercji
+            oraz
+            wdrożenie standardu <strong>Arrange-Act-Assert (AAA)</strong> aby poprawić czytelność i organizację kodu
+            testowego.
+        </p>
+
+        <h2>Asercja</h2>
+
+        <p>
+            Jest to forma zdaniowa w danym języku, która zwraca prawdę lub fałsz. Asercja wskazuje, że
+            programista zakłada, że ów predykat jest w danym miejscu prawdziwy. W przypadku gdy
+            predykat jest fałszywy (czyli niespełnione są warunki postawione przez programistę)
+            asercja powoduje przerwanie wykonania programu. Asercja ma szczególne zastosowanie
+            w trakcie testowania tworzonego oprogramowania.
+        </p>
+
+        <p>Struktura asercji:</p>
+
+        <pre>
+            <code class="language-python"># Listing 1
+
+result = (2 + 2) < 5
+assert result, "2 + 2 nie jest mniejsze od 5. Zweryfikuj kod."</code>
+        </pre>
+
+        <p>Zastosowanie asercji w praktyce:</p>
+
+        <pre>
+            <code class="language-python"># Listing 2
+
+def add(first, second):
+    return (first + second)
+
+if __name__ == "__main__":
+    assert add(1, 2) == 3, "add(1, 2) should return 3"</code>
+        </pre>
+
+        <p>
+            Postaraj się uruchomić skrypt, następnie zmodyfikuj warunek w
+            taki sposób, aby asercja zwróciła fałsz. Obserwuj co się dzieje w terminalu.
+        </p>
+
+        <h2>Zadanie do wykonania</h2>
+
+        <p>
+            Zaimplementuj funkcję <strong>def max(digits)</strong>, która wyszuka największy
+            element z kolekcji liczb całkowitych (digits). Zaproponuj dobre testy / asercje:
+        </p>
+
+        <ul>
+            <li>Test1: Obsługa None (gdy na wejściu pojawi się None to metoda zwraca None).</li>
+            <li>Test2: Obsługa pustej kolekcji (gdy na wejściu pojawi się pusta kolekcja metoda zwraca None).</li>
+            <li>Test3: Obsługa kolekcji jednoelementowej (metoda zwraca największy element).</li>
+            <li>Test4: Obsługa kolekcji wieloelementowej (metoda zwraca największy element).</li>
+        </ul>
+
+        <h2>Arrange-Act-Assert (AAA)</h2>
+
+        <p>
+            <strong>Arrange-Act-Assert (AAA)</strong> to technika opisu testów, która pomaga w tworzeniu
+            klarownych, czytelnych i zrozumiałych przypadków testowych. Jest to często stosowany format,
+            który ułatwia organizację testów poprzez podział na trzy etapy: przygotowanie warunków
+            początkowych (Arrange), wykonanie testowanej operacji (Act) oraz weryfikację oczekiwanych
+            rezultatów (Assert).
+        </p>
+
+        <p>Zastosowanie Arrange-Act-Assert w praktyce:</p>
+
+        <pre>
+            <code class="language-python"># Listing 3
+
+def add(first, second):
+    return first + second
+
+
+def test_addition():
+    # Arrange
+    first_number = 1
+    second_number = 2
+
+    # Act
+    result = add(first_number, second_number)
+
+    # Assert
+    assert result == 3, "add(1, 2) should return 3"</code>
+        </pre>
+
+        <h2>Zadanie do wykonania</h2>
+
+        <p>
+            Podziel swój kod z poprzedniego zadania na kod produkcyjny (lokalizacja <b>src</b>) i testowy (lokalizacja
+            <b>test</b>).
+            Asercje powinny znaleźć się w oddzielnych funkcjach (jedna asercja na funkcję) oraz powinny być
+            zapisane zgodnie z konwencją <strong>Arrange-Act-Assert</strong>.
+        </p>
+
+        <img src="./img/tree.png" alt="tree">
+
+        <h2>Zadanie dodatkowe</h2>
+
+        <p>
+            Zaimplementuj funkcję <strong>def is_pesel_correct(pesel_digits: list[int])</strong>, która zweryfikuje, czy
+            podany numer PESEL jest poprawny. Zaproponuj dobre testy. Zastosuj poznane zagadnienia podczas laboratorium.
+        </p>
+
+        <h2>Podsumowanie</h2>
+        <p>
+            Podczas tych zajęć omówiliśmy pojęcie asercji jako narzędzia do przerywania programu w przypadku
+            niespełnienia założeń logicznych.
+            Nauczyliśmy się również, jak dzielić test na trzy logiczne fazy (AAA), co znacząco ułatwia późniejszą
+            konserwację i analizę błędów w kodzie.
+        </p>
+
+        <a href="../index.html" class="glass-button" style="display: inline-block; margin-top: 1rem;">Powrót do strony
+            głównej</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tomasz Gądek. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+
+</html>

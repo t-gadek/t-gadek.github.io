@@ -1,0 +1,16 @@
+Imię,Nazwisko,Wynik (metry)
+Jan,Kowalski,6,85
+Anna,Nowak,7,12
+Piotr,Wiśniewski,6,98
+Maria,Dąbrowska,7,25
+Andrzej,Lewandowski,6,78
+Katarzyna,Wójcik,7,05
+Tomasz,Kamiński,7,30
+Magdalena,Kowalczyk,6,92
+Marek,Zieliński,7,18
+Ewa,Szymańska,7,20
+Krzysztof,Jankowski,6,88
+Alicja,Mazur,7,00
+Paweł,Krawczyk,7,35
+Beata,Gajewska,6,95
+Adam,Rutkowski,7,22

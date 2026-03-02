@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <title>JSON</title>
+
+    <meta name="description" content="Tomasz Gądek, Strona Domowa">
+    <meta name="author" content="Tomasz Gądek">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway:400,300,600">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css?v=2">
+    <link rel="stylesheet" type="text/css" href="/css/skeleton.css?v=2">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css?v=2">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css?v=2">
+    <link rel="stylesheet" type="text/css" href="./css/json.css?v2">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js?v=2" type="text/javascript"></script>
+    <script src="/js/menu.js?v=2" type="text/javascript"></script>
+    <script src="/js/site.js?v=2" type="text/javascript"></script>
+    <script src="/js/dates-copyright.js?v=2" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js?v=2"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+
+<body class="code-snippets-visible" id="home">
+
+    <div class="container">
+        <section class="header">
+            <h2 class="title">JSON - ćwiczenie praktyczne</h2>
+        </section>
+
+        <div class="docs-section">
+            <h3 class="docs-header">JSON - Definicja</h3>
+
+            <p>
+                <strong>JSON</strong> (JavaScript Object Notation) - 
+                jest prostym formatem wymiany danych. Zapis i odczyt danych 
+                w tym formacie jest łatwy do opanowania. Jednocześnie, z łatwością 
+                odczytują go i generują komputery. Jego definicja opiera się o podzbiór 
+                języka programowania <strong>JavaScript</strong>. <strong>JSON</strong> 
+                jest formatem tekstowym, całkowicie niezależnym od języków programowania.
+            </p>
+
+            <h3 class="docs-header">Lista studentów</h3>
+
+            <form>
+                <div class="row">
+                    <div class="twelve columns">
+                        <label>Przykładowy format pliku JSON:</label>
+<pre><code class="language-json">{
+    "students": [
+        {
+            "id": 1,
+            "firstName": "Jan",
+            "lastName": "Kowalski",
+            "grade": 4.5,
+            "avatar": null,
+            "deleted": true
+        },
+        {
+            "id": 2,
+            "firstName": "Julia",
+            "lastName": "Nowak",
+            "grade": 5.0,
+            "avatar": null,
+            "deleted": false
+        }
+    ]
+}
+</code></pre>
+                    </div>
+                    <div class="twelve columns">
+                        <label for="json">Wybierz plik JSON:</label>
+                        <input class="u-full-width" type="file" id="json" name="json" onclick="this.value=null;" accept="application/json">
+                    </div>
+                </div>
+            </form>
+
+            <p>Wczytaj plik JSON w odpowiednim formacie, aby automatycznie wprowadzić dane do tabeli.</p>
+
+            <div class="docs-example">
+                <table class="u-full-width">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Avatar</th>
+                            <th>Imię</th>
+                            <th>Nazwisko</th>
+                            <th>Ocena</th>
+                        </tr>
+                    </thead>
+                    <tbody id="students-data"></tbody>
+                </table>
+            </div>
+
+            <p>Średnia arytmetyczna wynosi: <strong><span id="average">0</span></strong></p>
+        </div>
+
+        <footer class="center">&copy Tomasz Gądek | <span id="year"></span></footer>
+    </div>
+    <script src="./js/load-json.js?v=2" type="text/javascript"></script>
+</body>
+
+</html>

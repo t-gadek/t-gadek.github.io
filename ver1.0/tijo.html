@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tomasz Gądek">
+    <meta name="description" 
+        content="
+            CLEAN CODE - Twórz oprogramowanie, które rozumieją ludzie, a nie komputery.
+            TDD - Bądź profesjonalny i testuj własny kod.
+            CODE KATA - Ćwicz do bólu, aż pojawi się pamięć mięśniowa. 
+        "
+    >
+
+    <link rel="icon" type="image/png" href="./img/tgadek-logo.png">
+
+    <title>Tomasz Gądek | TiJO</title>
+    
+    <link id="theme-style" rel="stylesheet" href="./css/general.css">
+</head>
+<body>
+    <header>
+        <a href="/"><img src="./img/tgadek-logo.png" alt="Tomasz Gądek Home Page" /></a><h1>tgadek.bitbucket.io</h1>
+    </header>
+
+    <nav>
+        <a href="/" title="Strona Główna">Home</a>
+        <!--<a href="./nisp.html" title="Narzędzia i Środowiska Programistyczne">NiSP</a>-->
+        <a href="./tijo.html" title="Testowanie i Jakość Oprogramowania">TiJO</a>
+        <!--<a href="./jz.html" title="Języki Znacznikowe">JZ / PIU</a>-->
+        <a href="./ld.html" title="Laboratorium Dyplomowe">LD</a>
+        <!--<a href="./ti.html" title="Technologia Informacyjna">TI</a>-->
+        <a href="./pwc.html" title="Programowanie w C">PwC</a>
+    </nav>
+
+    <div class="container">
+        <div class="terminal">
+            <div class="terminal-bar">
+                <div class="terminal-button red"></div>
+                <div class="terminal-button yellow"></div>
+                <div class="terminal-button green"></div>
+                <button class="theme-toggle" id="theme-toggle" title="Zmień tryb">☁️</button>
+            </div>
+            <div class="terminal-content">
+                <h1>Testowanie i Jakość Oprogramowania</h1>
+                <p>
+                    <a href="https://anstar.edu.pl/wydzialy/wydzial-politechniczny/katedry/katedra-informatyki/">Katedra Informatyki</a> 
+                    | Semestr letni | 3 rok | Matriały dydaktyczne
+                </p>
+                
+                <!--<h2>Laboratorium</h2>
+                
+                <ul>
+                    <li>Laboratorium 01: <a href="./tijo/assert-and-aaa.html">Asercja</a> *******.</li>
+                    <li>Laboratorium 02: <a href="./tijo/unittest-framework.html">Framework unittest</a> *******.</li>
+                    <li>Laboratorium 03: <a href="./tijo/tdd.html">TDD</a> *******.</li>
+                    <li>Laboratorium 04: <a href="./tijo/code-coverage.html">Pokrycie kodu testami</a> *******.</li>
+                    <li>Laboratorium 05: <a href="./tijo/solid.html">SOLID</a> *******.</li>
+                    <li>Laboratorium 06: <a href="./tijo/code-smell.html">Code Smells</a> *******.</li>
+                    <li>Laboratorium 07: <a href="./tijo/test-doubles.html">Atrapy</a> *******.</li>
+                    <li>Laboratorium 08: <a href="./tijo/oop.html">OOP</a> *******.</li>
+                    <li>Laboratorium 09: <a href="./tijo/manual.html">Testy manualne</a> *******.</li>
+                    <li>Laboratorium 10: <a href="./tijo/form.html">Testy manualne, testowanie formularzy</a> *******.</li>
+                    <li>Laboratorium 11: <a href="#">~~~~~~~</a> *******.</li>
+                    <li>Laboratorium 12: <a href="./tijo/bug.html">Test Case & Bug Report</a> *******.</li>
+                    <li>Laboratorium 13: <a href="./tijo/selenium.html">Selenium</a> *******.</li>
+                    <li>Laboratorium 14: Kolokwium (wykład). *******.</li>
+                    <li>Laboratorium 15: Kolokwium (laboratorium). *******.</li>
+                </ul>-->
+
+                <h2>Projekt</h2>
+
+                <div class="table-responsive-wrapper">
+                    <table>
+                        <tr>
+                            <th>Nr proj.</th>
+                            <th>Nazwa</th>
+                            <th>Link</th>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Implementacja oraz testy wybranej aplikacji</td>
+                            <td><a href="./pdf/prj/tijo/tijo-prj01.pdf">PDF</a></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!--<h2>Wykład</h2>
+
+                <ul>
+                    <li>Wykład 01: <a href="./tijo/lecture/tijo_lecture01.pdf">Wprowadzenie</a> *******.</li>
+                    <li>Wykład 02: <a href="./tijo/lecture/tijo_lecture02.pdf">Python</a> *******.</li>
+                    <li>Wykład 03: <a href="./tijo/lecture/tijo_lecture03.pdf">Podstawy Scrum</a> *******.</li>
+                    <li>Wykład 04: <a href="./tijo/lecture/tijo_lecture04.pdf">Flask</a> *******.</li>
+                    <li>Wykład 05: <a href="./tijo/lecture/tijo_lecture05.pdf">Elementy programownaia funkcyjnego</a> *******.</li>
+                    <li>Wykład 06: <a href="./tijo/lecture/tijo_lecture06.pdf">Czysty kod, OOP, dobre praktyki</a> *******.</li>
+                    <li>Wykład 07: <a href="./tijo/lecture/tijo_lecture07.pdf">SOLID, DRY, KISS, PRAWO DEMETER, CODE SMELL</a> *******.</li>
+                    <li>Wykład 08: <a href="./tijo/lecture/tijo_lecture08.pdf">Wzorce projektowe</a> *******.</li>
+                    <li>Wykład 09: Podsumowanie wiadomości, Q&A. *******.</li>
+                    <li>Wykład 10: <a href="./tijo/lecture/tijo_lecture10.pdf">Wprowadzenie do testowania, piramida testów</a> *******.</li>
+                    <li>Wykład 11: <a href="./tijo/lecture/tijo_lecture11.pdf">Testy jednostkowe, FIRST</a> *******.</li>
+                    <li>Wykład 12: <a href="./tijo/lecture/tijo_lecture12.pdf">Testy integracyjne, atrapy</a> *******.</li>
+                    <li>Wykład 13: <a href="./tijo/lecture/tijo_lecture13.pdf">TDD, E2E</a> *******.</li>
+                    <li>Wykład 14: Podsumowanie wiadomości, Q&A. *******.</li>
+                    <li>Wykład 15: Kolokwium. *******.</li>
+                </ul>-->
+
+                <hr>
+                
+                <p>
+                    <em>Każdy głupiec może napisać kod zrozumiały dla komputera. Dobrzy programiści 
+                    potrafią stworzyć kod zrozumiały dla ludzi.</em>
+                </p>
+                <p>~<strong>Martin Fowler</strong><span class="cursor"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tomasz Gądek. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="./js/ThemeSwitcher.js" type="text/javascript"></script>
+</body>
+</html>

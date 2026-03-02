@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tomasz Gądek">
+    <meta name="description" 
+        content="
+            CLEAN CODE - Twórz oprogramowanie, które rozumieją ludzie, a nie komputery.
+            TDD - Bądź profesjonalny i testuj własny kod.
+            CODE KATA - Ćwicz do bólu, aż pojawi się pamięć mięśniowa. 
+        "
+    >
+
+    <link rel="icon" type="image/png" href="../img/tgadek-logo.png">
+
+    <title>Tomasz Gądek | TI | LAB02</title>
+    
+    <link id="theme-style" rel="stylesheet" href="../css/general.css">
+</head>
+<body>
+    <header>
+        <a href="/"><img src="../img/tgadek-logo.png" alt="Tomasz Gądek Home Page" /></a><h1>tgadek.bitbucket.io</h1>
+    </header>
+
+    <nav>
+        <a href="/" title="Strona Główna">Home</a>
+        <a href="../nisp.html" title="Narzędzia i Środowiska Programistyczne">NiSP</a>
+        <a href="../tijo.html" title="Testowanie i Jakość Oprogramowania">TiJO</a>
+        <a href="../jz.html" title="Języki Znacznikowe">JZ / PIU</a>
+        <a href="../ld.html" title="Laboratorium Dyplomowe">LD</a>
+        <a href="../ti.html" title="Technologia Informacyjna">TI</a>
+    </nav>
+
+    <div class="container">
+        <div class="terminal">
+            <div class="terminal-bar">
+                <div class="terminal-button red"></div>
+                <div class="terminal-button yellow"></div>
+                <div class="terminal-button green"></div>
+                <button class="theme-toggle" id="theme-toggle" title="Zmień tryb">☁️</button>
+            </div>
+            <div class="terminal-content">
+                <h1>Technologia Informacyjna</h1>
+                <p>
+                    <strong>Laboratorium 2:</strong> Google Workspace (Gemini, Keep i Forms).
+                </p>
+                
+                <h2>Organizacja plików</h2>
+
+                <p>
+                    Zaloguj się na swoje konto <strong>Google</strong>, otwórz 
+                    <strong>Google Drive</strong> oraz uporządkuj swoje pliki. Postępuj
+                    zgodnie z poniższym filmikiem.
+                </p>
+
+                <video controls poster="../img/poster/poster.png" preload="auto">
+                    <source src="./static/ti-lab02-folders.mp4" type="video/mp4">
+                    Twoja przeglądarka nie obsługuje wideo.
+                </video>
+
+                <h2>Generowanie treści w Google Gemini</h2>
+
+                <p>
+                    <strong>Google Gemini</strong> to bardzo zaawansowany 
+                    <a target="_blank" href="https://pl.wikipedia.org/wiki/Duży_model_językowy">model językowy</a>. 
+                    Wyobraź sobie go jako inteligentnego asystenta, który potrafi: rozumieć i generować tekst,
+                    przetwarzać informacje, uczyć się i dostosowywać.
+                </p>
+
+                <img src="./static/ti-lab02-google-gemini.png" alt="google gemini">
+
+                <p>
+                    Otwórz <strong>Google Gemini</strong> oraz wpisz zapytanie (<em>prompt</em>). 
+                    Skopiuj poniższą treść, a następnie wklej ją do chat'u Gemini:
+                </p>
+
+                <p style="border-top: 2px solid #f00; border-bottom: 2px solid #f00;">
+                    "<em>Napisz artykuł o wpływie aktywności fizycznej na 
+                        zdrowie, uwzględniając siłownię, bieganie i pływanie."</em>
+                </p>
+
+                <p>
+                    Skopiuj wygenerowany tekst i wklej go do nowego dokumentu 
+                    <strong>Google Docs</strong>. Edytuj treść tak, aby miała dla Ciebie sens. 
+                    Możesz zmienić przykłady, dodać swoje doświadczenia lub usunąć niepotrzebne fragmenty.
+                    Plik powinien posiadać odpowiednią nazwę: 
+                    <strong>Wpływ aktywności fizycznej na zdrowie</strong>.
+                </p>
+
+                <h2>Formatowanie dokumentu</h2>
+
+                <p>
+                    Sformatuj dokument według poniższych zasad (twoje tytuły mogą wyglądać zupełnie inaczej, 
+                    nie wiemy, jakie dane wygeneruje model językowy Gemini):</p>
+
+                <ul>
+                    <li><strong>Nagłówek 1</strong>: "Wpływ aktywności fizycznej na zdrowie" (treść może się różnić).</li>
+                    <li><strong>Nagłówek 2</strong>: "Korzyści z siłowni" (treść może się różnić).</li>
+                    <li><strong>Nagłówek 2</strong>: "Bieganie jako forma aktywności" (treść może się różnić).</li>
+                    <li><strong>Nagłówek 2</strong>: "Zalety pływania" (treść może się różnić).</li>
+                    <li>Dodaj pogrubienie dla najważniejszych fragmentów tekstu.</li>
+                    <li>Dodaj punktowaną listę przedstawiającą zalety każdej z aktywności.</li>
+                    <li>Dodaj obrazek związany z aktywnością fizyczną.</li>
+                </ul>
+
+                <p>Zapisz dokument w folderze <strong>lab02</strong>.</p>
+
+                <h2>Google Forms</h2>
+
+                <p>
+                    <strong>Google Forms</strong> to bezpłatne narzędzie online, które umożliwia tworzenie 
+                    profesjonalnych ankiet, testów, formularzy rejestracyjnych oraz innych 
+                    interaktywnych kwestionariuszy. Dzięki intuicyjnemu interfejsowi użytkownika, 
+                    nawet osoby bez specjalistycznej wiedzy technicznej mogą z łatwością 
+                    projektować i rozpowszechniać formularze, a następnie analizować 
+                    zebrane odpowiedzi.
+                </p>
+
+                <p>
+                    Otwórz <strong>Google Forms</strong> i utwórz nowy formularz zatytułowany 
+                    <strong>Nawyki sportowe studentów - ankieta</strong>.
+                </p>
+
+                <img src="./static/ti-lab02-google-forms.png" alt="google forms">
+
+                <p>Dodaj następujące pytania:</p>
+
+                <ul>
+                    <li>Imię i nazwisko (Krótka odpowiedź: wymagane).</li>
+                    <li>Jak często uprawiasz sport? (Jednokrotny wybór: codziennie, kilka razy w tygodniu, raz w tygodniu, rzadko).</li>
+                    <li>Jaką formę aktywności wybierasz najczęściej? (Wielokrotny wybór: siłownia, bieganie, pływanie, sporty zespołowe, inne).</li>
+                    <li>Ile czasu poświęcasz na trening? (Jednokrotny wybór: mniej niż 30 minut, 30-60 minut, więcej niż 60 minut)</li>
+                    <li>Jak oceniasz swój poziom sprawności fizycznej? (Skala 1-5)</li>
+                </ul>
+
+                <p>Udostępnij formularz koledze / koleżance w grupie. Następnie przeanalizuj wyniki.</p>
+
+                <h2>Google Keep</h2>
+
+                <p>
+                    <strong>Google Keep</strong> to cyfrowy notes, który pozwala szybko zapisywać 
+                    myśli, tworzyć listy zadań, dodawać zdjęcia. Służy do organizacji codziennych spraw, 
+                    przypominania o ważnych zadaniach i łatwego dostępu do notatek z dowolnego urządzenia.
+                </p>
+
+                <p>Otwórz <strong>Google Keep</strong> oraz dodaj notatki.</p>
+
+                <img src="./static/ti-lab02-google-keep.png" alt="google keep">
+
+                <p>
+                    Twoje zadanie będzie polegało na sporządzeniu odpowiednich notatek. Skopiuj poniższą treść
+                    do własnych notatek. Ustaw odpowiednie etykiety oraz tła dla notatek.
+                </p>
+
+                <p style="border-bottom: 1px solid;"><strong>Notatka 1</strong>:</p>
+
+                <p>Tytuł: "Sportowe kino motywacji"</p>
+
+                <ul>
+                    <li>"Siła spokoju" - (Dramat, sportowy) - historia gimnastyka, który uczy się żyć tu i teraz.</li>
+                    <li>"Najlepszy" - (Biograficzny, sportowy) - Oparty na faktach film o triathloniście Jerzym Górskim, który pokonuje własne słabości.</li>
+                    <li>"Rydwany ognia" - (Dramat, sportowy) - Klasyczna opowieść o determinacji i dążeniu do celu.</li>
+                    <li>"Wojownik" - (Dramat, sportowy) - Historia braci, którzy stają naprzeciwko siebie w turnieju MMA.</li>
+                    <li>"Trener Carter" - (Dramat, sportowy) - O trenerze koszykówki, który uczy swoich podopiecznych nie tylko gry, ale i odpowiedzialności.</li>
+                    <li>"Creed: Narodziny legendy" - (Dramat, sportowy) - Kontynuacja serii Rocky, o młodym bokserze, który szuka swojej drogi.</li>
+                    <li>"Cud w Lake Placid" - (Dramat, sportowy) - Oparta na faktach historia hokejowej drużyny USA, która pokonuje faworytów z ZSRR.</li>
+                </ul>
+
+                <p><b>Etykieta:</b> Motywacja, Sport, Filmy (<b>to są oddzielne etykiety!</b>).</p>
+                <p><b>Powiadomienie:</b> Sobota, 20:00.</p>
+                <p><b>Kolor tła:</b> Pomarańczowy.</p>
+
+                <p style="border-bottom: 1px solid;"><strong>Notatka 2</strong>:</p>
+
+                <p>Tytuł: "Tygodniowy plan treningowy"</p>
+
+                <ul>
+                    <li>Poniedziałek: Bieganie 30 min (interwały), rozciąganie</li>
+                    <li>Wtorek: Siłownia: nogi (przysiady, wykroki, martwy ciąg)</li>
+                    <li>Środa: Pływanie 45 minut (style dowolne)</li>
+                    <li>Czwartek: Odpoczynek, lekka joga</li>
+                    <li>Piątek: Siłownia: klatka piersiowa, triceps</li>
+                    <li>Sobota: Długie wybieganie (10 km)</li>
+                    <li>Niedziela: Aktywny odpoczynek (spacer, rower)</li>
+                </ul>
+
+                <p><b>Etykieta:</b> Sport, Trening (<b>to są oddzielne etykiety!</b>).</p>
+                <p><b>Kolor tła:</b> Zielony.</p>
+
+                <p style="border-bottom: 1px solid;"><strong>Notatka 3</strong>:</p>
+                
+                <p>Tytuł: "Zdrowe posiłki na cały dzień"</p>
+
+                <ul>
+                    <li>Śniadanie: Owsianka z owocami (banan, jagody), orzechy</li>
+                    <li>Obiad: Grillowany kurczak z brązowym ryżem i warzywami (brokuły, marchew)</li>
+                    <li>Kolacja: Sałatka z tuńczykiem, awokado, pomidorem i ogórkiem</li>
+                    <li>Przekąski: jabłko, jogurt naturalny</li>
+                    <li>Nawodnienie: 2L wody</li>
+                </ul>
+
+                <p><b>Etykieta:</b> Dieta, Jedzenie, Zdrowie (<b>to są oddzielne etykiety!</b>).</p>
+                <p><b>Kolor tła:</b> Niebieski.</p>
+
+                <hr>
+
+                <p>
+                    <em>Wiem, że nic nie wiem</em>
+                </p>
+                <p>~<strong>Sokrates</strong><span class="cursor"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tomasz Gądek. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="../js/ThemeSwitcher.js" type="text/javascript"></script>
+</body>
+</html>

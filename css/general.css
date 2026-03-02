@@ -1,0 +1,259 @@
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --glass-blur: blur(12px);
+    --accent: #6366f1;
+    --accent-dark: #4f46e5;
+    --accent-violet: #8a2be2;
+    --text-main: #1f2937;
+    --text-muted: #4b5563;
+    --code-bg: #1e1e2e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #e0e7ff 0%, #f3f4f6 50%, #ddd6fe 100%);
+    background-attachment: fixed;
+    color: var(--text-main);
+    line-height: 1.6;
+    padding: 1rem;
+    min-height: 100vh;
+}
+
+.glass-container {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2.5rem;
+}
+
+/* --- TABELA (Zaokrąglona i Przewijalna) --- */
+/* --- TABELA (Zaokrąglona i Przewijalna) --- */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    /* Włącza przewijanie poziome */
+    -webkit-overflow-scrolling: touch;
+    /* Płynny scroll na urządzeniach mobilnych Apple */
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+    margin: 1.5rem 0;
+    background: rgba(255, 255, 255, 0.1);
+    /* Usuwamy ogólne overflow: hidden, które blokowało scroll */
+}
+
+/* Stylizacja paska przewijania (Scrollbar), aby pasował do stylu Glass */
+.table-wrapper::-webkit-scrollbar {
+    height: 6px;
+    /* Wysokość poziomego paska */
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background: var(--glass-border);
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+.glass-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    /* To wymusza scroll na małych ekranach */
+}
+
+.glass-table th,
+.glass-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--glass-border);
+    color: var(--text-main);
+    white-space: nowrap;
+    /* Zapobiega łamaniu tekstu, co wymusza szerokość tabeli */
+}
+
+/* --- WIDEO (Zaokrąglona Ramka) --- */
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* Proporcje 16:9 */
+    height: 0;
+    overflow: hidden;
+    /* To jest kluczowe dla zaokrąglenia rogów iframe */
+    border-radius: 24px;
+    border: 1px solid var(--glass-border);
+    margin: 1.5rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* --- LISTY --- */
+ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.2);
+    margin-bottom: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+li:hover {
+    transform: translateX(5px);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* --- PRZYCISKI --- */
+.course-tiles {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.glass-button {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    color: var(--text-main);
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 1rem;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.glass-button.selected {
+    background: var(--accent-violet);
+    border-color: var(--accent-violet);
+    color: #fff;
+}
+
+/* --- KOD ŹRÓDŁOWY --- */
+/* --- KOD ŹRÓDŁOWY (Jasny Glass) --- */
+pre code.hljs {
+    display: block;
+    background: rgba(255, 255, 255, 0.45) !important;
+    /* Jasne tło */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: var(--text-main) !important;
+    padding: 1.5rem;
+    border-radius: 16px;
+    font-size: 0.9rem;
+    border: 1px solid var(--glass-border);
+    overflow-x: auto;
+    /* Scroll poziomy dla kodu */
+    margin: 0;
+}
+
+/* Kolory składni highlight.js dla jasnego tła (opcjonalnie) */
+.hljs-keyword,
+.hljs-selector-tag {
+    color: #4f46e5;
+    font-weight: bold;
+}
+
+.hljs-string {
+    color: #059669;
+}
+
+.hljs-comment {
+    color: #9ca3af;
+}
+
+/* Pozostałe teksty i linki */
+h1,
+h2 {
+    color: var(--text-main);
+    margin-bottom: 1rem;
+}
+
+p {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+img {
+    display: block;
+    /*max-width: 500px;*/
+    width: 100%;
+    height: auto;
+    margin: 2rem auto;
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+}
+
+@media (max-width: 1024px) {
+    .course-tiles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .course-tiles {
+        grid-template-columns: 1fr;
+    }
+
+    .glass-container {
+        padding: 1.5rem;
+    }
+}

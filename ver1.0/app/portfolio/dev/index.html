@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Codenga">
+    <meta name="description" content="IT Design Portfolio">
+
+    <title>IT Design - Profesjonalne Rozwiązania IT</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <header>
+        <img src="./img/it-design-logo.png" alt="IT Design Logo" width="50" height="50">
+        <h1>IT Design</h1>
+    </header>
+
+    <nav>
+        <a href="./index.html">HOME</a>
+        <a href="./portfolio.html">PORTFOLIO</a>
+        <a href="./team.html">ZESPÓŁ</a>
+        <a href="./experience.html">DOŚWIADCZENIE</a>
+    </nav>
+
+    <div class="container">
+        <h2>Profesjonalne Rozważania IT dla Twojej Firmy</h2>
+
+        <div class="intro">
+            <p>
+                IT Design to lider w dostarczaniu nowoczesnych rozwiązań technologicznych. Nasz zespół ekspertów łączy wieloletnie doświadczenie 
+                z pasją do tworzenia innowacyjnych produktów IT. Specjalizujemy się w projektowaniu aplikacji webowych, systemów zarządzania 
+                oraz zaawansowanych narzędzi informatycznych.
+            </p>
+            <hr>
+            <p>
+                Nasza misja to wspieranie rozwoju biznesów poprzez optymalizację procesów i implementację efektywnych rozwiązań IT. Każdy 
+                projekt traktujemy indywidualnie, dostosowując technologie do potrzeb naszych klientów.
+            </p>
+            <hr>
+            <p>
+                Zaufaj IT Design – partnerowi, który dba o jakość, terminowość i pełną satysfakcję z dostarczanych usług. 
+                Razem budujemy przyszłość cyfrowego świata.
+            </p>
+        </div>
+
+        <h2>Skontaktuj się z nami</h2>
+
+        
+
+        <form onsubmit="validateForm(event)">
+            <div id="messageBox" class="message"></div>
+
+            <label for="email">Twój email:</label>
+            <input type="email" id="email" name="email" placeholder="Wpisz swój adres email">
+            
+            <label for="message">Twoja wiadomość (maks. 200 znaków):</label>
+            <textarea id="message" name="message" maxlength="10" placeholder="Wpisz swoją wiadomość"></textarea>
+
+            <button type="submit">Wyślij</button>
+        </form>
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2024 IT Design. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script type="text/javascript" src="./js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<comics>
+    <universum type="marvel">
+        <hero>
+            <name>Spider-Man</name>
+            <main-color>blue &amp; red</main-color>
+            <gender>MAN</gender>
+        </hero>
+    </universum>
+    <universum type="dc" />
+</comics>
+
