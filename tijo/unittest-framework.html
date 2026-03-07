@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="W Pythonie do tworzenia testów jednostkowych najczęściej używa się frameworka unittest. Zrozumienie jego struktury oraz umiejętność poprawnego testowania kodu są kluczowe dla każdego programisty.">
+    <meta name="keywords" content="testowanie, jakość oprogramowania, unittest, python, testy jednostkowe">
+    <meta name="author" content="Tomasz Gądek">
+    <title>TiJO | Framework unittest</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+    <div class="glass-container">
+        <h1>Testowanie i Jakość Oprogramowania</h1>
+        <p><strong>L#02:</strong> Framework unittest.</p>
+
+        <h2>Wprowadzenie</h2>
+        <p>
+            Testowanie jednostkowe to fundament tworzenia niezawodnego oprogramowania. Framework
+            <strong>unittest</strong>
+            jest standardowym narzędziem do testów jednostkowych w ekosystemie Pythona. Dostarcza on
+            silnik do uruchamiania testów oraz bogaty zestaw asercji. Pozwala na separację logiki
+            testowej od produkcyjnej oraz automatyzację procesu weryfikacji zmian w kodzie.
+        </p>
+
+        <h2>Cel</h2>
+        <p>
+            Celem laboratorium jest zapoznanie się z architekturą testów w frameworku <strong>unittest</strong>.
+            Skupimy się na izolacji przypadków testowych poprzez metody cyklu życia (<code>setUp</code>,
+            <code>tearDown</code>),
+            weryfikacji sytuacji wyjątkowych oraz stosowaniu spójnych konwencji nazewniczych. Na przykładzie klasy
+            koszyka zakupowego przećwiczymy projektowanie testów dla złożonej logiki biznesowej.
+        </p>
+
+        <h2>Framework unittest</h2>
+        <p>
+            Spójrz na podstawową strukturę testu przy użyciu tego frameworka. Postaraj się przeanalizować kod,
+            a następnie dokończyć implementacje testów (nie zapominając o konwencji AAA) oraz klasy
+            <strong>Calc</strong>.
+        </p>
+
+        <pre>
+            <code class="language-python"># Listing 1
+
+import unittest
+from src.calc import Calc
+
+class TestCalc(unittest.TestCase):
+
+    def setUp(self):
+        print("* setUp()")
+        self.calc = Calc()
+
+    def test_should_add_two_numbers(self):
+        print("** test_should_add_two_numbers()")
+        result = self.calc.add(3, 2)
+        self.assertEqual(result, 5)
+
+    def test_should_raise_error_when_division_by_zero(self):
+        print("** test_should_raise_error_when_division_by_zero()")
+        with self.assertRaises(ZeroDivisionError):
+            self.calc.divide(10, 0)
+
+    def tearDown(self):
+        print("*** tearDown()")
+        self.calc = None
+
+if __name__ == "__main__":
+    unittest.main()</code>
+        </pre>
+
+        <p>
+            Zaimplementuj brakujące metody w klasie <strong>Calc</strong> (add(), subtract(), multiply(), divide()).
+            Po uruchomieniu testów przeanalizuj logi widoczne w konsoli.
+        </p>
+
+        <h2>Struktura testów</h2>
+
+        <ul>
+            <li>W pierwszej kolejności importujemy bibliotekę <strong>unittest</strong>, która zawiera funkcje do
+                testowania.</li>
+            <li>Każdy test jednostkowy w <strong>unittest</strong> musi być zawarty w klasie, która dziedziczy po
+                <strong>unittest.TestCase</strong>.
+            </li>
+            <li>Metoda <strong>setUp()</strong> jest wywoływana przed każdym testem. Jest to miejsce, gdzie
+                inicjalizujemy obiekty lub zasoby, które będą używane w testach.</li>
+            <li>Każda metoda testowa musi zaczynać się od <strong>test_</strong>. Jest to konwencja, którą
+                <strong>unittest</strong> wykorzystuje do rozpoznawania metod, które są testami. Każda metoda testowa
+                sprawdza jedną, konkretną funkcjonalność.
+            </li>
+            <li><strong>assertEqual()</strong> to najczęściej używana metoda do porównywania oczekiwanego wyniku z
+                wynikiem rzeczywistym. Sprawdza, czy oba argumenty są sobie równe.</li>
+            <li><strong>assertRaises()</strong> jest używana do testowania, czy w odpowiednich sytuacjach jest rzucany
+                wyjątek (np. <strong>ZeroDivisionError</strong> przy dzieleniu przez zero).</li>
+            <li><strong>tearDown()</strong> jest wywoływana po każdym teście i służy do zwalniania zasobów lub zamykania
+                połączeń.</li>
+            <li>Testy uruchamiamy za pomocą <strong>unittest.main()</strong>, co powoduje automatyczne wykrycie i
+                uruchomienie wszystkich metod testowych.</li>
+        </ul>
+
+        <h2>Nazewnictwo testów</h2>
+        <p>
+            Poprawne nazywanie plików, klas i metod testowych jest kluczowe dla utrzymania porządku w projekcie oraz
+            szybkiej analizy wyników testów.
+        </p>
+
+        <div class="table-wrapper">
+            <table class="glass-table">
+                <thead>
+                    <tr>
+                        <th>Element struktury</th>
+                        <th>Wymóg techniczny</th>
+                        <th>Przykładowa konwencja klasyczna</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nazwa pliku</td>
+                        <td><code>test_*.py</code> lub <code>*_test.py</code></td>
+                        <td><code>test_user_service.py</code></td>
+                    </tr>
+                    <tr>
+                        <td>Nazwa klasy</td>
+                        <td><code>Test*</code> (zalecane)</td>
+                        <td><code>TestUserAuthentication</code></td>
+                    </tr>
+                    <tr>
+                        <td>Nazwa metody</td>
+                        <td><code>test_*</code> (wymagane)</td>
+                        <td><code>test_invalid_password_rejection</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>
+            Wybór stylu nazewnictwa metod wpływa na czytelność raportów generowanych przez narzędzia testowe.
+        </p>
+
+        <div class="table-wrapper">
+            <table class="glass-table">
+                <thead>
+                    <tr>
+                        <th>Styl nazewnictwa</th>
+                        <th>Przykładowa nazwa metody</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Minimalistyczny</td>
+                        <td><code>test_add</code></td>
+                    </tr>
+                    <tr>
+                        <td>BDD (Should)</td>
+                        <td><code>test_should_add_two_positive_integers</code></td>
+                    </tr>
+                    <tr>
+                        <td>Fact-based</td>
+                        <td><code>test_adds_two_positive_integers</code></td>
+                    </tr>
+                    <tr>
+                        <td>Given-When-Then</td>
+                        <td><code>test_given_two_ints_when_added_then_sum_is_correct</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>
+            <strong>Ważne:</strong> Niezależnie od wybranego stylu, kluczowe jest trzymanie się <strong>jednej
+                konwencji</strong>
+            w obrębie całego projektu. Zapewnia to spójność i ułatwia pracę innym programistom.
+        </p>
+
+        <h2>Uruchomienie testów</h2>
+        <p>
+            Po poprawnym zaimplementowaniu testów oraz klasy produkcyjnej, możemy przystąpić do ich uruchomienia.
+            Poniżej zaprezentowano przykładowy widok z konsoli po pomyślnym wykonaniu wszystkich przypadków testowych.
+        </p>
+
+        <img src="./img/tijo-lab02-run.png" alt="Widok uruchomionych testów">
+
+        <h2>Zadanie do wykonania</h2>
+
+        <p>
+            Twoje zadanie będzie polegało na implementacji koszyka zakupowego oraz zestawu testów jednostkowych.
+            Poniżej znajduje się kod źródłowy, który definiuje oczekiwaną strukturę klasy.
+        </p>
+
+        <pre>
+            <code class="language-python"># Listing 2
+
+class ShoppingCart:
+
+    def add_product(self, product_name: str, price: int, quantity: int) -> bool:
+        """
+            Dodawanie produktu do koszyka.
+            
+            Parametr 'product_name' traktujemy jak identyfikator, nie 
+            można dodać nowego produktu o tym samym identyfikatorze.
+            Metoda powinna zwrócić False jeżeli przekażemy produkt, który 
+            już istnieje w koszyku.
+        """
+        
+        # 'pass' pozwala na utworzenie pustego bloku, gdy nie ma implementacji. 
+        # Do usunięcia.
+        pass 
+
+    def remove_product(self, product_name: str) -> bool:
+        """Usuwanie produktu z koszyka"""
+        pass
+
+    def update_quantity(self, product_name: str, new_quantity: int) -> bool:
+        """Aktualizacja ilości produktu w koszyku"""
+        pass
+
+    def get_products(self):
+        """Pobieranie nazw produktów z koszyka"""
+        pass
+
+    def count_products(self) -> int:
+        """Pobieranie liczby produktów znajdujących się w koszyku"""
+        pass
+
+    def get_total_price(self) -> int:
+        """Pobieranie sumy cen produktów w koszyku"""
+        pass
+
+    def apply_discount_code(self, discount_code: str) -> bool:
+        """Zastosowanie kuponu rabatowego. Jaką formę promocji proponujesz?"""
+        pass
+
+    def checkout(self) -> bool:
+        """
+            Realizacja zamówienia. 
+            
+            W tym miejscu proponuję zaimplementować logikę, która będzie symulowała 
+            proces zakupu. Metoda zwraca True, jeżeli zamówienie zostało zrealizowane 
+            pomyślnie, a False w przeciwnym wypadku (np. brak produktów w koszyku).
+        """
+        pass</code>
+        </pre>
+
+        <p>
+            Pamiętaj, aby przed implementacją konkretnej metody napisać dla niej test (o technice TDD szerzej opowiemy
+            sobie na kolejnych zajęciach).
+            Zastosuj poznaną konwencję <strong>Arrange-Act-Assert</strong> w każdej metodzie testowej.
+        </p>
+
+        <h2>Podsumowanie</h2>
+        <p>
+            Opanowanie frameworka <strong>unittest</strong> pozwala na budowę solidnej siatki bezpieczeństwa dla kodu.
+            Kluczowym elementem jest nie tylko sama weryfikacja wyników, ale także dbałość o czytelność raportów
+            poprzez precyzyjne nazewnictwo oraz zachowanie izolacji testów. Takie podejście minimalizuje
+            ryzyko regresji i ułatwia późniejszą refaktoryzację kodu.
+        </p>
+
+        <a href="../index.html" class="glass-button" style="display: inline-block; margin-top: 1rem;">Powrót do strony
+            głównej</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tomasz Gądek. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+
+</html>
