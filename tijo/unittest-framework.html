@@ -64,7 +64,7 @@ class TestCalc(unittest.TestCase):
 
     def test_should_raise_error_when_division_by_zero(self):
         print("** test_should_raise_error_when_division_by_zero()")
-        with self.assertRaises(ZeroDivisionError):
+        with self.assertRaises(ValueError):
             self.calc.divide(10, 0)
 
     def tearDown(self):
