@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const courses = [
         { id: 'tijo', name: 'Testowanie i Jakość Oprogramowania' },
         { id: 'nisp', name: 'Narzędzia i Środowiska Programistyczne' },
-        { id: 'ti', name: 'Technologia Informacyjna' }
+        { id: 'ti', name: 'Technologia Informacyjna' },
+        { id: 'ld', name: 'Prace dyplomowe' }
     ];
 
     // Restore the selected course from local storage
