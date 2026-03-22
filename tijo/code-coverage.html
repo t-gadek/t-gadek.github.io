@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Laboratorium 4 z Testowania i Jakości Oprogramowania: Pokrycie kodu testami (Code Coverage). Analiza skuteczności testów automatycznych.">
+    <meta name="keywords"
+        content="testowanie, jakość oprogramowania, code coverage, pokrycie kodu, python, testy automatyczne">
+    <meta name="author" content="Tomasz Gądek">
+    <title>TiJO | Pokrycie kodu testami</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+    <div class="glass-container">
+        <h1>Testowanie i Jakość Oprogramowania</h1>
+        <p><strong>L#04:</strong> Pokrycie kodu testami.</p>
+
+        <h2>Wprowadzenie</h2>
+        <p>
+            Pokrycie kodu testami (<em>ang. code coverage</em>) to mierzalna metryka stosowana w inżynierii
+            oprogramowania, która określa, jaki procent linii kodu źródłowego został wykonany (skontrolowany)
+            przez testy automatyczne. Narzędzia do mierzenia pokrycia kodu pomagają zidentyfikować obszary aplikacji,
+            które nie są jeszcze chronione przed potencjalnymi błędami.
+        </p>
+
+        <h2>Cel</h2>
+        <p>
+            Głównym celem tego laboratorium jest poznanie technik analizy i zwiększania pokrycia kodu testami.
+            Nauczymy się generować powiązane raporty w środowisku programistycznym (IDE) oraz interpretować ich wyniki.
+            Wykonując ćwiczenia praktyczne postaramy się osiągnąć maksymalne (100%) pokrycie dla wybranych algorytmów.
+        </p>
+
+        <h2>Pokrycie kodu testami w praktyce</h2>
+        <p>
+            Istnieje kilka rodzajów metryk oceniających pokrycie – można sprawdzać pokrycie linii (czy dana linijka
+            została wykonana),
+            jak i pokrycie rozgałęzień (czy sprawdzono wszystkie ścieżki warunków logicznych takich jak if/else). W
+            naszym przypadku
+            skupimy się na podstawowej analizie pokrycia bezpośrednio w IDE.
+        </p>
+
+        <h2>Implementacja</h2>
+        <p>Utwórz nowy projekt w <strong>PyCharm</strong> i umieść w pakiecie produkcyjnym implementację klasy
+            <strong>QuadraticEquation</strong>.
+        </p>
+        <pre>
+            <code class="language-python"># Listing 1
+
+import math
+
+
+class QuadraticEquation:
+    def __init__(self, a: float, b: float, c: float):
+        if a == 0:
+            raise ValueError("Współczynnik 'a' nie może być zerowy w równaniu kwadratowym.")
+        self.a = a
+        self.b = b
+        self.c = c
+
+    def solve(self):
+        delta = self.b ** 2 - 4 * self.a * self.c
+
+        if delta > 0:
+            x1 = (-self.b + math.sqrt(delta)) / (2 * self.a)
+            x2 = (-self.b - math.sqrt(delta)) / (2 * self.a)
+            return x1, x2
+        elif delta == 0:
+            x = -self.b / (2 * self.a)
+            return (x,)
+        else:
+            return None  # Brak pierwiastków rzeczywistych
+            </code>
+        </pre>
+
+        <p>Umieść w pakiecie testowym implementację klasy <strong>TestQuadraticEquation</strong>.</p>
+        <pre>
+            <code class="language-python"># Listing 2
+
+import unittest
+from src.quadratic_equation import QuadraticEquation
+
+
+class TestQuadraticEquation(unittest.TestCase):
+    def test_should_raise_error_when_a_is_zero(self):
+        # arrange
+        a, b, c = 0, 2, 4
+
+        # act & assert
+        self.assertRaises(ValueError, QuadraticEquation, a, b, c)
+
+
+if __name__ == '__main__':
+    unittest.main()
+            </code>
+        </pre>
+
+        <h2>Testy z raportem</h2>
+        <p>Postaraj się uruchomić testy z raportem pokrycia kodu testami. Przejedź do skryptu z testami i kliknij w
+            zieloną strzałkę (obok
+            klasy) i wybierz opcję widoczną na poniższym rysunku.</p>
+        <img src="./img/tijo-lab04-run-coverage.png" alt="run coverage">
+
+        <h2>Analiza</h2>
+        <p>
+            Po uruchomieniu testów zwróć uwagę na statystyki pokrycia kodu w kodzie klasy
+            <strong>QuadraticEquation</strong>. Kolor <strong>czerwony</strong> wskazuje linie,
+            które nie zostały pokryte testami. Kolor <strong>zielony</strong> wskazuje linie, które
+            zostały pokryte testami.
+        </p>
+        <img src="./img/tijo-lab04-coverage-stats.png" alt="coverage stats">
+
+        <p>Mamy <strong>33%</strong> pokrycia kodu testami. Dopisz pozostałe testy i zwiększ pokrycie kodu.</p>
+
+        <h2>Zadanie do wykonania</h2>
+        <p>
+            Twoje zadanie będzie polegało na implementacji operacji na bankomacie.
+            Skorzystaj z przygotowanej poniżej struktury klasy (wraz z dokumentacją metod). Pamiętaj, aby pisać kod
+            metodą TDD. Podczas implementacji i uruchamiania testów analizuj i badaj pokrycie kodu testami.
+        </p>
+        <p>
+            Dla każdego cyklu stosuj odpowiednią strukturę commiów, np.:
+        </p>
+        <ul>
+            <li>RED: implementacja testów dla weryfikacji salda</li>
+            <li>GREEN: implementacja metody check_balance</li>
+            <li>REFACTOR: refaktoryzacja kodu metody check_balance</li>
+        </ul>
+
+        <p>Kod początkowy (<strong>atm.py</strong>):</p>
+
+        <pre>
+            <code class="language-python"># Listing 3
+
+class ATM:
+    """
+    Klasa reprezentująca bankomat (ATM) z podstawowymi operacjami bankowymi.
+    """
+
+    def check_balance(self, pin: int) -> float:
+        """
+        Sprawdza saldo konta użytkownika.
+
+        :param pin: PIN użytkownika.
+        :return: Saldo konta użytkownika.
+        :raises InvalidPinException: Jeśli podany PIN jest nieprawidłowy.
+        """
+        pass
+
+    def deposit(self, pin: int, amount: float) -> float:
+        """
+        Wpłaca środki na konto użytkownika.
+
+        :param pin: PIN użytkownika.
+        :param amount: Kwota do wpłacenia.
+        :return: Aktualne saldo po wpłacie.
+        :raises InvalidPinException: Jeśli podany PIN jest nieprawidłowy.
+        """
+        pass
+
+    def withdraw(self, pin: int, amount: float) -> float:
+        """
+        Wypłaca środki z konta użytkownika.
+
+        :param pin: PIN użytkownika.
+        :param amount: Kwota do wypłacenia.
+        :return: Aktualne saldo po wypłacie.
+        :raises InsufficientFundsException: Jeśli saldo jest niewystarczające.
+        :raises InvalidPinException: Jeśli podany PIN jest nieprawidłowy.
+        """
+        pass</code>
+        </pre>
+
+        <h2>Podsumowanie</h2>
+        <p>
+            Dążenie do wysokiego stopnia pokrycia kodu testami zwiększa jakość całego systemu informatycznego.
+            Warto jednak pamiętać, że nawet 100% pokrycia nie gwarantuje całkowicie bezbłędnej aplikacji.
+            W teście liczy się jakość asercji, a sama metryka służy jedynie jako wsparcie i
+            nawigacja pomagająca odnaleźć obszary, które testy automatyczne jeszcze nie pokryły.
+        </p>
+
+        <a href="../index.html" class="glass-button" style="display: inline-block; margin-top: 1rem;">Powrót do strony
+            głównej</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tomasz Gądek. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+
+</html>
