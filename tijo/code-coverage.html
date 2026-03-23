@@ -142,6 +142,15 @@ class ATM:
     Klasa reprezentująca bankomat (ATM) z podstawowymi operacjami bankowymi.
     """
 
+    def __init__(self, pin: int, initial_balance: float = 0.0):
+        """
+        Inicjalizuje bankomat z podanym saldem początkowym.
+
+        :param initial_balance: Saldo początkowe konta.
+        :raises ValueError: Jeśli saldo początkowe jest ujemne.
+        """
+        pass
+
     def check_balance(self, pin: int) -> float:
         """
         Sprawdza saldo konta użytkownika.
