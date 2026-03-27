@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Odtwarzacz multimedialny — wideo, audio i galeria obrazów.">
+    <meta name="author" content="Tomasz Gądek">
+    <title>Media Player | Tomasz Gądek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/player.css">
+    <link rel="icon" href="./img/favicon.png" type="image/png">
+</head>
+
+<body>
+
+    <div class="player-container">
+        <!-- Header -->
+        <div class="player-header">
+            <h1 id="player-title">Media Player</h1>
+            <a href="index.html" class="back-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                Strona główna
+            </a>
+        </div>
+
+        <!-- Dynamic content injected here -->
+        <div id="media-content"></div>
+    </div>
+
+    <footer class="player-footer">
+        <p>&copy; 2026 Tomasz Gądek. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="js/player.js"></script>
+
+</body>
+
+</html>
