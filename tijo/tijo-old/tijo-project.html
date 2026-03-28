@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tomasz Gądek">
+    <meta name="description" 
+        content="
+            CLEAN CODE - Twórz oprogramowanie, które rozumieją ludzie, a nie komputery.
+            TDD - Bądź profesjonalny i testuj własny kod.
+            CODE KATA - Ćwicz do bólu, aż pojawi się pamięć mięśniowa. 
+        "
+    >
+
+    <link rel="icon" type="image/png" href="../img/tgadek-logo.png">
+
+    <title>Tomasz Gądek | TiJO | PRJ</title>
+
+    <link id="theme-style" rel="stylesheet" href="../css/general.css">
+</head>
+<body>
+    <header>
+        <a href="/"><img src="../img/tgadek-logo.png" alt="Tomasz Gądek Home Page" /></a><h1>tgadek.bitbucket.io</h1>
+    </header>
+
+    <nav>
+        <a href="../" title="Strona Główna">Home</a>
+        <a href="../nisp.html" title="Narzędzia i Środowiska Programistyczne">NiSP</a>
+        <a href="../tijo.html" title="Testowanie i Jakość Oprogramowania">TiJO</a>
+        <a href="../jz.html" title="Języki Znacznikowe">JZ / PIU</a>
+        <a href="../ld.html" title="Laboratorium Dyplomowe">LD</a>
+        <a href="../ti.html" title="Technologia Informacyjna">TI</a>
+    </nav>
+
+    <div class="container">
+        <div class="terminal">
+            <div class="terminal-bar">
+                <div class="terminal-button red"></div>
+                <div class="terminal-button yellow"></div>
+                <div class="terminal-button green"></div>
+                <button class="theme-toggle" id="theme-toggle" title="Zmień tryb">☁️</button>
+            </div>
+            <div class="terminal-content">
+                <h1>Testowanie i Jakość Oprogramowania</h1>
+                <p>
+                    <strong>Projekt:</strong> Asystent AI
+                </p>
+
+                <h2>Mikroprojekt: Asystent AI dla Testera Oprogramowania</h2>
+
+                <p>
+                    Stwórz prostą aplikację z interfejsem użytkownika, która 
+                    wykorzystuje API <a href="https://ai.google.dev/gemini-api/docs/quickstart" target="_blank">Gemini 2.0</a> 
+                    do wsparcia pracy testera oprogramowania. Wybór technologii jest dowolny (np. Python, Java, PHP, 
+                    JavaScript, frameworki frontendowe lub backendowe). Ważne, aby aplikacja posiadała interfejs użytkownika.
+                </p>
+
+                <h2>Przykłady asystentów AI:</h2>
+                <ul>
+                    <li>Asystent generujący testy jednostkowe na podstawie fragmentu kodu.</li>
+                    <li>Narzędzie wykrywające naruszenia zasad SOLID lub prawa Demeter.</li>
+                    <li>Asystent jakości kodu analizujący fragmenty i sugerujący poprawki.</li>
+                    <li>Inteligentny generator przypadków testowych.</li>
+                    <li>Aplikacja wspierająca dokumentowanie przypadków testowych.</li>
+                    <li>Automatyczny recenzent kodu pod kątem typowych błędów i dobrych praktyk.</li>
+                    <li>Asystent do analizy pokrycia testami i sugerowania brakujących przypadków.</li>
+                </ul>
+
+                <h2>Wymagania</h2>
+
+                <ul>
+                    <li>
+                        Projekt powinien posiadać prosty, estetyczny interfejs użytkownika (technologia dowolna).
+                    </li>
+                    <li>
+                        Większość funkcjonalności powinna być realizowana przez LLM (Gemini 2.0) poprzez API. Użytkownik wykonuje 
+                        minimum czynności, a interfejs oraz model zapewniają maksymalną automatyzację i wygodę.
+                    </li>
+                    <li>
+                        W projekcie należy zastosować wyrafinowany prompt. Opisz w nim konkretnego agenta, np. "Jestem ekspertem od 
+                        testowania, analizuję kod pod kątem jakości oprogramowania, wykrywam typowe błędy i proponuję poprawki. 
+                        Odpowiadam precyzyjnie, zwięźle i profesjonalnie&hellip;".
+                    </li>
+                </ul>
+
+                <h2>Materiały pomocnicze</h2>
+
+                <ul>
+                    <li>
+                        Pobierz swój <a href="https://aistudio.google.com/app/apikey" target="_blank">API Key Gemini</a>.
+                    </li>
+                    <li>
+                        Przykład szybkiego połączenia z API: 
+                        <a href="https://ai.google.dev/gemini-api/docs/quickstart" target="_blank">Gemini API Quickstart</a>.
+                    </li>
+                </ul>
+
+                <h2>Wskazówki</h2>
+
+                <ul>
+                    <li>
+                        Skup się na użyteczności i automatyzacji. Użytkownik powinien wykonywać jak najmniej kroków, a 
+                        większość pracy powinna być realizowana przez aplikację i model LLM.
+                    </li>
+                    <li>
+                        Wyeksponuj w interfejsie użytkownika możliwości agenta oraz jego specjalizację.
+                    </li>
+                    <li>
+                        Technologie są dowolne. Możesz użyć narzędzi i języków, które znasz najlepiej.
+                    </li>
+                </ul>
+
+                <h2>Termin oddania projektu</h2>
+                
+                <p><strong>13 maj 2025 r.</strong></p>
+
+                <hr>
+                
+                <p>
+                    <em>Myślisz, że nic nie wiesz? Spokojnie, większość z nas zaczynała dokładnie tak samo.</em>
+                </p>
+                <p>~<strong>Tomasz Gądek</strong><span class="cursor"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tomasz Gądek. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="../js/ThemeSwitcher.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Dokumentacja oraz wymagania dla projektu z przedmiotu Projektowanie Interfejsów Użytkownika (PIU).">
+    <meta name="keywords" content="projektowanie interfejsów, ui, ux, frontend, html, css, javascript, web development">
+    <meta name="author" content="Tomasz Gądek">
+    <title>PIU | Projekt</title>
+    <link rel="icon" type="image/png" href="../../img/tgadek-logo.png">
+    <link rel="stylesheet" href="../../css/general.css">
+</head>
+
+<body>
+    <div class="glass-container">
+        <h1>Projektowanie Interfejsów Użytkownika</h1>
+        <p><strong>PROJEKT:</strong> Wymagania.</p>
+
+        <h2>Wprowadzenie</h2>
+        <p>
+            Poniższy dokument przedstawia wymagania dotyczące realizacji projektu z przedmiotu <strong>Projektowanie
+                Interfejsów Użytkownika</strong>.
+            Projekt polega na stworzeniu responsywnego interfejsu, składającego się z minimum pięciu podstron, opartych
+            o technologie HTML, CSS i JavaScript.
+        </p>
+
+        <h2>Cel</h2>
+        <p>
+            Głównym celem projektu jest praktyczne zastosowanie wiedzy nabytej podczas zajęć poprzez samodzielne
+            skonstruowanie nowoczesnego, estetycznego i spójnego interfejsu. Projekt sprawdza umiejętności dotyczące
+            tworzenia responsywnych układów oraz wykorzystania zewnętrznego API.
+        </p>
+
+        <h2>Etapy realizacji</h2>
+
+        <p>Projekt jest podzielony na trzy etapy.</p>
+
+        <div class="table-wrapper">
+            <table class="glass-table">
+                <thead>
+                    <tr>
+                        <th>Etap/Termin</th>
+                        <th>Opis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mockupy. Do 15 kwietnia.</td>
+                        <td>
+                            Opracowanie makiet w programie dedykowanym
+                            (np. <a href="https://www.figma.com">Figma</a>,
+                            <a href="https://balsamiq.com">Balsamiq</a>)
+                            dla wersji desktop, tablet i mobile.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Implementacja. Do 15 maja.</td>
+                        <td>
+                            Implementacja interfejsu użytkownika, wykorzystanie API,
+                            przygotowanie responsywności.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dokumentacja i testy. Do 15 czerwca.</td>
+                        <td>
+                            Przygotowanie dokumentacji w <a href="https://www.markdownguide.org">Markdown</a>,
+                            testy aplikacji w przeglądarkach (Chrome, Edge, Safari, Firefox, Opera) na trzech rozdzielczościach.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>
+            <strong>Uwaga:</strong> Niedotrzymanie terminów skutkuje obniżeniem oceny końcowej o 1 stopień.
+        </p>
+
+        <h2>Wymagania dla poszczególnych widoków</h2>
+
+        <p>
+            Aplikacja powinna składać się z minimum pięciu podstron. Każda podstrona
+            powinna zawierać menu, treść i stopkę.
+        </p>
+
+        <div class="table-wrapper">
+            <table class="glass-table">
+                <thead>
+                    <tr>
+                        <th>Widok/Podstrona</th>
+                        <th>Wymagania funkcjonalne i wizualne</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Strona główna</td>
+                        <td>
+                            Powinna zawierać logo, menu nawigacyjne, stopkę oraz krótki
+                            opis.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Lista danych</td>
+                        <td>
+                            Wyświetlanie listy elementów. Możliwość paginacji / sortowania / filtrowania
+                            wyników. Różne układy listy w zależności od ekranu (np. tabela na desktopie,
+                            karty na mobile). Dane można pobrać z publicznego API
+                            (np. <a href="https://jsonplaceholder.typicode.com/">JSONPlaceholder</a>).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Szczegóły</td>
+                        <td>
+                            Widok pojedynczego elementu (np. użytkownik, post, produkt).
+                            Dynamiczne pobieranie szczegółowych danych po kliknięciu na element
+                            listy. Przyciski <strong>Wróć</strong> i <strong>Edytuj</strong>
+                            (jeśli aplikacja to umożliwi).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Podstrona z 3 kolumnami</td>
+                        <td>
+                            <ul>
+                                <li>Desktop: 3 kolumny obok siebie.</li>
+                                <li>Tablet: 2 kolumny + 1 poniżej. </li>
+                                <li>Mobile: układ jednokolumnowy.</li>
+                            </ul>
+        
+                            Zawartość powinna mieć konsekwentny układ i spójne nagłówki.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dodatkowa podstrona</td>
+                        <td>
+                            Może zawierać np. formularz kontaktowy, galerię zdjęć.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Responsywność</h2>
+
+        <p>Projekt musi być w pełni responsywny.</p>
+
+        <ul>
+            <li>Desktop: [szerokość] &ge; 1024px</li>
+            <li>Tablet : [szerokość] &ge; 768px i [szerokość] &le; 1023px</li>
+            <li>Mobile : [szerokośc] &le; 767px</li>
+        </ul>
+
+        <p>
+            Aplikacja będzie testowana w przeglądarce <strong>Google Chrome</strong> na
+            trzech wiodących rozdzielczościach.
+        </p>
+
+        <img src="../../img/dev-tools.png" alt="devtools">
+
+        <h2>Dodatkowe wymagania</h2>
+
+        <p>
+            Użyj <strong>GitHub</strong> / <strong>Bitbucket</strong> do wersjonowania kodu.
+            Proponuje użyć <strong>GitHub Pages</strong> do hostowania projektu. Mile widziane
+            stosowanie metodologii <strong>BEM</strong> w CSS.
+        </p>
+
+        <h2>Dokumentacja</h2>
+
+        <p>Dokumentacja projektu powinna zawierać:</p>
+
+        <ul>
+            <li>Wstęp.</li>
+            <li>Opis struktury serwisu.</li>
+            <li>Opis technologii zastosowanych przy tworzeniu serwisu.</li>
+            <li>Testy.</li>
+            <li>Podsumowanie.</li>
+        </ul>
+
+        <h2>Podsumowanie</h2>
+        <p>
+            Zrealizowanie wszystkich założeń projektowych jest niezbędne do zaliczenia przedmiotu.
+            Stosowanie dobrych praktyk projektowych (np. responsywność, dostępność, przejrzysty kod)
+            przyniesie korzyści w postaci użytecznej i estetycznej aplikacji internetowej.
+        </p>
+
+        <a href="../../index.html" class="glass-button" style="display: inline-flex; margin-top: 1rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            Strona główna
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tomasz Gądek. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+
+</html>

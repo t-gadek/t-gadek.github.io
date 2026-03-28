@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tomasz Gądek">
+    <meta name="description" 
+        content="
+            CLEAN CODE - Twórz oprogramowanie, które rozumieją ludzie, a nie komputery.
+            TDD - Bądź profesjonalny i testuj własny kod.
+            CODE KATA - Ćwicz do bólu, aż pojawi się pamięć mięśniowa. 
+        "
+    >
+
+    <link rel="icon" type="image/png" href="../img/tgadek-logo.png">
+
+    <title>Tomasz Gądek | TI | LAB04</title>
+
+    <link id="theme-style" rel="stylesheet" href="../css/general.css">
+</head>
+<body>
+    <header>
+        <a href="/"><img src="../img/tgadek-logo.png" alt="Tomasz Gądek Home Page" /></a><h1>tgadek.bitbucket.io</h1>
+    </header>
+
+    <nav>
+        <a href="/" title="Strona Główna">Home</a>
+        <a href="../nisp.html" title="Narzędzia i Środowiska Programistyczne">NiSP</a>
+        <a href="../tijo.html" title="Testowanie i Jakość Oprogramowania">TiJO</a>
+        <a href="../jz.html" title="Języki Znacznikowe">JZ / PIU</a>
+        <a href="../ld.html" title="Laboratorium Dyplomowe">LD</a>
+        <a href="../ti.html" title="Technologia Informacyjna">TI</a>
+    </nav>
+
+    <div class="container">
+        <div class="terminal">
+            <div class="terminal-bar">
+                <div class="terminal-button red"></div>
+                <div class="terminal-button yellow"></div>
+                <div class="terminal-button green"></div>
+                <button class="theme-toggle" id="theme-toggle" title="Zmień tryb">☁️</button>
+            </div>
+            <div class="terminal-content">
+                <h1>Technologia Informacyjna</h1>
+                <p>
+                    <strong>Laboratorium 4:</strong> Google Sheets.
+                </p>
+                
+                <h2>Google Sheets - Karta pracy</h2>
+
+                <p>
+                    <strong>Google Sheets</strong> to narzędzie, które już poznaliśmy podczas poprzedniego laboratorium. 
+                    Tym razem wcielisz się w rolę trenera personalnego, który musi stworzyć dynamiczną kartę pracy. 
+                    Twoim zadaniem jest przygotowanie arkusza, który będzie automatycznie przeliczał Twoje stawki. 
+                    Oto kilka wymagań: pracownik może wprowadzać dane tylko w kolumnach <strong>A</strong>, 
+                    <strong>B</strong> i <strong>C</strong>. 
+                    Dane w komórkach <strong>E2</strong> i <strong>F2</strong> powinny zmieniać się dynamicznie. 
+                    Dodatkowo, rozliczenie pracownika powinno mieć wpływ na wartość w komórce <strong>F2</strong>. 
+                    Postaraj się, aby arkusz był przejrzysty i łatwy w obsłudze.
+                </p>
+
+                <p>
+                    Utwórz arkusz kalkulacyjny, jak na poniższym zrzucie ekranu.
+                </p>
+
+                <img src="./static/ti-lab04-job.png" alt="job">
+
+                <h2>Google Sheets - Tabela skoczków narciarskich</h2>
+
+                <p>
+                    Przepisz dane z poniższego obrazka do arkusza Google Sheets.
+                </p>
+
+                <img src="./static/ti-lab04-ski-data.png" alt="ski data">
+
+                <p>
+                    Następnie wykorzystaj te dane, aby wygenerować tabelę skoczków narciarskich. Upewnij się, że wszystkie wartości są poprawnie wprowadzone i formatowanie tabeli jest czytelne.
+                </p>
+
+                <img src="./static/ti-lab04-ski-table.png" alt="ski table">
+
+                <p>
+                    <p>
+                        Aby przekonwertować dane do tabeli w Google Sheets, zaznacz wszystkie wprowadzone dane, a następnie w menu wybierz opcję <strong>Formatuj</strong> -> <strong>Przekonweruj na tabelę</strong>. 
+                        Tabela pozwoli Ci na łatwiejsze zarządzanie danymi, dodając funkcje takie jak sortowanie i filtrowanie.
+                        Spróbuj posortować dane (np. według nazwisk lub wyników), zastosować filtry (aby wyświetlić tylko określone wartości). Zastanów się, jak te operacje mogą pomóc w analizie danych i ich prezentacji.
+                    </p>
+                </p>
+
+                <h2>Google Sheets - Adresacja względna i bezwzględna</h2>
+
+                <p>
+                    W adresacji względnej w Google Sheets odwołujemy się do komórek w sposób zależny od ich położenia względem komórki, w której znajduje się formuła. Na przykład, jeśli w komórce A1 wpiszemy formułę "=B1", to po skopiowaniu tej formuły do komórki A2, automatycznie zmieni się ona na "=B2".
+                </p>
+                <p>
+                    Adresacja bezwzględna natomiast odnosi się do konkretnej komórki, niezależnie od miejsca, w którym znajduje się formuła. W tym celu używamy znaku "$". Na przykład, jeśli w komórce A1 wpiszemy formułę "=$B$1", to po skopiowaniu tej formuły do komórki A2, pozostanie ona bez zmian jako "=$B$1".
+                </p>
+                <p>
+                    Adresacja mieszana to połączenie obu powyższych typów. Możemy zablokować tylko kolumnę, tylko wiersz lub oba. Na przykład, formuła "=$B1" zablokuje kolumnę B, ale wiersz będzie się zmieniać, a formuła "A$1" zablokuje wiersz 1, ale kolumna będzie się zmieniać.
+                </p>
+                <p>
+                    Dzięki temu możemy kontrolować, które odwołania w formule mają się zmieniać, a które pozostają stałe.
+                </p>
+
+                <p>Dolar ($) blokuje:</p>
+                <ul>
+                    <li>$A1 – blokuje kolumnę (A), ale wiersz może się zmieniać.</li>
+                    <li>A$1 – blokuje wiersz (1), ale kolumna może się zmieniać.</li>
+                    <li>$A$1 – blokuje zarówno kolumnę, jak i wiersz.</li>
+                </ul>
+                
+                <p>To pozwala kontrolować, jak formuły działają podczas kopiowania.</p>
+
+                <p>Czas na zadanie...</p>
+
+                <p>
+                    Wyobraź sobie, że jesteś nauczycielem WF i masz listę uczniów z ich wynikami w biegu na 60 metrów. Chcesz obliczyć, ile sekund każdy uczeń był wolniejszy od najlepszego wyniku w klasie.
+                </p>
+
+                <img src="./static/ti-lab04-diff.png" alt="diff">
+                
+                <p>
+                    Wprowadź dane do arkusza Google Sheets, a następnie użyj formuły, aby obliczyć różnicę między najlepszym wynikiem a wynikami uczniów. Użyj odpowiedniej adresacji, aby formuła działała poprawnie po skopiowaniu do innych komórek.
+                </p>
+
+                <p>Upewnij się, czy wyniki są poprawne ;)</p>
+
+                <h2>Google Sheets - Orlik Cup</h2>
+
+                <p>
+                    Wyobraź sobie, że jesteś organizatorem turnieju Orlik Cup i Twoim zadaniem jest przygotowanie arkusza Google Sheets, który będzie zawierał harmonogram meczów oraz wyniki drużyn. Następnie stwórz drugi arkusz, który automatycznie wyświetli najlepsze 3 drużyny.
+                </p>
+
+                <p>
+                    Aby odwołać się do danych z innego arkusza, użyj nazwy arkusza, po której następuje wykrzyknik (!) i adres komórki lub zakres komórek.
+                </p>
+
+                <p>Przykłady:</p>
+                
+                <ul>
+                    <li>Pojedyncza komórka z Arkusza1: Arkusz1!A1</li>
+                    <li>Zakres komórek z Arkusza1: Arkusz1!B2:C10</li>
+                </ul>
+
+                <p>W pierwszym arkuszu umieść następującą tabelę.</p>
+
+                <img src="./static/ti-lab04-orlik-cup.png" alt="orlik cup">
+
+                <p>
+                    W drugim arkuszu wyświetl nazwy trzech drużyn, które zajmują trzy pierwsze miejsca.
+                    W arkuszu drugim odwołaj się do danych znajdujących się w arkuszu pierwszym.
+                </p>
+
+                <hr>
+
+                <p>
+                    <em>Wiem, że nic nie wiem</em>
+                </p>
+                <p>~<strong>Sokrates</strong><span class="cursor"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tomasz Gądek. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="../js/ThemeSwitcher.js" type="text/javascript"></script>
+</body>
+</html>
