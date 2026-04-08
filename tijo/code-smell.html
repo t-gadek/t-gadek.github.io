@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="CLEAN CODE - Twórz oprogramowanie, które rozumieją ludzie, a nie komputery. TDD - Bądź profesjonalny i testuj własny kod. CODE KATA - Ćwicz do bólu, aż pojawi się pamięć mięśniowa.">
+    <meta name="keywords" content="testowanie, jakość oprogramowania, code smells, clean code">
+    <meta name="author" content="Tomasz Gądek">
+    <title>TiJO | Code Smells</title>
+    <link rel="stylesheet" href="../css/general.css">
+</head>
+
+<body>
+    <div class="glass-container">
+        <h1>Testowanie i Jakość Oprogramowania</h1>
+        <p><strong>L#06:</strong> Code Smells.</p>
+
+        <h2>Wprowadzenie</h2>
+
+        <p>
+            <strong>Code Smell</strong> to termin używany w programowaniu do
+            opisywania pewnych cech kodu źródłowego, które wskazują na potencjalne
+            problemy z jego jakością. Niekoniecznie oznaczają one błędy, ale
+            często prowadzą do trudniejszego utrzymania kodu.
+        </p>
+
+        <h2>Cel</h2>
+        <p>
+            Głównym celem laboratorium jest identyfikacja najczęstszych "zapachów" kodu (ang. Code Smells)
+            oraz nauka ich eliminowania poprzez odpowiednią refaktoryzację struktury kodu.
+        </p>
+
+        <h2>Rozrosty</h2>
+
+        <ul>
+            <li><strong>Długa metoda:</strong> Jeżeli metoda jest dłuższa niż 10-20 linii dziel na mniejsze metody.</li>
+            <li><strong>Długa lista parametrów:</strong> Jeżeli funkcja ma więcej niż 3-4 parametry, rozważ użycie
+                obiektu.
+            </li>
+            <li><strong>Obsesja na punkcie prymitywów:</strong> Używanie powiązanych ze sobą typów prymitywnych
+                zamiast klas. Stwórz klasę / strukturę, która będzie agregować te parametry.</li>
+        </ul>
+
+        <h2>Zbędne elementy</h2>
+
+        <ul>
+            <li><strong>Zduplikowany kod:</strong> Powtarzający się kod w kilku miejscach wyciągnij do wspólnej
+                metody.</li>
+            <li><strong>Martwy kod:</strong> Nieużywane zmienne lub funkcje, usuń je.</li>
+            <li><strong>Leniwa klasa:</strong> Klasa, która nie robi nic szczególnego, połącz ją z inną klasą
+                lub usuń.</li>
+        </ul>
+
+        <h2>Łatwe do wykrycia powiązania</h2>
+
+        <ul>
+            <li><strong>Zbitki danych:</strong> Duplikacja tych samych parametrów w kilku miejscach. Stwórz
+                logiczną struktrę, która będzie agregować te parametry.</li>
+            <li><strong>Zazdrość o funkcje:</strong> Metoda operuje głównie na danych innej klasy. Przenieś ją
+                do klasy, których danych używa.
+            </li>
+        </ul>
+
+        <h2>Nadużycia</h2>
+
+        <ul>
+            <li><strong>Instrukcje warunkowe:</strong> Długi switch/if-else zastąp polimorfizmem lub mapą.</li>
+            <li><strong>Magiczne liczby:</strong> Stałe jak 42 bez wyjaśnienia zdefiniuj jako nazwane stałe.
+            </li>
+        </ul>
+
+        <h2>Zadanie rekrutacyjne</h2>
+
+        <p>
+            Wykorzystaj dotychczas zdobytą wiedzę i postaraj się rozwiązać problem. Napisz testy
+            oraz zaimplementuj rozwiązanie.
+        </p>
+        <p>
+            Proszę zaimplementować program, który będzie odpowiedzialny za wyszukiwanie zbiorów
+            liczb powtarzających się elementów o ściśle określonym rozmiarze. Dla podanego
+            zbioru liczb (lista elementów o dowolnej długości) użytkownik powinien przekazać
+            również rozmiar wyszukiwanych zbiorów. Funkcja powinna zwracać listę składającą
+            się z pojedynczych elementów reprezentujących wyszukiwane zbiory.
+        </p>
+
+        <div class="table-wrapper">
+            <table class="glass-table">
+                <thead>
+                    <tr>
+                        <th>PARAMETRY FUNKCJI LOTTERY</th>
+                        <th>EFEKT DZIAŁANIA</th>
+                        <th>REZULTAT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>[1, 1, 3, 2, 2, 2, 4, 5]</code>, <code>2</code></td>
+                        <td><code>[<b>1</b>, <b>1</b>, 3, 2, 2, 2, 4, 5]</code></td>
+                        <td><code>[1]</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>[1, 1, 2, 2, 2, 3, 4, 5]</code>, <code>3</code></td>
+                        <td><code>[1, 1, <b>2</b>, <b>2</b>, <b>2</b>, 3, 4, 5]</code></td>
+                        <td><code>[2]</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>[1, 2, 2, 2, 3, 4, 5, 5, 1]</code>, <code>2</code></td>
+                        <td><code>[<b>1</b>, 2, 2, 2, 3, 4, <b>5</b>, <b>5</b>, <b>1</b>]</code></td>
+                        <td><code>[1, 5]</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>None</code>, <code>1</code></td>
+                        <td><code>[]</code></td>
+                        <td><code>[]</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>[1, 2, 3]</code>, <code>None</code></td>
+                        <td><code>[]</code></td>
+                        <td><code>[]</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>None</code>, <code>None</code></td>
+                        <td><code>[]</code></td>
+                        <td><code>[]</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>[1, 1, 2, 2, 2, 3, 4, 5]</code>, <code>7</code></td>
+                        <td><code>[]</code></td>
+                        <td><code>[]</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>
+            <em>Realne zadanie rekrutacyjne do firmy <a href="https://www.schibsted.pl">schibsted</a>.</em>
+        </p>
+
+        <h2>Pojazd księżycowy</h2>
+
+        <p>
+            Jako inżynier firmy <a href="https://www.nasa.gov">NASA</a> zostałeś poproszony o
+            zaprojektowanie, przetestowanie oraz implementację ruchu pojazdu księżycowego.
+            Musisz być świadomy ograniczeń, które zostały uwzględnione w specyfikacji technicznej.
+        </p>
+
+        <img src="./img/tijo-lab06-space-vehicle.png" alt="space vehicle">
+
+        <p>
+            Specyfikacja techniczna pojazdu księżycowego:
+        </p>
+
+        <div class="table-wrapper">
+            <table class="glass-table">
+                <thead>
+                    <tr>
+                        <th>PRZESTRZEŃ PRACY</th>
+                        <th>ZACHOWANIE W PRZESTRZENI 2D</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jazda do przodu.</td>
+                        <td>Możliwa o dowolną liczbę pól.</td>
+                    </tr>
+                    <tr>
+                        <td>Jazda do tyłu.</td>
+                        <td>Możliwa o dowolną liczbę pól.</td>
+                    </tr>
+                    <tr>
+                        <td>Skręt w lewo.</td>
+                        <td>Brak tradycyjnego mechanizmu skrętu.</td>
+                    </tr>
+                    <tr>
+                        <td>Skręt w prawo</td>
+                        <td>Brak tradycyjnego mechanizmu skrętu.</td>
+                    </tr>
+                    <tr>
+                        <td>Rotacja / obrót wokół własnej osi.</td>
+                        <td>Możliwy. Ruch oznacza obrót o 90&deg; w lewo lub w prawo.</td>
+                    </tr>
+                    <tr>
+                        <td>Punkt startu.</td>
+                        <td>Punkt początkowy. Punkt odniesienia pojazdu.</td>
+                    </tr>
+                    <tr>
+                        <td>Odczyt lokalizacji.</td>
+                        <td>Pojazd zwraca współrzędne X i Y obszaru, w którym się znajduje.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>
+            Bardzo proszę zaproponować interfejs pojazdu księżycowego dostosowany do specyfikacji
+            technicznej. Proszę zaimplementować mechanizm poruszania się pojazdu księżycowego.
+            Zachowanie pojazdu powinno być dobrze przetestowane przy pomocy modułu
+            <strong>unittest</strong>.
+        </p>
+
+        <h2>Podsumowanie</h2>
+        <p>
+            Umiejętność rozpoznawania i naprawiania Code Smells jest niezbędna przy tworzeniu łatwego w utrzymaniu
+            oprogramowania. Zrozumienie opisanych w laboratorium złych praktyk i ich świadome unikanie znacznie
+            zredukuje przyszły czas poświęcony na refaktoryzację kodu źródłowego.
+        </p>
+
+        <a href="../index.html" class="glass-button" style="display: inline-flex; margin-top: 1rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            Strona główna
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tomasz Gądek. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+
+</html>
