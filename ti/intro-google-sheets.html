@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Google Sheets to internetowy arkusz kalkulacyjny ułatwiający tworzenie, edytowanie i analizę danych w tabelach. Zobacz, jak zacząć z nim pracować.">
+    <meta name="keywords"
+        content="technologia informacyjna, google sheets, arkusze kalkulacyjne, chmura, analiza danych">
+    <meta name="author" content="Tomasz Gądek">
+    <title>TI | Wprowadzenie do Google Sheets</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+    <div class="glass-container">
+        <h1>Technologia Informacyjna</h1>
+        <p><strong>Laboratorium 3:</strong> Wprowadzenie do Google Sheets.</p>
+
+        <h2>Wprowadzenie</h2>
+        <p>
+            <strong>Google Sheets</strong> (Arkusze Google) to internetowy arkusz kalkulacyjny, umożliwiający tworzenie
+            i analizę danych w tabelach. Działa w chmurze, umożliwiając współpracę
+            wielu użytkowników w czasie rzeczywistym. Jest to darmowe narzędzie będące częścią pakietu
+            <strong>Google Workspace</strong>, które łatwo integruje się z innymi aplikacjami.
+        </p>
+
+        <h2>Cel laboratorium</h2>
+        <p>
+            Celem zajęć jest zapoznanie się z aplikacją <strong>Google Sheets</strong> oraz opanowanie podstawowej
+            analizy danych.
+            Podczas pracy poznasz pojęcia arkusza, komórki i formuł, będziesz w stanie formatować dane, używać
+            podstawowych funkcji do prostych kalkulacji oraz tworzyć wykresy, by podnieść czytelność prezentowanych
+            parametrów.
+        </p>
+
+        <h2>Podstawowe pojęcia</h2>
+
+        <p>
+            <strong>Arkusz</strong>: Pojedyncza strona w pliku Google Sheets, składająca się z siatki wierszy i kolumn.
+        </p>
+        <p>
+            <strong>Wiersz</strong>: Poziomy układ komórek, oznaczony liczbami (1, 2, 3...).
+        </p>
+        <p>
+            <strong>Kolumna</strong>: Pionowy układ komórek, oznaczony literami (A, B, C...).
+        </p>
+        <p>
+            <strong>Komórka</strong>: Pojedynczy prostokąt, w którym znajdują się dane, oznaczony adresem (np.
+            <strong>A1</strong>, <strong>B2</strong>).
+        </p>
+
+        <img src="./static/ti-lab03-intro.png" alt="Google Sheets intro">
+
+        <h2>Tutorial: Jak dodać nowy arkusz?</h2>
+
+        <p>
+            W lewym dolnym rogu ekranu znajduje się przycisk <strong>"+"</strong> (Dodaj arkusz).
+        </p>
+
+        <img src="./static/ti-lab03-add-sheet.png" alt="Add sheet">
+
+        <h2>Tutorial: Formatowanie warunkowe</h2>
+
+        <p>
+            To narzędzie, które pozwala automatycznie formatować komórki (np. zmieniać kolor tła lub tekstu) na
+            podstawie
+            określonych warunków. Przydaje się na przykład do oznaczania na zielono komórek z wynikami powyżej 2.0.
+        </p>
+
+        <div class="video-responsive">
+            <video controls poster="../img/poster/poster.svg" preload="auto">
+                <source src="./static/ti-lab03-format-condition.mp4" type="video/mp4">
+                Twoja przeglądarka nie obsługuje wideo.
+            </video>
+        </div>
+
+        <h2>Tutorial: Format danych</h2>
+
+        <p>
+            Format danych pozwala określić, jak dane są wyświetlane w komórkach
+            (np. jako liczby z dwoma miejscami po przecinku, daty w odpowiednim i oczekiwanym formacie lub waluty).
+        </p>
+
+        <div class="video-responsive">
+            <video controls poster="../img/poster/poster.svg" preload="auto">
+                <source src="./static/ti-lab03-format-data.mp4" type="video/mp4">
+                Twoja przeglądarka nie obsługuje wideo.
+            </video>
+        </div>
+
+        <h2>Tutorial: Formuły</h2>
+
+        <p>
+            Formuły to wyrażenia wykonujące obliczenia na danych w arkuszu. Formuła
+            zawsze zaczyna się od znaku równości (<strong>=</strong>). Można używać wbudowanych funkcji (np.
+            <strong>SUM()</strong>)
+            oraz operatorów matematycznych (np. <strong>+</strong>, <strong>-</strong>, <strong>*</strong>,
+            <strong>/</strong>).
+            <br>Wstawienie:
+        </p>
+        <pre><code class="language-plaintext hljs">=SUM(C3:C5)</code></pre>
+        <p>
+            Sumuje wartości w komórkach od C3 do C5.
+        </p>
+
+        <div class="video-responsive">
+            <video controls poster="../img/poster/poster.svg" preload="auto">
+                <source src="./static/ti-lab03-avg.mp4" type="video/mp4">
+                Twoja przeglądarka nie obsługuje wideo.
+            </video>
+        </div>
+
+        <h2>Tutorial: Funkcja COUNTIF()</h2>
+
+        <p>
+            Funkcja <strong>COUNTIF()</strong> zlicza komórki w danym zakresie, które spełniają określone z góry
+            kryteria.
+            <br>Składnia:
+        </p>
+        <pre><code class="language-plaintext hljs">COUNTIF(zakres; kryteria)</code></pre>
+        <p>
+            Przykład:
+        </p>
+        <pre><code class="language-plaintext hljs">COUNTIF(C2:C5; ">2")</code></pre>
+        <p>
+            Zlicza, ile razy w zadanym zakresie od C2 do C5 wynik jest większy od 2.
+        </p>
+
+        <div class="video-responsive">
+            <video controls poster="../img/poster/poster.svg" preload="auto">
+                <source src="./static/ti-lab03-countif.mp4" type="video/mp4">
+                Twoja przeglądarka nie obsługuje wideo.
+            </video>
+        </div>
+
+        <h2>Tutorial: Tworzenie wykresów</h2>
+
+        <p>
+            Zaznacz dane, które chcesz zaprezentować na wykresie. Kliknij
+            <strong>Wstaw</strong> w górnym obszarze menu, a następnie wybierz <strong>Wykres</strong>.
+            Później, w <strong>Edytorze wykresów</strong> po prawej stronie, po prostu wybierz typ
+            odpowiadającego ci wykresu i dodatkowo dostosuj jego ogólny wygląd.
+        </p>
+
+        <div class="video-responsive">
+            <video controls poster="../img/poster/poster.svg" preload="auto">
+                <source src="./static/ti-lab03-create-figure.mp4" type="video/mp4">
+                Twoja przeglądarka nie obsługuje wideo.
+            </video>
+        </div>
+
+        <h2>Tutorial: Funkcja IF()</h2>
+
+        <p>
+            Funkcja <strong>IF()</strong> zwraca jedną wartość, jeśli dany zadeklarowany warunek logiczny jest
+            spełniony, oraz inną docelową wartość, jeśli ten nie jest spełniony.
+            <br>Składnia:
+        </p>
+        <pre><code class="language-plaintext hljs">IF(warunek; wartość_jeśli_prawda; wartość_jeśli_fałsz)</code></pre>
+        <p>
+            Przykład z życia:
+        </p>
+        <pre><code class="language-plaintext hljs">=IF(C3>2; "Zal"; "Brak zal")</code></pre>
+        <p>
+            Jeżeli wartość wskazana w komórce C3 jest wyższa niż 2, nastąpi zwrócenie "Zal", w przeciwnym razie wpisze
+            po prostu "Brak zal".
+        </p>
+
+        <div class="video-responsive">
+            <video controls poster="../img/poster/poster.svg" preload="auto">
+                <source src="./static/ti-lab03-if.mp4" type="video/mp4">
+                Twoja przeglądarka nie obsługuje wideo.
+            </video>
+        </div>
+
+        <p>Zwróć uwagę, że wystarczy wprowadzić formułę do jednej komórki, a następnie przeciągnąć ją do pozostałych a
+            formuła dostosuje się do każdej komórki.</p>
+
+        <h2>Zadanie 1: Rekordy biegowe (wprowadzanie i edycja danych)</h2>
+
+        <p>
+            <strong>Dane:</strong> Lista 10 zawodników, ich imiona, nazwiska i czasy uzyskane w biegu na 100 metrów.
+        </p>
+        <pre><code class="language-plaintext hljs">Imię;Nazwisko;Czas (sekundy)
+Jan;Kowalski;10,5
+Anna;Nowak;11,2
+Piotr;Wiśniewski;10,8
+Maria;Dąbrowska;11,5
+Andrzej;Lewandowski;10,9
+Katarzyna;Wójcik;11,1
+Tomasz;Kamiński;10,7
+Magdalena;Kowalczyk;11,4
+Marek;Zieliński;11,0
+Ewa;Szymańska;11,3</code></pre>
+        <p>
+            <strong>Polecenie:</strong> Utwórz nowy arkusz i wprowadź dane do nowego arkusza.
+            Użyj klawiszy Enter (przenosi do następnego wiersza), Tab (przenosi do następnej kolumny)
+            i F2 (edytuj komórkę) do nawigacji i edycji danych.
+        </p>
+
+        <h2>Zadanie 2: Analiza wyników skoku w dal (formatowanie danych)</h2>
+
+        <p>
+            <strong>Dane:</strong> Wyniki 15 zawodników w skoku w dal (w metrach).
+        </p>
+        <pre><code class="language-plaintext hljs">Imię;Nazwisko;Wynik (metry)
+Jan;Kowalski;6,85
+Anna;Nowak;7,12
+Piotr;Wiśniewski;6,98
+Maria;Dąbrowska;7,25
+Andrzej;Lewandowski;6,78
+Katarzyna;Wójcik;7,05
+Tomasz;Kamiński;7,30
+Magdalena;Kowalczyk;6,92
+Marek;Zieliński;7,18
+Ewa;Szymańska;7,20
+Krzysztof;Jankowski;6,88
+Alicja;Mazur;7,00
+Paweł;Krawczyk;7,35
+Beata;Gajewska;6,95
+Adam;Rutkowski;7,22</code></pre>
+        <p>
+            <strong>Polecenie:</strong> Utwórz nowy arkusz i wprowadź dane. Sformatuj komórki, aby
+            wyświetlały wyniki z dokładnością do dwóch miejsc po przecinku. Zastosuj
+            formatowanie warunkowe, aby wyróżnić wyniki powyżej 7 metrów.
+        </p>
+
+        <h2>Zadanie 3: Obliczanie BMI (podstawowe funkcje)</h2>
+
+        <p>
+            <strong>Dane:</strong> Lista 20 osób, ich waga (w kilogramach) i wzrost (w metrach).
+        </p>
+        <pre><code class="language-plaintext hljs">Imię;Nazwisko;Waga (kg);Wzrost (m)
+Jan;Kowalski;80;1,80
+Anna;Nowak;65;1,65
+Piotr;Wiśniewski;90;1,85
+Maria;Dąbrowska;70;1,70
+Andrzej;Lewandowski;85;1,90
+Katarzyna;Wójcik;60;1,60
+Tomasz;Kamiński;75;1,75
+Magdalena;Kowalczyk;68;1,68
+Marek;Zieliński;95;1,95
+Ewa;Szymańska;72;1,72
+Krzysztof;Jankowski;88;1,88
+Alicja;Mazur;63;1,63
+Paweł;Krawczyk;92;1,92
+Beata;Gajewska;67;1,67
+Adam;Rutkowski;82;1,82
+Karolina;Sokołowska;58;1,58
+Rafał;Pawlak;98;1,98
+Agata;Lis;78;1,78
+Michał;Woźniak;83;1,83
+Sylwia;Kozłowska;69;1,69</code></pre>
+        <p>
+            <strong>Polecenie:</strong> Utwórz nowy arkusz i wprowadź dane. Użyj formuły do obliczenia BMI
+            dla każdej osoby (BMI = waga / wzrost^2). Oblicz średnie BMI dla całej grupy.
+        </p>
+
+        <h2>Zadanie 4: Wizualizacja postępów (tworzenie wykresów)</h2>
+
+        <p>
+            <strong>Dane:</strong> Miesięczne uśrednione wyniki wybranego zawodnika w pływaniu na 50 metrów.
+        </p>
+        <pre><code class="language-plaintext hljs">Miesiąc;Czas (sekundy)
+Styczeń;32,5
+Luty;31,8
+Marzec;31,2
+Kwiecień;30,9
+Maj;30,5
+Czerwiec;30,1
+Lipiec;29,8
+Sierpień;29,5
+Wrzesień;29,2
+Październik;29,0
+Listopad;28,8
+Grudzień;28,5</code></pre>
+        <p>
+            <strong>Polecenie:</strong> Utwórz nowy arkusz i wprowadź dane. Utwórz wykres liniowy, aby przedstawić
+            postępy zawodnika w czasie. Dostosuj wygląd wykresu, dodając tytuł
+            (np. "Postępy w pływaniu na 50 metrów") i etykiety osi (oś X: "Miesiąc", oś Y: "Czas (sekundy)").
+        </p>
+
+        <h2>Zadanie 5: Porównanie wyników drużynowych (wykresy porównawcze)</h2>
+
+        <p>
+            <strong>Dane:</strong> Kompletne wyniki reprezentujące poszczególne trzy drużyny w ramach piłkarskiego
+            turnieju szkolnego (liczone poprzez wprowadzanie sumarycznych zdobytych celnych strzałów po każdej
+            stronie podanej w meczu).
+        </p>
+        <pre><code class="language-plaintext hljs">Mecz;Real Madryt;FC Barcelona;Atletico Madryt
+Mecz 1;3;1;2
+Mecz 2;2;4;0
+Mecz 3;1;2;3
+Mecz 4;4;0;1
+Mecz 5;0;3;2
+Mecz 6;2;1;4
+Mecz 7;3;2;0
+Mecz 8;1;4;3
+Mecz 9;4;0;2
+Mecz 10;2;3;1</code></pre>
+        <p>
+            <strong>Polecenie:</strong> Utwórz nowy arkusz i wprowadź dane. Utwórz wykres kolumnowy, aby porównać wyniki
+            drużyn. Dodaj tytuł, legendę i dostosuj kolory, aby wykres był czytelny.
+        </p>
+
+        <h2>Zadanie 6: Analiza frekwencji na zajęciach Anatomii (funkcje logiczne)</h2>
+
+        <p>
+            <strong>Dane:</strong> Ujednolicona lista wszystkich studentów posiadających wpis oraz odnotowana
+            frekwencja w postaci danych: "O" (obecny) oraz "N" (nieobecny).
+        </p>
+        <pre><code class="language-plaintext hljs">Student;2023-10-02;2023-10-09;2023-10-16;2023-10-23;2023-10-30;2023-11-06;2023-11-13;2023-11-20;2023-11-27;2023-12-04
+Jan Kowalski;O;O;N;O;O;O;N;O;O;N
+Anna Nowak;O;O;O;O;O;O;O;O;O;O
+Piotr Wiśniewski;N;O;O;N;O;N;O;O;N;O
+Maria Dąbrowska;O;N;O;O;N;O;N;O;O;N
+Andrzej Lewandowski;O;O;N;N;O;O;N;N;O;O
+Katarzyna Wójcik;O;O;O;O;O;O;O;O;O;O
+Tomasz Kamiński;N;N;O;O;N;N;O;O;N;N
+Magdalena Kowalczyk;O;O;N;O;O;O;N;O;O;O
+Marek Zieliński;O;N;O;N;O;N;O;N;O;N
+Ewa Szymańska;O;O;O;O;N;O;O;O;O;N</code></pre>
+        <p>
+            <strong>Polecenie:</strong> Utwórz nowy arkusz i wprowadź dane. Użyj funkcji COUNTIF(), aby obliczyć
+            frekwencję każdego studenta. Jeżeli student posiada więcej niż 2 nieobecności, oznacz go jako "Do
+            skreślenia"
+        </p>
+
+        <h2>Podsumowanie</h2>
+        <p>
+            Arkusze kalkulacyjne to potężne narzędzie, które może być wykorzystywane do wielu celów. W sporcie możesz je
+            wykorzystywać do analizy wyników i tworzenia wykresów.
+        </p>
+
+        <a href="../index.html" class="glass-button" style="display: inline-flex; margin-top: 1rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            Strona główna
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tomasz Gądek. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+
+</html>

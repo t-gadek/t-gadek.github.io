@@ -182,6 +182,10 @@ li:hover {
 }
 
 /* --- KOD ŹRÓDŁOWY --- */
+pre {
+    margin-bottom: 1.5rem;
+}
+
 /* --- KOD ŹRÓDŁOWY (Jasny Glass) --- */
 pre code.hljs {
     display: block;
