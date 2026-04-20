@@ -1,0 +1,120 @@
+.diploma-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin: 2rem 0 1rem;
+}
+
+/* --- Single Tile --- */
+.diploma-tile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.75rem 1.25rem 2.25rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    text-decoration: none;
+    color: var(--text-main);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* --- Hover State (matching .glass-button:hover) --- */
+.diploma-tile:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.15);
+}
+
+/* --- Icon --- */
+.diploma-tile__icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(138, 43, 226, 0.12));
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.diploma-tile__icon svg {
+    width: 26px;
+    height: 26px;
+}
+
+/* --- Title --- */
+.diploma-tile__title {
+    font-size: 0.92rem;
+    font-weight: 600;
+    line-height: 1.45;
+    text-align: center;
+    color: var(--text-main);
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* --- Date --- */
+.diploma-tile__date {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.45);
+    padding: 0.25rem 0.65rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.02em;
+}
+
+/* --- PDF Badge --- */
+.diploma-tile__badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent), var(--accent-violet));
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+    pointer-events: none;
+}
+
+.diploma-tile:hover .diploma-tile__badge {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .diploma-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 540px) {
+    .diploma-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .diploma-tile {
+        padding: 1.25rem 1rem 1.75rem;
+    }
+}
