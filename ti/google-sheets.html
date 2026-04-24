@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Praktyczne zastosowanie Google Sheets dla studentów wychowania fizycznego. Organizacja turniejów, zarządzanie wynikami i rozliczenia trenera personalnego.">
+    <meta name="keywords"
+        content="technologia informacyjna, google sheets, arkusze kalkulacyjne, sport, wf, trener personalny">
+    <meta name="author" content="Tomasz Gądek">
+    <title>TI | Google Sheets - Zastosowania w sporcie</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+</head>
+
+<body>
+    <div class="glass-container">
+        <h1>Technologia Informacyjna</h1>
+        <p><strong>Laboratorium 4:</strong> Google Sheets.</p>
+
+        <h2>Wprowadzenie</h2>
+        <p>
+            Praca nauczyciela WF, trenera czy organizatora zawodów to nie tylko bezpośredni kontakt z zawodnikami, ale
+            też mnóstwo "papierkowej" roboty.
+            <strong>Google Sheets</strong> to Twój osobisty, wirtualny asystent, który automatycznie przeliczy stawki za
+            treningi personalne, błyskawicznie wskaże najszybszego sprintera w klasie i wyłoni zwycięzców turnieju
+            piłkarskiego.
+            Narzędzia informatyczne oszczędzają Twój czas, pozwalając Ci skupić się na tym, co najważniejsze – na
+            sporcie.
+        </p>
+
+        <h2>Cel laboratorium</h2>
+        <p>
+            Dowiesz się, jak zautomatyzować codzienną pracę trenera i organizatora zawodów. Nauczysz się blokować
+            komórki w formułach (adresacja bezwzględna). Przećwiczysz sortowanie i filtrowanie list zawodników.
+            Zbudujesz powiązane ze sobą arkusze wyników.
+        </p>
+
+        <h2>Zadanie 1: Karta pracy trenera personalnego</h2>
+        <p>
+            Jako trener personalny, musisz sprawnie zarządzać rozliczeniami ze swoimi podopiecznymi.
+            Obecnie prowadzisz 3 stałych klientów, z których każdy trenuje w innym trybie: jeden codziennie, drugi raz w
+            tygodniu, a trzeci wpada na salę sporadycznie.
+        </p>
+        <p>
+            Przygotuj arkusz w taki sposób, aby każdy klient posiadał swoją własną sekcję składającą się z dwóch kolumn:
+            <strong>daty treningu</strong> oraz <strong>liczby przepracowanych godzin</strong>.
+            W efekcie Twój arkusz będzie posiadał 6 kolumn z danymi (np. kolumna A – data, kolumna B – godziny dla
+            pierwszego klienta, kolumna C – data, kolumna D – godziny dla drugiego klienta itd.).
+        </p>
+        <p>
+            W pracy trenera lista danych ciągle rośnie. Zamiast co chwilę poprawiać formuły (np. zmieniać
+            <strong>SUMA(A2:A10)</strong> na <strong>SUMA(A2:A100)</strong>), Google Sheets pozwala na
+            stosowanie tzw. <strong>zakresów otwartych</strong>. Zapis <strong>A2:A</strong> (bez cyfry na
+            końcu) oznacza: "weź wszystko od drugiego wiersza aż do samego dołu arkusza".
+        </p>
+        <p>
+            Przygotuj <strong>trzy oddzielne podsumowania kosztów</strong> (po jednym dla każdego klienta).
+            Wykorzystaj mechanizm zakresów otwartych (np.
+            <strong>=SUMA(B3:B) * 100</strong>), aby Twoje formuły
+            automatycznie doliczały każdą nową sesję wpisaną do arkusza w przyszłości. Pozwoli Ci to na prowadzenie
+            rozliczeń "w nieskończoność" bez żadnych poprawek w strukturze pliku.
+        </p>
+        <p>Oto przykładowy rezultat. Pamiętaj, że wprowadzenie nowych danych powinno automatycznie aktualizować
+            podsumowania.</p>
+
+        <img src="./static/ti-lab04-job.png" alt="Dynamiczna karta pracy trenera">
+
+        <h2>Zadanie 2: Tabela skoczków narciarskich</h2>
+        <p>
+            Podczas zawodów w skokach narciarskich gromadzisz dziesiątki pomiarów. Przeanalizowanie ich "na oko" i
+            ręczne
+            szukanie lidera bywa uciążliwe i sprzyja pomyłkom. Twoim zadaniem jest przepisanie poniższych danych do
+            arkusza. Zrób to dokładnie w takiej kolejności, w jakiej są podane (dane są celowo nieposortowane).
+        </p>
+
+        <pre><code class="language-csv">Zawodnik;Kraj;Skok 1 [m];Skok 2 [m];Nota końcowa
+Ryoyu Kobayashi;JPN;138,5;134,0;282,1
+Stefan Kraft;AUT;139,0;140,0;310,5
+Anze Lanisek;SLO;132,5;131,0;265,4
+Andreas Wellinger;GER;135,0;136,5;290,8
+Jan Hoerl;AUT;128,0;132,0;255,2
+Pius Paschke;GER;125,5;129,5;248,9
+Karl Geiger;GER;131,0;130,5;268,2
+Marius Lindvik;NOR;134,5;133,0;275,6
+Gregor Deschwanden;SUI;127,0;128,5;240,1
+Peter Prevc;SLO;130,0;132,5;262,3
+Timi Zajc;SLO;126,0;124,5;235,8
+Lovro Kos;SLO;133,0;134,5;278,9
+Johann Andre Forfang;NOR;132,0;129,0;259,4
+Manuel Fettner;AUT;129,5;131,5;260,7
+Daniel Tschofenig;AUT;124,0;127,0;230,5
+Kamil Stoch;POL;126,5;125,0;238,2
+Piotr Żyła;POL;123,5;128,0;232,1
+Dawid Kubacki;POL;121,0;122,5;220,4
+Halvor Egner Granerud;NOR;118,5;120,0;215,7
+Aleksander Zniszczoł;POL;122,0;125,5;228,9</code></pre>
+
+        <p>
+            Po wprowadzeniu wszystkich 20 wierszy, zamień te dane w profesjonalną bazę! Zaznacz obszar z wartościami i z
+            górnego menu wybierz opcję <strong>Formatuj -> Przekonwertuj na tabelę</strong>.
+        </p>
+        <p>
+            Następnie wykorzystaj funkcję sortowania tabeli, aby uszeregować zawodników według <strong>noty
+                końcowej</strong> (od największej do najmniejszej).
+        </p>
+        <p>
+            <strong>Podpowiedź:</strong> Aby to zrobić, kliknij małą ikonę strzałki (filtrowania) w nagłówku kolumny
+            "Nota końcowa" i wybierz opcję <strong>Sortuj Z-A</strong>. Dzięki temu od razu zweryfikujesz wyniki i
+            zobaczysz, kto stanął na podium. Na koniec, pod stworzoną tabelą, wypisz ręcznie imiona i nazwiska trzech
+            najlepszych skoczków tych zawodów.
+        </p>
+        <p>Oto przykładowy rezultat:</p>
+        <img src="./static/ti-lab04-ski-table.png" alt="Sformatowana tabela skoczków">
+
+        <h2>Zadanie 3: Wyniki biegu na 60m</h2>
+        <p>
+            Na lekcji WF sprawdzasz czasy swoich uczniów w sprincie na 60 metrów. Chcesz szybko obliczyć i pokazać
+            młodzieży, ile sekund stracili do najszybszego zawodnika. Aby zrobić to sprawnie, musisz zrozumieć
+            <strong>mechanizm blokowania komórek</strong>, czyli różnicę między adresacją względną a bezwzględną.
+        </p>
+
+        <p>
+            Wyobraź sobie, że symbol dolara (<code>$</code>) to solidna kłódka. To, co stoi bezpośrednio po nim, zostaje
+            „zamrożone” i nie zmienia się podczas kopiowania formuły:
+        </p>
+        <ul>
+            <li><strong>A1</strong> – <strong>Pełna swoboda:</strong> Przeciągasz w dół? Zmienia się wiersz (A2, A3...).
+                <br>
+                Przeciągasz w bok? Zmienia się kolumna(B1,C1...).
+            </li>
+            <li><strong>$A1</strong> – <strong>Zablokowana kolumna:</strong> Zawsze będziemy patrzeć na kolumnę A, ale
+                wiersze będą <br>
+                się zmieniać przy przeciąganiu w dół.
+            </li>
+            <li><strong>A$1</strong> – <strong>Zablokowany wiersz:</strong> Zawsze będziemy patrzeć na 1. wiersz, ale
+                kolumny mogą <br>
+                się zmieniać przy przeciąganiu w bok.
+            </li>
+            <li><strong>$A$1</strong> – <strong>Pełna blokada (adresacja bezwzględna):</strong> Komórka jest całkowicie
+                zamrożona. Niezależnie gdzie <br>
+                przeciągniesz formułę, ona zawsze będzie<br>
+                brała wartość z tego samego miejsca.
+            </li>
+        </ul>
+        <p><strong>Eksperymenty przygotowawcze (wykonaj w nowym arkuszu):</strong></p>
+        <p>
+            Najpierw przygotuj prostą "mapę wartości", aby na własne oczy zobaczyć, co się dzieje. Wpisz:
+        </p>
+        <ul>
+            <li>W komórki <strong>A1, B1, C1</strong> kolejno liczby: <strong>1</strong>, <strong>2</strong>,
+                <strong>3</strong>.
+            </li>
+            <li>W komórki <strong>A2, A3</strong> kolejno liczby: <strong>10</strong>, <strong>20</strong>.</li>
+        </ul>
+
+        <img src="./static/ti-lab04-digits.png" alt="Komórki z liczbami">
+
+        <p>
+            Teraz przejdź do zupełnie innego, pustego miejsca arkusza, np. do komórki <strong>E1</strong>. Wpisz w niej
+            prostą formułę: <strong>=A1</strong>. To polecenie mówi arkuszowi: "pobierz wartość z komórki A1".
+            Naszym celem jest sprawdzenie, jak to odwołanie będzie się zachowywać, gdy zaczniemy kopiować (przeciągać)
+            komórkę E1 w różne strony.
+        </p>
+
+        <img src="./static/ti-lab04-digits-shift.png" alt="Przeciąganie formuły">
+
+        <p>
+            Przetestuj cztery rodzaje kłódek (dolarów). Za każdym razem wpisz odpowiednią formułę w komórkę
+            <strong>E1</strong> i przeciągnij ją o dwie komórki w prawo oraz o dwie w dół:
+        </p>
+        <ul>
+            <li>Test <strong>=A1</strong> (Brak kłódek): Przeciągnij w prawo → w nowych komórkach
+                zobaczysz <strong>2</strong> i <strong>3</strong>. Przeciągnij w dół → zobaczysz <strong>10</strong> i
+                <strong>20</strong>. Formuła swobodnie „spaceruje” po Twojej mapie.
+            </li>
+            <li>Test <strong>=$A1</strong> (Kłódka przy kolumnie): Przeciągnij w prawo → wszędzie
+                zobaczysz
+                <strong>1</strong> (bo kolumna A jest zamrożona). Przeciągnij w dół → zobaczysz <strong>10</strong> i
+                <strong>20</strong> (bo wiersze nadal się zmieniają).
+            </li>
+            <li>Test <strong>=A$1</strong> (Kłódka przy wierszu): Przeciągnij w dół → wszędzie
+                zobaczysz
+                <strong>1</strong> (bo wiersz pierwszy jest zamrożony). Przeciągnij w bok → zobaczysz <strong>2</strong>
+                i <strong>3</strong> (bo kolumny nadal "płyną").
+            </li>
+            <li>Test <strong>=$A$1</strong> (Pełna blokada): Przeciągnij gdziekolwiek. Zawsze zobaczysz
+                <strong>1</strong>. Formuła jest na sztywno "przyspawana" do komórki A1.
+            </li>
+        </ul>
+        <p>
+            <em>Wskazówka: Możesz szybko przełączać te tryby, naciskając klawisz <strong>F4</strong> po zaznaczeniu
+                adresu w formule.</em>
+        </p>
+
+        <p>
+            Wprowadź poniższe wyniki do arkusza i stwórz formułę wyliczającą różnicę czasu. Pamiętaj o zablokowaniu
+            komórki z czasem lidera za pomocą dolara. Dzięki temu Twoja formuła bezbłędnie przeliczy stratę dla każdego
+            z
+            uczniów, gdy przeciągniesz ją na dół tabeli!
+        </p>
+        <img src="./static/ti-lab04-diff.png" alt="Różnice w wynikach biegu">
+
+        <h2>Zadanie 4: Orlik Cup</h2>
+        <p>
+            Organizujesz osiedlowy turniej piłkarski <strong>Orlik Cup</strong>. W jednym arkuszu ("brudnopisie")
+            prowadzisz pełny zapis wszystkich meczów grupowych i notujesz punkty na bieżąco.
+            Jednak na wydruku dyplomów chcesz umieścić wyłącznie oficjalny, schludny ranking 3
+            najlepszych drużyn.
+        </p>
+        <p>
+            Nie kopiuj wyników ręcznie! Zamiast tego naucz się łączyć różne arkusze. Wystarczy podać nazwę arkusza
+            zrodłowego, dodać wykrzyknik i wskazać komórkę (np. <code>Arkusz1!A1</code>).
+        </p>
+        <p><strong>Twoje 1 zadanie</strong>: W pierwszej karcie arkusza przygotuj główną tabelę z punktacją grupową:</p>
+
+        <img src="./static/ti-lab04-orlik-cup.png" alt="Tabela Orlik Cup">
+
+        <p><strong>Twoje 2 zadanie</strong>: Utwórz nową, oddzielną kartę na dole (klikając ikonę "+") i w niej, za
+            pomocą odwołań, dynamicznie "wyciągnij" tylko nazwy drużyn z miejsc na podium.</p>
+
+        <h2>Podsumowanie</h2>
+        <p>
+            Potrafisz już nie tylko gromadzić wyniki sportowe, ale też błyskawicznie je przetwarzać.
+        </p>
+
+        <a href="../index.html" class="glass-button" style="display: inline-flex; margin-top: 1rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            Strona główna
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tomasz Gądek. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+
+</body>
+
+</html>
