@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Laboratorium z testów manualnych. Nauczysz się przeprowadzać ręczne testy aplikacji, identyfikować błędy i weryfikować poprawność implementacji logiki na przykładzie gry w szachy.">
+    <meta name="keywords" content="testowanie, testy manualne, q&a, tijo, jakość oprogramowania">
+    <meta name="author" content="Tomasz Gądek">
+    <title>TiJO | Testy manualne</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+    <div class="glass-container">
+        <h1>Testowanie i Jakość Oprogramowania</h1>
+        <p><strong>L#09:</strong> Testy manualne.</p>
+
+        <h2>Wprowadzenie</h2>
+        <p>
+            <strong>Testy manualne</strong> to proces testowania oprogramowania, w którym tester ręcznie wykonuje
+            testy, aby sprawdzić, czy aplikacja zachowuje się zgodnie z oczekiwaniami. W testach
+            manualnych tester wykonuje konkretne kroki, aby zweryfikować funkcjonalność aplikacji,
+            identyfikować błędy i oceniać ogólną jakość produktu.
+        </p>
+
+        <h2>Cel</h2>
+        <p>
+            Głównym celem laboratorium jest zapoznanie się z procesem testowania manualnego w praktyce.
+            Nauczysz się weryfikować działanie aplikacji, analizować jej zachowanie. Dodatkowo przeprowadzisz
+            implementację brakujących funkcji na podstawie analizy wyników testów manualnych.
+        </p>
+
+        <h2>Aplikacja Chess</h2>
+
+        <p>
+            Pobierz aplikację <a href="./source-code/chess/flask-chess-app.zip" download="chess.zip">chess.zip</a> i
+            dobrze przeanalizuj kod. Po uruchomieniu aplikacji gra
+            będzie dostępna pod adresem <a href="http://localhost:5000/" target="_blank">http://localhost:5000/</a>.
+        </p>
+
+        <p><strong>Jak działa gra?</strong></p>
+
+        <p>
+            Z pola typu <strong>select</strong> wybieramy figurkę, która nas interesuje. Inicjujemy ruch poprzez
+            zaznaczenie figury (klikamy na figurkę).
+        </p>
+
+        <img src="./img/tijo-lab09-move-before.png" alt="move before">
+
+        <p>
+            Następnie klikamy w pole docelowe, gdzie życzymy sobie, aby figurka się przemieściła.
+        </p>
+
+        <img src="./img/tijo-lab09-move-after.png" alt="move after">
+
+        <h2>Twoje zadanie</h2>
+
+        <p>
+            Bardzo proszę dokończyć implementację logiki ruchów figurek na planszy szachowej (ruchy figur
+            szachowych: <a href="https://pl.wikipedia.org/wiki/Zasady_gry_w_szachy" target="_blank">wikipedia</a>).
+            Wzorujemy się na implementacji, która już istnieje. Aplikacja
+            frontendowa została już zaimplementowana. Ruchy figur powinny być testowane manualnie.
+        </p>
+
+        <p>
+            Po zakończonej implementacji zastanów się nad refaktoryzacją kodu. Zwróć uwagę na wielokrotne instrukcje
+            warunkowe realizujące poszczególne ruchy. Czy da się zaimplementować to inaczej? (<em>Podpowiedź:
+                Wykorzystaj polimorfizm</em>).
+        </p>
+
+
+        <h2>Podsumowanie</h2>
+        <p>
+            Testy manualne są kluczowym elementem zapewniania jakości oprogramowania, zwłaszcza na wczesnych etapach
+            rozwoju oprogramowania lub przy interfejsach użytkownika, które ciężko w pełni zautomatyzować. Podczas
+            testów wykonywanych ręcznie możemy dostrzec problemy z perspektywy użytkownika końcowego, których nie
+            dostrzeglibyśmy podczas analizy kodu. Pozwalają one również na identyfikację błędów, które nie zostały
+            wykryte podczas testów automatycznych.
+        </p>
+
+        <a href="../index.html" class="glass-button" style="display: inline-flex; margin-top: 1rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                style="margin-right: 0.5rem;">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            Strona główna
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tomasz Gądek. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+
+</html>
