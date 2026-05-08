@@ -88,8 +88,8 @@ body {
     text-align: left;
     border-bottom: 1px solid var(--glass-border);
     color: var(--text-main);
-    white-space: nowrap;
-    /* Zapobiega łamaniu tekstu, co wymusza szerokość tabeli */
+    white-space: normal;
+    /* Pozwala na łamanie tekstu. Scrollbar pojawi się tylko poniżej min-width. */
 }
 
 /* --- WIDEO (Zaokrąglona Ramka) --- */
