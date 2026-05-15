@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Laboratorium z tworzenia przypadków testowych i zgłaszania błędów (Test Case & Bug Report).">
+    <meta name="keywords" content="testowanie, test case, bug report, tijo, trello, jakość oprogramowania">
+    <meta name="author" content="Tomasz Gądek">
+    <title>TiJO | Test Case & Bug Report</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+    <div class="glass-container">
+        <h1>Testowanie i Jakość Oprogramowania</h1>
+        <p><strong>L#11:</strong> Test Case & Bug Report.</p>
+
+        <h2>Wprowadzenie</h2>
+        <p>
+            <strong>Test Case (Przypadek Testowy)</strong> to dokument służący do weryfikacji, czy system w odpowiedzi
+            na konkretne akcje działa zgodnie z założeniami. Ułatwia systematyczne i powtarzalne testowanie.
+        </p>
+        <img src="./img/tijo-lab11-test-case.png" alt="test case">
+
+        <p>
+            <strong>Bug Report (Zgłoszenie Błędu)</strong> to raport opisujący niezgodność między działaniem faktycznym
+            a oczekiwanym. Precyzyjne zgłoszenie pozwala programiście sprawnie odtworzyć i usunąć usterkę.
+        </p>
+        <img src="./img/tijo-lab11-bug-report.png" alt="bug report">
+
+        <h2>Cel</h2>
+        <p>
+            Celem laboratorium jest zapoznanie się z procesem dokumentowania przypadków testowych
+            oraz tworzenia raportów o błędach z wykorzystaniem narzędzia Trello.
+        </p>
+
+        <h2>Zadanie - Test Case & Bug Reports (Trello)</h2>
+        <p>
+            Masz do dyspozycji dwie aplikacje w wersji DEV (do testowania) i PROD (jako dokumentacja referencyjna):
+        </p>
+
+        <ul>
+            <li>Aplikacja "Kalkulator": <a href="/app/tijo-calc/dev/index.html" target="_blank">DEV</a>, <a
+                    href="/app/tijo-calc/prod/index.html" target="_blank">PROD</a></li>
+            <li>Aplikacja "Portfolio": <a href="/app/tijo-portfolio/dev/index.html" target="_blank">DEV</a>, <a
+                    href="/app/tijo-portfolio/prod/index.html" target="_blank">PROD</a></li>
+        </ul>
+
+        <p>
+            Twoim pierwszym krokiem jest założenie konta w aplikacji <a href="https://trello.com"
+                target="_blank">Trello</a>.
+            Dla każdej aplikacji utwórz oddzielną tablicę, a następnie przeprowadź ich <strong>analizę
+                porównawczą</strong>
+            (wersja PROD stanowi bezbłędny wzorzec). Wszelkie zauważone różnice w działaniu są kluczem do sporządzenia
+            przypadków
+            testowych (<strong>Test Case</strong>) i na ich podstawie raportów błędów (<strong>Bug Reports</strong>).
+        </p>
+
+        <p>W każdej tablicy utwórz kolumny (jedna tablica = jeden projekt):</p>
+
+        <ul>
+            <li>TestCase - Kalkulator, 2 karty | Portfolio, 5 kart.</li>
+            <li>Zgłoszenia (BugReports) - Kalkulator, 2 karty | Portfolio, 5 kart.</li>
+            <li>Zgłoszenia w trakcie - Kolumna bez kart.</li>
+            <li>Zgłoszenia zweryfikowane - Kolumna bez kart.</li>
+        </ul>
+
+        <h2>Podsumowanie</h2>
+        <p>
+            Zrozumienie różnicy pomiędzy przypadkami testowymi a raportami błędów oraz umiejętność
+            ich rzetelnego dokumentowania są absolutnie niezbędne w pracy z zapewnieniem jakości.
+            Korzystanie z narzędzi do zarządzania pracą, takich jak Trello, ułatwia organizację procesu
+            testowego i usprawnia komunikację w zespole programistycznym.
+        </p>
+
+        <a href="../index.html" class="glass-button" style="display: inline-flex; margin-top: 1rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                style="margin-right: 0.5rem;">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            Strona główna
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tomasz Gądek. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+
+</html>
