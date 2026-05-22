@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Laboratorium z automatyzacji przeglądarek internetowych za pomocą Selenium i języka Python.">
+    <meta name="keywords" content="testowanie, selenium, automatyzacja, tijo, python, jakość oprogramowania">
+    <meta name="author" content="Tomasz Gądek">
+    <title>TiJO | Selenium</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+    <div class="glass-container">
+        <h1>Testowanie i Jakość Oprogramowania</h1>
+        <p><strong>L#12:</strong> Selenium.</p>
+
+        <h2>Wprowadzenie</h2>
+        <p>
+            <strong>Selenium</strong> to biblioteka języka Python służąca do automatyzacji przeglądarek internetowych.
+            Pozwala na sterowanie
+            przeglądarką, symulowanie działań użytkownika oraz testowanie aplikacji webowych.
+        </p>
+
+        <h3>Do czego wykorzystujemy Selenium?</h3>
+        <ul>
+            <li>Automatyzacja testów aplikacji webowych.</li>
+            <li>Symulowanie interakcji użytkownika z przeglądarką.</li>
+            <li>Testowanie kompatybilności stron na różnych przeglądarkach.</li>
+            <li>Web scraping (pobieranie danych ze stron internetowych).</li>
+            <li>Tworzenie botów do wykonywania powtarzalnych czynności online.</li>
+        </ul>
+
+        <h3>Co można testować przy pomocy Selenium?</h3>
+        <ul>
+            <li><strong>Formularze</strong>: Testowanie obsługi formularzy, wprowadzania danych i przesyłania.</li>
+            <li><strong>Nawigację</strong>: Klikanie w linki, sprawdzanie przekierowań.</li>
+            <li><strong>Elementy interfejsu</strong>: Widoczność przycisków, tekstów, ikon.</li>
+            <li><strong>Interakcje użytkownika</strong>: Scrollowanie, przeciąganie (drag and drop), alerty.</li>
+            <li><strong>Responsywność</strong>: Testy dla różnych rozdzielczości.</li>
+        </ul>
+
+        <h3>Instalacja potrzebnych paczek</h3>
+        <pre><code class="language-bash">pip install selenium webdriver-manager</code></pre>
+
+        <h3>Przydatne zasoby</h3>
+        <ul>
+            <li><a href="https://selenium-python.readthedocs.io/" target="_blank">Selenium with Python
+                    (dokumentacja)</a>.</li>
+        </ul>
+
+        <h2>Cel</h2>
+        <p>
+            Celem laboratorium jest zapoznanie się z biblioteką Selenium oraz procesem automatyzacji testów webowych w
+            języku Python.
+            Zdobędziesz praktyczne umiejętności pozwalające na tworzenie skryptów, które automatycznie weryfikują
+            działanie aplikacji
+            w przeglądarce, bazując na wcześniej przygotowanych przypadkach testowych.
+        </p>
+
+        <h2>Zadanie - Selenium</h2>
+        <p>
+            Na podstawie zaprezentowanych poniżej przykładów kodu napisz testy automatyczne dla aplikacji udostępnionych
+            na poprzednim laboratorium.
+            Wykorzystaj bibliotekę Selenium oraz język Python.
+        </p>
+        <p>
+            Twoim zadaniem będzie zaimplementowanie testów, które będą weryfikowały przypadki testowe oraz zgłoszone
+            błędy (bug reports).
+            Skup się na automatyzacji scenariuszy testowych, które zostały utworzone podczas poprzedniego laboratorium.
+        </p>
+        <ul>
+            <li>Przeanalizuj dostępne poniżej skrypty i uruchom je lokalnie.</li>
+            <li>Przeanalizuj swoje przypadki testowe i bug reporty z poprzednich zajęć.</li>
+            <li>Napisz testy automatyczne w Pythonie z użyciem Selenium, które pokrywają te przypadki.</li>
+            <li>Przetestuj swoje rozwiązanie (zweryfikuj, jak zachowują się testy po przełączeniu na środowisko DEV).
+            </li>
+        </ul>
+
+        <h2>Przykłady implementacji testów automatycznych</h2>
+        <p>Poniżej znajdziesz gotowe skrypty, które pomogą Ci zrozumieć podstawowe mechanizmy i rozpocząć pracę.</p>
+
+        <h3>Weryfikacja nagłówka strony</h3>
+        <p>Prosty test weryfikujący obecność i treść nagłówka <strong>H1</strong> na
+            przykładowej stronie.</p>
+        <pre><code class="language-python">import unittest
+import time
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+
+
+
+class TestWebPage(unittest.TestCase):
+    def setUp(self):
+        """
+        Inicjalizacja testu - uruchomienie przeglądarki Chrome
+        """
+        self.service = Service(ChromeDriverManager().install())
+        self.driver = webdriver.Chrome(service=self.service)
+
+    def test_page_heading(self):
+        """
+        Test sprawdzający obecność (assertIsNotNone) i zawartość (assertEqual) nagłówka na stronie
+        """
+        # Given
+        self.driver.get('https://example.com')
+
+        # When
+        heading = self.driver.find_element(By.TAG_NAME, 'h1')
+
+        # Then
+        self.assertIsNotNone(heading)
+        self.assertEqual(heading.text, "Example Domain")
+
+        # Zatrzymanie przeglądarki na 3 sekundy (do celów edukacyjnych)
+        time.sleep(3)
+
+    def tearDown(self):
+        """
+        Zakończenie testu - zamknięcie przeglądarki
+        """
+        self.driver.quit()
+
+if __name__ == '__main__':
+    unittest.main()</code></pre>
+
+        <h3>Obsługa formularza kalkulatora</h3>
+        <p>Test wprowadzający dane do formularza i weryfikujący wynik
+            działania kalkulatora.</p>
+        <pre><code class="language-python">import unittest
+import time
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+
+
+class TestCalculator(unittest.TestCase):
+    def setUp(self):
+        """
+        Inicjalizacja testu - uruchomienie przeglądarki Chrome i otwarcie strony kalkulatora
+        """
+        self.service = Service(ChromeDriverManager().install())
+        self.driver = webdriver.Chrome(service=self.service)
+        self.driver.get('https://tgadek.pl/app/tijo-calc/prod/index.html')
+
+    def test_addition(self):
+        """
+        Test sprawdzający działanie operacji dodawania w kalkulatorze
+        """
+        # Given
+        number1 = self.driver.find_element(By.ID, "number1")
+        number1.send_keys("1")
+        number2 = self.driver.find_element(By.ID, "number2")
+        number2.send_keys("2")
+
+        # When
+        self.driver.find_element(By.CSS_SELECTOR, "input[type='button']").click()
+
+        # Then
+        result = self.driver.find_element(By.ID, "result").text
+        self.assertEqual(result, "1 + 2 = 3")
+
+        # Zatrzymanie przeglądarki na 3 sekundy (do celów edukacyjnych)
+        time.sleep(3)
+
+    def tearDown(self):
+        """
+        Zakończenie testu - zamknięcie przeglądarki
+        """
+        self.driver.quit()
+
+
+if __name__ == '__main__':
+    unittest.main()</code></pre>
+
+        <h2>Podsumowanie</h2>
+        <p>
+            Automatyzacja testów za pomocą narzędzi takich jak Selenium znacznie przyspiesza proces weryfikacji
+            oprogramowania,
+            szczególnie przy powtarzalnych <strong>testach regresyjnych</strong> (testy weryfikujące, czy nowo
+            wprowadzony kod nie popsuł działających już funkcji).
+        </p>
+
+        <a href="../index.html" class="glass-button" style="display: inline-flex; margin-top: 1rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                style="margin-right: 0.5rem;">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            Strona główna
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tomasz Gądek. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+
+</html>
