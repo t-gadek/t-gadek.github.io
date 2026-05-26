@@ -364,3 +364,61 @@
     font-size: 0.8rem;
     color: var(--text-muted);
 }
+
+/* --- Footer --- */
+.cv-footer-rodo {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--glass-border);
+}
+
+.cv-footer-rodo p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.cv-footer__rodo {
+    font-size: 0.75rem !important;
+    line-height: 1.4;
+    color: #6b7280;
+}
+
+/* --- Print Styles dla cv-pdf.html --- */
+@media print {
+    body {
+        background: none;
+        color: #000;
+    }
+
+    .glass-container {
+        border: none;
+        box-shadow: none;
+        max-width: none;
+        padding: 0;
+    }
+
+    .cv-hero,
+    .cv-print-section {
+        page-break-inside: avoid;
+    }
+
+    .cv-pdf-links a {
+        text-decoration: underline;
+        color: #000;
+    }
+
+    .cv-footer-rodo {
+        border-top: 1px solid #ccc;
+        page-break-inside: avoid;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
