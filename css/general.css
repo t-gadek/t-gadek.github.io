@@ -5,8 +5,8 @@
     --accent: #6366f1;
     --accent-dark: #4f46e5;
     --accent-violet: #8a2be2;
-    --text-main: #1f2937;
-    --text-muted: #4b5563;
+    --text-main: #000000;
+    --text-muted: #000000;
     --code-bg: #1e1e2e;
 }
 
@@ -68,11 +68,6 @@ body {
 .table-wrapper::-webkit-scrollbar-thumb {
     background: var(--glass-border);
     border-radius: 10px;
-    transition: background 0.3s;
-}
-
-.table-wrapper::-webkit-scrollbar-thumb:hover {
-    background: var(--accent);
 }
 
 .glass-table {
@@ -131,13 +126,7 @@ li {
     padding: 0.8rem 1.2rem;
     border-radius: 12px;
     border: 1px solid var(--glass-border);
-    transition: transform 0.2s ease, background 0.2s ease;
     color: var(--text-muted);
-}
-
-li:hover {
-    transform: translateX(5px);
-    background: rgba(255, 255, 255, 0.3);
 }
 
 /* --- PRZYCISKI --- */
@@ -161,18 +150,11 @@ li:hover {
     text-decoration: none;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    transition: all 0.3s ease;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-}
-
-.glass-button:hover {
-    background: rgba(255, 255, 255, 0.35);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.15);
 }
 
 .glass-button.selected {

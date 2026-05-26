@@ -1,0 +1,366 @@
+/* ==========================================================================
+   CV Styles (BEM Methodology)
+   ========================================================================== */
+
+/* --- Wrapper & Layout --- */
+.cv-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Sekcja Hero --- */
+.cv-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .cv-hero {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.cv-hero__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+@media (min-width: 768px) {
+    .cv-hero__left {
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+.cv-hero__image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--glass-border);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    margin: 0 0 1rem 0;
+    display: block;
+}
+
+.cv-hero__title {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, var(--accent-dark), var(--accent-violet));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cv-hero__role {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Contact Links --- */
+.cv-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .cv-contact {
+        justify-content: flex-start;
+    }
+}
+
+.cv-contact__link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.cv-contact__icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+/* --- Hero Right / Skills Summary --- */
+.cv-hero__right {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.cv-hero__subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--accent-dark);
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 0.5rem;
+}
+
+/* --- Skills Tags --- */
+.cv-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.cv-skills__tag {
+    background: var(--accent);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.2);
+}
+
+.cv-skills__tag--lang {
+    background: var(--accent-violet);
+}
+
+/* --- Nawigacja CV --- */
+.cv-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--glass-border);
+    padding-bottom: 1rem;
+}
+
+.cv-nav__btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--glass-border);
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cv-nav__icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.cv-nav__btn:not(.cv-nav__btn--active):hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.cv-nav__btn--active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+@media (max-width: 768px) {
+    .cv-nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cv-nav__btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* --- Sekcje CV --- */
+.cv-section {
+    display: none;
+}
+
+.cv-section--active {
+    display: block;
+}
+
+/* --- Timeline --- */
+.cv-timeline {
+    /* Container for timeline items if needed */
+}
+
+.cv-timeline__item {
+    position: relative;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cv-timeline__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed var(--glass-border);
+    padding-bottom: 1rem;
+}
+
+.cv-timeline__title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.cv-timeline__subtitle {
+    color: var(--accent-dark);
+    font-weight: 600;
+    font-size: 1.15rem;
+    display: block;
+    margin-top: 0.3rem;
+}
+
+.cv-timeline__date {
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--text-muted);
+    padding: 0.4rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.cv-timeline__body {
+    /* Body of timeline item */
+}
+
+/* Helpers for timeline body elements to avoid inline styles */
+.cv-timeline__heading {
+    font-size: 1.15rem;
+    color: var(--accent-dark);
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cv-timeline__text {
+    margin-bottom: 0.5rem;
+}
+
+.cv-timeline__text--compact {
+    margin-bottom: 0.2rem;
+}
+
+.cv-timeline__text--large-bottom {
+    margin-bottom: 1rem;
+}
+
+.cv-timeline__text--no-bottom {
+    margin-bottom: 0;
+}
+
+.cv-timeline__label {
+    color: var(--text-main);
+    font-weight: bold;
+}
+
+/* Lists inside timeline / cv-section */
+.cv-list {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.cv-list__item {
+    color: var(--text-main);
+    border: none;
+    background: none;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    transform: none;
+}
+
+.cv-list__item:hover {
+    background: none;
+    transform: none;
+}
+
+/* --- Tagi --- */
+.cv-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cv-tags__item {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 6px rgba(31, 38, 135, 0.05);
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: var(--accent-dark);
+}
+
+/* --- Certyfikaty --- */
+.cv-certs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.cv-certs__card {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--glass-border);
+    padding: 1.2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cv-certs__title {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-main);
+    line-height: 1.3;
+}
+
+.cv-certs__issuer {
+    color: var(--accent-dark);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.cv-certs__meta {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
