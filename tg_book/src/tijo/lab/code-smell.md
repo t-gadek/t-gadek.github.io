@@ -61,7 +61,7 @@ wyszukiwanych zbiorów. Funkcja powinna zwracać listę składającą się z
 pojedynczych elementów reprezentujących wyszukiwane zbiory.
 
 | PARAMETRY FUNKCJI LOTTERY | EFEKT DZIAŁANIA | REZULTAT |
-|----|----|----|
+|:---|:---|:---|
 | `[1, 1, 3, 2, 2, 2, 4, 5]`, `2` | `[`**`1`**`, `**`1`**`, 3, 2, 2, 2, 4, 5]` | `[1]` |
 | `[1, 1, 2, 2, 2, 3, 4, 5]`, `3` | `[1, 1, `**`2`**`, `**`2`**`, `**`2`**`, 3, 4, 5]` | `[2]` |
 | `[1, 2, 2, 2, 3, 4, 5, 5, 1]`, `2` | `[`**`1`**`, 2, 2, 2, 3, 4, `**`5`**`, `**`5`**`, `**`1`**`]` | `[1, 5]` |
@@ -85,7 +85,7 @@ w specyfikacji technicznej.
 Specyfikacja techniczna pojazdu księżycowego:
 
 | PRZESTRZEŃ PRACY | ZACHOWANIE W PRZESTRZENI 2D |
-|----|----|
+|:---|:---|
 | Jazda do przodu. | Możliwa o dowolną liczbę pól. |
 | Jazda do tyłu. | Możliwa o dowolną liczbę pól. |
 | Skręt w lewo. | Brak tradycyjnego mechanizmu skrętu. |

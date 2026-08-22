@@ -3,7 +3,7 @@
 Laboratoria obejmują praktyczne ćwiczenia z asercji, testowania jednostkowego, TDD, wzorców projektowych, testów manualnych, selenium, a także QA i AI-driven development. Każde ćwiczenie ma wersję PDF oraz wersję przerobioną do formatu Markdown.
 
 | Nr | Temat | Materiały |
-|---:|------|-----------|
+|:---|:---|:---|
 | L#01 | Asercja, Arrange-Act-Assert (AAA) | [Materiały](assert-and-aaa.md)
 | L#02 | Framework unittest | [Materiały](unittest-framework.md)
 | L#03 | TDD | [Materiały](tdd.md)

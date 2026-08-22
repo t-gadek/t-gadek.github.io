@@ -35,7 +35,7 @@ Implementacja walidacji = COMMIT (implementuj funkcjonalnośći etapami,
 pamiętaj o dobrym opisie commit'a).
 
 | POLE FORMULARZA | WALIDACJA |
-|----|----|
+|:---|:---|
 | LOGIN | Pole nie może być puste. Pole może zawierać dowolny ciąg składający się minimum z 4 znaków. |
 | FIRST_NAME | Pole nie może być puste. Pole może zawierać dowolny ciąg. |
 | LAST_NAME | Pole nie może być puste. Pole może zawierać dowolny ciąg. |

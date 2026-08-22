@@ -5,7 +5,7 @@ Przedmiot obejmuje praktyczne ćwiczenia z podstaw programowania, pracy z Gitem 
 Poniżej lista ćwiczeń dostępnych jako pliki PDF.
 
 | Nr | Temat | PDF |
-|---:|------|-----|
+|:---|:---|:---|
 | L#01 | Podstawy programowania w języku Kotlin | [nisp-lab01.pdf](./static/nisp-lab01.pdf) |
 | L#02 | Instrukcje warunkowe oraz pętle | [nisp-lab02.pdf](./static/nisp-lab02.pdf) |
 | L#03 | Tablice, funkcje, zakresy, łańcuchy znaków, debugowanie kodu | [nisp-lab03.pdf](./static/nisp-lab03.pdf) |

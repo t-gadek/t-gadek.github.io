@@ -89,7 +89,7 @@ Poprawne nazywanie plików, klas i metod testowych jest kluczowe dla
 utrzymania porządku w projekcie oraz szybkiej analizy wyników testów.
 
 | Element struktury | Wymóg techniczny | Przykładowa konwencja klasyczna |
-|----|----|----|
+|:---|:---|:---|
 | Nazwa pliku | `test_*.py` lub `*_test.py` | `test_user_service.py` |
 | Nazwa klasy | `Test*` (zalecane) | `TestUserAuthentication` |
 | Nazwa metody | `test_*` (wymagane) | `test_invalid_password_rejection` |
@@ -98,7 +98,7 @@ Wybór stylu nazewnictwa metod wpływa na czytelność raportów generowanych
 przez narzędzia testowe.
 
 | Styl nazewnictwa | Przykładowa nazwa metody                             |
-|------------------|------------------------------------------------------|
+|:---|:---|
 | Minimalistyczny  | `test_add`                                           |
 | BDD (Should)     | `test_should_add_two_positive_integers`              |
 | Fact-based       | `test_adds_two_positive_integers`                    |

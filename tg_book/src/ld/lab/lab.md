@@ -3,7 +3,7 @@
 Przedmiot obejmuje przygotowanie projektu dyplomowego, wytyczne formalne, zasady organizacji pracy oraz materiały pomocnicze do realizacji pracy dyplomowej.
 
 | Nr | Temat | Materiały |
-|---:|---|---|
+|:---|:---|:---|
 | L#01 | Laboratorium dyplomowe | [PDF](./static/lab/ld-lab01.pdf) |
 | L#02 | Wskazówki dla autorów prac dyplomowych - Struktura | [Materiały](guidelines-structure.md) |
 | L#03 | Wskazówki dla autorów prac dyplomowych - Formatowanie | [Materiały](guidelines-formatting.md) |
