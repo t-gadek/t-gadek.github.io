@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Laboratorium z testów manualnych formularzy. Nauczysz się przeprowadzać ręczne testy walidacji danych oraz obsługi błędów wprowadzania informacji w aplikacjach webowych.">
+    <meta name="keywords" content="testowanie, testy manualne, formularze, walidacja, tijo, jakość oprogramowania">
+    <meta name="author" content="Tomasz Gądek">
+    <title>TiJO | Testowanie formularzy</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+    <div class="glass-container">
+        <h1>Testowanie i Jakość Oprogramowania</h1>
+        <p><strong>L#10:</strong> Testy manualne, testowanie formularzy.</p>
+
+        <h2>Wprowadzenie</h2>
+        <p>
+            <strong>Testy manualne</strong> to proces testowania oprogramowania, w którym tester ręcznie wykonuje
+            testy, aby sprawdzić, czy aplikacja zachowuje się zgodnie z oczekiwaniami. W testach
+            manualnych tester wykonuje konkretne kroki, aby zweryfikować funkcjonalność aplikacji,
+            identyfikować błędy i oceniać ogólną jakość produktu.
+        </p>
+
+        <h2>Cel</h2>
+        <p>
+            Celem laboratorium jest zapoznanie się z procesem testowania formularzy i walidacji danych
+            w praktyce.
+        </p>
+
+        <h2>Aplikacja Register</h2>
+        <p>
+            Pobierz aplikację <a href="./source-code/register/flask-form-app.zip"
+                download="register.zip">register.zip</a> i dobrze
+            przeanalizuj kod. Po uruchomieniu aplikacji formularz rejestracji
+            będzie dostępny pod adresem <a href="http://localhost:5000/" target="_blank">http://localhost:5000/</a>.
+        </p>
+
+        <p>Widok aplikacji po uruchomieniu serwera.</p>
+
+        <img src="./img/tijo-lab10-register-form.png" alt="register form">
+
+        <h2>Twoje zadanie</h2>
+        <p>
+            Bardzo proszę przeanalizować kod i dokończyć (poprawić) walidację pozostałych
+            (istniejących) pól formularza rejestracji użytkownika zgodnie z założeniami
+            umieszczonymi w tabelce.
+        </p>
+        <p>
+            Implementacja walidacji = COMMIT (implementuj funkcjonalnośći etapami, pamiętaj o dobrym opisie commit'a).
+        </p>
+
+        <div class="table-wrapper">
+            <table class="glass-table">
+                <tr>
+                    <th>POLE FORMULARZA</th>
+                    <th>WALIDACJA</th>
+                </tr>
+                <tr>
+                    <td>LOGIN</td>
+                    <td>Pole nie może być puste. Pole może zawierać dowolny ciąg składający się minimum z 4 znaków.</td>
+                </tr>
+                <tr>
+                    <td>FIRST_NAME</td>
+                    <td>Pole nie może być puste. Pole może zawierać dowolny ciąg.</td>
+                </tr>
+                <tr>
+                    <td>LAST_NAME</td>
+                    <td>Pole nie może być puste. Pole może zawierać dowolny ciąg.</td>
+                </tr>
+                <tr>
+                    <td>PASSWORD</td>
+                    <td>
+                        Pole nie może być puste. Pole powinno składać się z minimum 4 znaków. Hasło powinno składać się
+                        przynajmniej z: Cyfry, wielkiej litery, małej litery, znaku specjalnego (!@#$%^&*()_+-=).
+                    </td>
+                </tr>
+                <tr>
+                    <td>PESEL</td>
+                    <td>
+                        Pole nie może być puste. Weryfikacja numeru PESEL powinna zostać oparta o wyliczenie
+                        <a href="https://pl.wikipedia.org/wiki/PESEL#Cyfra_kontrolna_i_sprawdzanie_poprawności_numeru"
+                            target="_blank">cyfry kontrolnej</a>.
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>Podsumowanie</h2>
+        <p>
+            Testowanie manualne formularzy to podstawowy i niezbędny element zapewniania jakości każdej aplikacji
+            internetowej. Prawidłowa walidacja zabezpiecza aplikację przed wprowadzaniem niepoprawnych lub
+            niebezpiecznych danych.
+        </p>
+
+        <a href="../index.html" class="glass-button" style="display: inline-flex; margin-top: 1rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                style="margin-right: 0.5rem;">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            Strona główna
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tomasz Gądek. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+
+</html>

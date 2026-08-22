@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #f0e8dc;
+    color: #3a1c1c;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image:
+        radial-gradient(circle at 30% 40%, rgba(160, 60, 40, 0.04) 0%, transparent 50%),
+        radial-gradient(circle at 70% 60%, rgba(160, 60, 40, 0.04) 0%, transparent 50%);
+}
+
+.container {
+    background: linear-gradient(160deg, #c0392b 0%, #a83229 40%, #8e2a22 100%);
+    padding: 32px 30px;
+    border-radius: 18px;
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35),
+        0 8px 20px rgba(0, 0, 0, 0.2),
+        0 3px 0 #6e1d18,
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    color: #fde8db;
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    margin-bottom: 24px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #fde8db;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+input[type="number"] {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.08);
+    margin-bottom: 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #3a1c1c;
+    background: linear-gradient(180deg, #fdf6ee, #f2e0cc);
+    box-shadow:
+        inset 0 2px 4px rgba(0, 0, 0, 0.08),
+        0 2px 4px rgba(0, 0, 0, 0.12);
+    outline: none;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"]:focus {
+    border-color: rgba(255, 220, 200, 0.5);
+    box-shadow:
+        inset 0 2px 4px rgba(0, 0, 0, 0.08),
+        0 0 0 3px rgba(253, 232, 219, 0.25);
+}
+
+input[type="button"] {
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #3a1c1c;
+    background: linear-gradient(180deg, #fdf6ee, #ecd4bc);
+    cursor: pointer;
+    box-shadow:
+        0 4px 0 #c4a08a,
+        0 6px 12px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transition: all 0.08s ease;
+}
+
+input[type="button"]:hover {
+    background: linear-gradient(180deg, #fff9f2, #f2dcc8);
+    box-shadow:
+        0 5px 0 #c4a08a,
+        0 8px 14px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    transform: translateY(-1px);
+}
+
+input[type="button"]:active {
+    background: linear-gradient(180deg, #e8cdb8, #dcc0a8);
+    box-shadow:
+        0 1px 0 #c4a08a,
+        0 2px 4px rgba(0, 0, 0, 0.15),
+        inset 0 2px 3px rgba(0, 0, 0, 0.08);
+    transform: translateY(3px);
+}
+
+.result {
+    margin-top: 20px;
+    padding: 14px 16px;
+    background: linear-gradient(180deg, #fdf6ee, #f2e0cc);
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.08);
+    box-shadow:
+        inset 0 2px 4px rgba(0, 0, 0, 0.06),
+        0 2px 4px rgba(0, 0, 0, 0.1);
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3a1c1c;
+}
+
+.result span {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #3a1c1c;
+    letter-spacing: 0.5px;
+}

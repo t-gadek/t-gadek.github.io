@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Wprowadzenie do wykorzystania generatywnej sztucznej inteligencji w testowaniu oprogramowania i automatyzacji narzędzi QA.">
+    <meta name="keywords" content="testowanie, QA, AI, sztuczna inteligencja, Gemini, automatyzacja">
+    <meta name="author" content="Tomasz Gądek">
+    <title>TiJO | QA & AI-Driven Development</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+    <div class="glass-container">
+        <h1>Testowanie i Jakość Oprogramowania</h1>
+        <p><strong>L#13:</strong> QA & AI-Driven Development</p>
+
+        <h2>Wprowadzenie</h2>
+        <p>
+            Rola inżyniera jakości (QA) dynamicznie ewoluuje. Dziś nowoczesny tester nie tylko manualnie weryfikuje
+            oprogramowanie, ale przede wszystkim projektuje zautomatyzowane procesy z wykorzystaniem AI. Podczas tego
+            laboratorium dowiesz się, jak sprawnie tworzyć własne, inteligentne narzędzia i asystentów znacząco
+            przyspieszających codzienną pracę.
+        </p>
+
+        <h2>Cel</h2>
+        <p>
+            Praktyczne opanowanie środowiska Gemini (przejdź do <a href="https://gemini.google.com"
+                target="_blank">Gemini</a>) w celu tworzenia dedykowanych botów (Gems) generujących testy automatyczne.
+            Kolejnym etapem będzie błyskawiczna budowa własnego, przeglądarkowego klienta API z wykorzystaniem
+            interaktywnego panelu Gemini Canvas.
+        </p>
+
+        <h2>Słownik pojęć</h2>
+        <ul>
+            <li><strong>Data-Driven Testing (DDT):</strong> Technika automatyzacji polegająca na oddzieleniu skryptów
+                testowych od danych (zapisywanych w zewnętrznym pliku np. JSON, YAML lub CSV), co pozwala na wykonywanie
+                tych samych testów dla wielu zestawów danych wejściowych.
+            </li>
+            <li><strong>Gemini Gem:</strong> Spersonalizowana wersja asystenta AI, skonfigurowana pod konkretne zadanie
+                za pomocą stałych instrukcji systemowych.</li>
+            <li><strong>System Prompt</strong> (<a
+                    href="https://workspace.google.com/intl/pl/resources/ai/writing-effective-prompts/">Instrukcja
+                    systemowa</a>)<strong>:</strong> Główna instrukcja nadająca
+                asystentowi AI rolę, kontekst oraz określająca format wyjściowy i ograniczenia.
+            </li>
+            <li><strong>Gemini Canvas:</strong> Zintegrowany, interaktywny edytor wbudowany w Gemini, pozwalający na
+                programowanie, testowanie i edycję kodu bezpośrednio obok okna czatu.</li>
+        </ul>
+
+        <h2>Automatyzacja tworzenia testów z Gemini Gems</h2>
+
+        <p>
+            <strong>Gemini Gem</strong> to spersonalizowany asystent AI działający w oparciu o stałe instrukcje. Dzięki
+            nim bot staje się wyspecjalizowanym narzędziem, które nie traci
+            kontekstu projektu podczas kolejnych sesji programistycznych.
+        </p>
+
+        <p><strong>Jak utworzyć Gema?</strong><br>
+            W lewym menu bocznym interfejsu Gemini przejdź do sekcji <i>Gemy (Gems)</i>.
+            Należy wybrać opcję <strong>+ Nowy Gem</strong>. Zostaniesz przekirowany do formularza konfiguracji Gema,
+            który składa się z następujących pól:
+        </p>
+        <ul>
+            <li><strong>Nazwa (Name):</strong> Krótka, identyfikująca nazwa asystenta.</li>
+            <li><strong>Opis (Description):</strong> Zwięzła informacja o przeznaczeniu bota.</li>
+            <li><strong>Instrukcje (Instructions):</strong> Najważniejsze pole (system prompt), które decyduje o
+                zachowaniu AI. Wklejamy tu rygorystyczne wytyczne określające rolę, styl pracy oraz ograniczenia bota.
+            </li>
+            <li><strong>Wiedza:</strong> Pliki lub zrzuty ekranu, które mają być wykorzystywane przez bota jako
+                kontekst w procesie tworzenia kodu.</li>
+            <li><strong>Podgląd:</strong> Pole do testowania stworzonego bota.</li>
+        </ul>
+
+        <img src="./img/tijo-lab13-gem.png" alt="Tworzenie Gema">
+
+        <p>
+            Kluczem do sukcesu przy generowaniu testów jest podanie botowi precyzyjnej <strong>sygnatury
+                metody</strong>, wymagań biznesowych i wymuszenie w promptach (instrukcjach Gema) rygorystycznego
+            zwracania <strong>wyłącznie kodu źródłowego</strong> (bez opisów). Zmusza to model do wygenerowania
+            gotowego do wdrożenia kodu testów, eliminując niepotrzebny szum informacyjny.
+        </p>
+
+        <h2>Zadania do wykonania</h2>
+        <p>
+            <strong>Zadanie 1: Budowa bota odpowiedzialnego za tworzenie testów</strong><br>
+            Utwórz Gema <strong>Senior QA Test Generator</strong>, którego wyłącznym celem jest generowanie testów w
+            bibliotece <strong>unittest</strong> dla języka Python na podstawie dostarczonych wymagań biznesowych i
+            sygnatury. Upewnij się, że bot zwraca
+            <strong>wyłącznie kod źródłowy</strong>. Kluczowe jest, aby w polu <strong>Instrukcje</strong> wyegzekwować
+            od bota stosowanie zasady <strong>FIRST</strong> (Fast, Independent, Repeatable, Self-validating, Timely)
+            oraz precyzyjny podział kodu każdego testu na sekcje (np. Arrange-Act-Assert). Przetestuj bota, przekazując
+            mu poniższą deklarację oraz wymagania:
+        </p>
+        <p>
+            <em>
+                Cena bazowa biletu to 50 PLN. Dzieci poniżej 12 r.ż. mają 50% zniżki, seniorzy powyżej 65 r.ż. 30%.
+                Klubowicze otrzymują dodatkowe 10% zniżki naliczane kaskadowo (zniżka nie jest naliczana od kwoty
+                bazowej, ale od kwoty po zastosowaniu innych zniżek). Metoda rzuca wyjątek <strong>ValueError</strong>
+                dla ujemnego wieku.
+            </em>
+        </p>
+
+        <pre><code class="language-python">def calculate_ticket_price(age: int, is_club_member: bool) -> float:
+    pass</code></pre>
+
+        <p>
+            <strong>Zadanie 2: Budowa bota odpowiedzialnego za tworzenie produkcyjnego kodu</strong><br>
+            Zbuduj drugiego Gema <strong>Python Developer</strong>, który na podstawie zwróconych testów z Zadania
+            1 przygotuje czysty, produkcyjny kod
+            metody. W polu <strong>Instrukcje</strong> tego Gema kategorycznie zażądaj przestrzegania dobrych praktyk
+            inżynierskich: zasad <strong>SOLID</strong>, prawa <strong>Demeter</strong>, reguł
+            <strong>KISS</strong> (Keep It Simple, Stupid) i <strong>DRY</strong> (Don't Repeat Yourself). Wygenerowany
+            kod musi charakteryzować się najwyższą jakością. Skopiuj wygenerowany kod, uruchom go w lokalnym
+            środowisku i solidnie przetestuj. Sprawdź, czy wszystkie testy zakończyły się powodzeniem.
+        </p>
+
+        <p>
+            <em>
+                Wskazówka: Wykorzystaj świeżo zbudowane Gemy do wygenerowania i weryfikacji testów dla logiki aplikacji,
+                którą tworzyłeś w poprzednich laboratoriach (np. <strong><a href="unittest-framework.html">L#02:
+                        Framework unittest</a></strong>, <strong><a href="code-coverage.html">L#04: Pokrycie kodu
+                        testami</a></strong>, <strong><a href="code-smell.html">L#06: Code Smells</a></strong>). To
+                doskonała okazja, aby porównać kod testów napisany manualnie z rozwiązaniami od GenAI.
+            </em>
+        </p>
+
+        <h2>Klient API w środowisku Gemini Canvas</h2>
+
+        <p>
+            <strong>Gemini Canvas</strong> to zaawansowany edytor pozwalający na błyskawiczne prototypowanie,
+            modyfikowanie i uruchamianie aplikacji webowych (np. lekkich klientów API) bezpośrednio z poziomu
+            przeglądarki, bez potrzeby instalacji lokalnego IDE czy frameworków.
+        </p>
+
+        <img src="./img/tijo-lab13-canvas.png" alt="Gemini Canvas">
+
+        <h2>Zadania do wykonania</h2>
+        <p>
+            <strong>Zadanie 3: Prototypowanie klienta API</strong><br>
+            Zleć w Gemini (wykorzystując Canvas) zaprojektowanie nowoczesnego, przeglądarkowego narzędzia do testowania
+            API. Aplikacja powinna pozwalać na wczytanie pliku ze specyfikacją testów (np. w
+            formacie JSON, YAML lub CSV), zawierającego listę zapytań HTTP (URL, metoda, opcjonalny payload) oraz
+            oczekiwane kody statusów. Narzędzie ma odczytać ten plik, wygenerować listę testów i umożliwić ich zbiorcze
+            uruchomienie jednym przyciskiem. Całość powinna zamknąć się w jednym, czytelnym pliku integrującym HTML,
+            CSS oraz JavaScript (wybór bibliotek UI pozostaw asystentowi). Zadbaj, aby interfejs czytelnie prezentował
+            raport i statusy wykonanych testów. Taką aplikację możesz udostępnić w formie gotowego linku, a następnie
+            dodać go do ulubionych zakładek w przeglądarce. W ten sposób zyskasz wygodny i szybki sposób na uruchomienie
+            własnych testów z każdego miejsca na świecie.
+        </p>
+
+        <p>
+            <strong>Zadanie 4: Testy integracyjne na żywo</strong><br>
+            Uruchom aplikację za pomocą przycisku <strong>Preview</strong> w oknie Canvas. Przygotuj prosty plik
+            ze specyfikacją (np. <strong>tests.json</strong>) dla darmowego serwera
+            <a href="https://jsonplaceholder.typicode.com">https://jsonplaceholder.typicode.com</a>,
+            w którym zdefiniujesz scenariusze dla różnych endpointów. Wczytaj plik do swojego nowego
+            narzędzia, uruchom kolekcję jednym kliknięciem i zweryfikuj, czy klient poprawnie odczytał specyfikację,
+            wykonał żądania oraz wygenerował czytelny raport z informacją o sukcesach i błędach.
+        </p>
+
+        <h2>Podsumowanie</h2>
+        <p>
+            Sztuczna inteligencja rewolucjonizuje szybkość budowania oprogramowania i automatyzacji, lecz to na
+            inżynierze QA spoczywa obowiązek projektowania odpowiedniej architektury testów oraz <strong>krytycznej
+                weryfikacji</strong> kodu. Pamiętaj o ryzyku zjawiska <a
+                href="https://pl.wikipedia.org/wiki/Halucynacja_(sztuczna_inteligencja)">halucynacji</a> modeli
+            językowych. AI dostarcza tylko wysokiej jakości szkice, które zawsze wymagają audytu przez specjalistę przed
+            wdrożeniem.
+        </p>
+
+        <a href="../index.html" class="glass-button" style="display: inline-flex; margin-top: 1rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            Strona główna
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tomasz Gądek. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+
+</html>

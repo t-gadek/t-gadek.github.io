@@ -1,0 +1,11 @@
+Imię,Nazwisko,Czas (sekundy)
+Jan,Kowalski,10,5
+Anna,Nowak,11,2
+Piotr,Wiśniewski,10,8
+Maria,Dąbrowska,11,5
+Andrzej,Lewandowski,10,9
+Katarzyna,Wójcik,11,1
+Tomasz,Kamiński,10,7
+Magdalena,Kowalczyk,11,4
+Marek,Zieliński,11,0
+Ewa,Szymańska,11,3

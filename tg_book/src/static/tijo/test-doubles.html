@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Praktyczne zastosowanie test doubles, atrap w Pythonie oraz refaktoryzacja kodu do wzorca MVC.">
+    <meta name="keywords" content="testowanie, test doubles, mock, stub, fake, spy, dummy, python, mvc, refaktoryzacja">
+    <meta name="author" content="Tomasz Gądek">
+    <title>TiJO | Test Doubles i Refaktoryzacja</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+    <div class="glass-container">
+        <h1>Testowanie i Jakość Oprogramowania</h1>
+        <p><strong>L#07:</strong> Atrapy.</p>
+
+        <h2>Wprowadzenie</h2>
+        <p>
+            Atrapy są to obiekty zastępcze, które ułatwiają testowanie projektów. Pozwalają wydzielić kod od zawiłych
+            zależności, takich jak bazy danych czy systemy plików. Dają pełną kontrolę nad otoczeniem testowanego kodu.
+            Ułatwiają tym samym sprawdzanie logiki.
+        </p>
+        <p>
+            Rozróżniamy pięć głównych typów atrap.
+        </p>
+        <ul>
+            <li><strong>Dummy</strong> służy do zastąpienia obiektu, który jest wymagany jako parametr, ale nie jest
+                używany w testowanej metodzie.</li>
+            <li><strong>Stub</strong> służy do podmieniania zachowania obiektu, aby zwracał z góry określone wartości.
+            </li>
+            <li><strong>Fake</strong> jest to atrapa, która posiada własną implementację, ale nie jest to rzeczywista
+                implementacja.</li>
+            <li><strong>Spy</strong> bazuje na prawdziwym obiekcie, ale opakowuje go i zapisuje informacje o jego
+                wywołaniach. W języku Python nie ma dedykowanej klasy Spy, ale można ją zaimplementować za pomocą Mock.
+            </li>
+            <li><strong>Mock</strong> bazuje na pustym obiekcie, ale możemy zdefiniować jego zachowanie i sprawdzić jego
+                wywołania.</li>
+        </ul>
+        <p>
+            Wykorzystujemy je jako obiekty zastępcze w testach.
+        </p>
+        <p>
+            <strong>Wskazówka:</strong> Warto zauważyć, że język Python (biblioteka <strong>unittest.mock</strong>) nie
+            dzieli atrap na tak sztywne klasyfikacje. Klasa <strong>Mock</strong> pełni najczęściej rolę uniwersalnego
+            zamiennika (np. jako Dummy, Stub, czy Spy). Dlatego na potrzeby tego laboratorium i zachowania czytelności
+            kodu, wykluczyłem niektóre z nich i skupimy się na nauce oraz praktycznym wykorzystaniu <strong>Dummy, Fake
+                oraz Mock</strong>.
+        </p>
+
+        <h2>Cel</h2>
+        <p>
+            Celem laboratorium jest zapoznanie się z atrapami i ich zastosowaniem w testach.
+        </p>
+
+        <p>Oto zadania dla Ciebie:</p>
+        <ul>
+            <li>
+                <strong>Refaktoryzacja kodu:</strong> Oddziel kod produkcyjny(<strong>src</strong>) od
+                testowego(<strong>test</strong>).
+                Rozbij skrypt na mniejsze moduły i umieść je w odpowiednich katalogach. W katalogu produkcyjnym utwórz
+                podkatalogi <strong>model</strong>, <strong>view</strong>, <strong>controller</strong>.
+
+            </li>
+            <li>
+                <strong>Implementacja:</strong> Dokończ implementację wszystkich metod w kodzie produkcyjnym. Nie
+                zmieniaj testów! Po uruchomieniu zestawu testów zauważysz, że nie przechodzą ze
+                względu na brak implementacji logiki szyfru Cezara.
+                Pracuj zgodnie z techniką <strong>TDD (Test-Driven Development)</strong>. Skup się na zaprogramowaniu
+                logiki
+                (wyszukaj komentarze <strong>TODO</strong>), aby testy przeszły, a dopiero potem
+                zajmij się refaktoryzacją. Każda zaimplementowana funkcjonalność to jeden commit, więc zatwierdzaj
+                aplikację etapami.
+            </li>
+            <li>
+                <strong>Użyj ChatBota:</strong> Wykorzystaj ChatBota do refaktoryzacji kodu i implementacji, ale nie
+                generuj gotowego rozwiązania. Zamiast tego, proś o pomoc w poszczególnych krokach.
+            </li>
+            <li>
+                <strong>Analiza atrap:</strong> Przeanalizuj kod i zwróć uwagę, w jaki sposób wykorzystywane są atrapy.
+            </li>
+        </ul>
+
+        <h2>Wzorzec MVC</h2>
+        <p>
+            <a href="https://pl.wikipedia.org/wiki/Model-View-Controller" target="_blank">Wzorzec MVC
+                (Model-View-Controller)</a> to wzorzec architektoniczny, który polega na podziale kodu programu na
+            trzy oddzielne moduły. Model reprezentuje dane i logikę biznesową. View to interfejs użytkownika. Controller
+            to pośrednik między modelem a widokiem.
+        </p>
+
+        <h2>Aplikacja - szyfr Cezara</h2>
+        <pre><code class="language-python"># main.py
+import tkinter as tk
+from tkinter import messagebox
+import unittest
+from unittest.mock import Mock, call
+
+# --- MODEL BIZNESOWY (Model) ---
+class Logger:
+    """Prosty system logowania."""
+    def info(self, msg: str) -> None:
+        print(f"[INFO] {msg}")
+        
+    def error(self, msg: str) -> None:
+        print(f"[ERROR] {msg}")
+
+class FileHandler:
+    """Obsługa plików."""
+    def read_content(self, filepath: str) -> str:
+        # TODO: Zaimplementuj odczyt
+        raise NotImplementedError("Odczyt z pliku nie jest zaimplementowany.")
+        
+    def write_content(self, filepath: str, content: str) -> None:
+        # TODO: Zaimplementuj zapis
+        raise NotImplementedError("Zapis do pliku nie jest zaimplementowany.")
+
+class CaesarCipher:
+    """Logika kryptograficzna."""
+    def __init__(self, shift: int):
+        self.shift = shift
+
+    def encrypt(self, text: str) -> str:
+        # TODO: Zaimplementuj szyfr Cezara
+        raise NotImplementedError("Logika szyfrowania nie jest gotowa.")
+
+class CryptoModel:
+    """Mózg operacyjny. Odcięty od interfejsu."""
+    def __init__(self, cipher: CaesarCipher, file_handler: FileHandler, logger: Logger):
+        self.cipher = cipher
+        self.file_handler = file_handler
+        self.logger = logger
+        
+    def process_file(self, input_path: str, output_path: str) -> bool:
+        """Kieruje logiką przetwarzania danych."""
+        try:
+            content = self.file_handler.read_content(input_path)
+            encrypted = self.cipher.encrypt(content)
+            self.file_handler.write_content(output_path, encrypted)
+            self.logger.info(f"Sukces w lokalizacji: {output_path}")
+            return True
+        except Exception as e:
+            self.logger.error(f"Wystąpił błąd: {e}")
+            return False
+
+# --- WIDOK (View) ---
+class AppView:
+    """Warstwa prezentacji (Tkinter). Nie wie nic o szyfrowaniu."""
+    def __init__(self, root):
+        self.root = root
+        
+        # Interfejs okna.
+        tk.Label(root, text="Ścieżka pliku wejściowego:").pack(pady=(10, 0))
+        self.input_entry = tk.Entry(root, width=35)
+        self.input_entry.insert(0, "tajne_hasla.txt")
+        self.input_entry.pack(pady=5)
+
+        tk.Label(root, text="Ścieżka pliku wyjściowego:").pack(pady=(10, 0))
+        self.output_entry = tk.Entry(root, width=35)
+        self.output_entry.insert(0, "wynik_szyfrowania.txt")
+        self.output_entry.pack(pady=5)
+        
+        self.action_button = tk.Button(root, text="Szyfruj plik")
+        self.action_button.pack(pady=20)
+        
+    def get_input_path(self) -> str:
+        # Pobieranie tekstu widgetu.
+        return self.input_entry.get()
+        
+    def get_output_path(self) -> str:
+        # TODO: Odbierz wartość przypisaną z powyższego pola.
+        return "wyjście.txt"
+        
+    def show_message(self, success: bool):
+        # TODO: Wygeneruj okno messagebox.showinfo lub messagebox.showerror bazując na fladze.
+        pass
+
+    def bind_action(self, callback):
+        # TODO: Przypisz zdarzenie zaprogramowanego przycisku.
+        pass
+
+# --- KONTROLER (Controller) ---
+class AppController:
+    """Spaja widok z modelem reagując na zdarzenia."""
+    def __init__(self, model: CryptoModel, view: AppView):
+        self.model = model
+        self.view = view
+        self.view.bind_action(self.handle_encryption)
+
+    def handle_encryption(self):
+        """Zarządza logiką tuż po kliknięciu, wywołując poszczególne akcje modelu."""
+        in_path = self.view.get_input_path()
+        out_path = self.view.get_output_path()
+        result = self.model.process_file(in_path, out_path)
+        self.view.show_message(result)
+
+# --- SEKCJA TESTÓW ---
+class TestMVCComponents(unittest.TestCase):
+
+    # Wykorzystana atrapa: Dummy
+    def test_should_process_file_without_errors(self):
+        # Dummy służy do zastąpienia obiektu, który jest wymagany jako 
+        # parametr, ale nie jest używany w testowanej metodzie.
+        
+        # Given
+        dummy_logger = Mock() 
+        mock_handler = Mock(spec=FileHandler)
+        mock_handler.read_content.return_value = "DowolnyTekst"
+        real_cipher = CaesarCipher(shift=3)
+        model = CryptoModel(real_cipher, mock_handler, dummy_logger)
+        
+        # When
+        result = model.process_file("in.txt", "out.txt")
+        
+        # Then
+        # Uwaga: Dummy spełnił swoją rolę już podczas bezbłędnej inicjalizacji 
+        # modelu w Given. Testujemy tu tylko to, że sama obecność pustego 
+        # loggera nie spowodowała błędu (wyjątku).
+        self.assertTrue(result)
+
+    # Wykorzystana atrapa: Mock
+    def test_should_write_encrypted_content_to_output_file(self):
+        # Mock bazuje na pustym obiekcie, ale możemy zdefiniować jego 
+        # zachowanie i sprawdzić jego wywołania.
+        
+        # Given
+        dummy_logger = Mock()
+        mock_file_handler = Mock(spec=FileHandler)
+        mock_file_handler.read_content.return_value = "abc"
+        real_cipher = CaesarCipher(shift=3)
+        model = CryptoModel(real_cipher, mock_file_handler, dummy_logger)
+        
+        # When
+        model.process_file("a.txt", "b.txt")
+        
+        # Then
+        mock_file_handler.write_content.assert_called_once_with("b.txt", "def")
+
+    # Wykorzystana atrapa: Fake
+    def test_should_save_data_to_file_system(self):
+        # Fake jest to atrapa, która posiada własną implementację, ale nie 
+        # jest to rzeczywista implementacja.
+        
+        # Given
+        class InMemoryFileHandler(FileHandler):
+            def __init__(self):
+                self.storage = {"d/wejscie.txt": "abc"}
+            def read_content(self, path: str) -> str:
+                if path not in self.storage:
+                    raise FileNotFoundError(f"Brak: {path}")
+                return self.storage[path]
+            def write_content(self, path: str, content: str) -> None:
+                self.storage[path] = content
+                
+        dummy_logger = Mock()
+        real_cipher = CaesarCipher(shift=3)
+        fake_fs = InMemoryFileHandler()
+        model = CryptoModel(real_cipher, fake_fs, dummy_logger)
+        
+        # When
+        model.process_file("d/wejscie.txt", "d/wynik.txt")
+        
+        # Then
+        self.assertIn("d/wynik.txt", fake_fs.storage)
+        self.assertEqual(fake_fs.storage["d/wynik.txt"], "def")
+
+
+if __name__ == "__main__":
+
+    unittest.main() # Uruchamia testy
+    
+    # Kod uruchomieniowy aplikacji przenieś do pliku main.py 
+    # (plik main.py umieść w katalogu src)
+    
+    # root = tk.Tk()
+    # root.title("Kryptografia MVC")
+    # root.geometry("400x300")
+    # model = CryptoModel(CaesarCipher(3), FileHandler(), Logger())
+    # view = AppView(root)
+    # controller = AppController(model, view)
+    # root.mainloop()
+</code></pre>
+
+        <a href="../index.html" class="glass-button" style="display: inline-flex; margin-top: 1rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            Strona główna
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tomasz Gądek. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+
+</html>

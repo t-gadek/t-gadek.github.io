@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Zasady SOLID to zestaw pięciu fundamentalnych zasad projektowania oprogramowania obiektowego, które pomagają tworzyć aplikacje elastyczne, łatwe w utrzymaniu.">
+    <meta name="keywords" content="testowanie, jakość oprogramowania, solid, srp, ocp, lsp, isp, dip, dobre praktyki">
+    <meta name="author" content="Tomasz Gądek">
+    <title>TiJO | SOLID</title>
+    <link rel="stylesheet" href="../css/general.css">
+</head>
+
+<body>
+    <div class="glass-container">
+        <h1>Testowanie i Jakość Oprogramowania</h1>
+        <p><strong>L#05:</strong> SOLID.</p>
+
+        <h2>Wprowadzenie</h2>
+        <p>
+            Zasady <strong>SOLID</strong> to pięć kluczowych reguł projektowania obiektowego.
+            Dzięki nim kod jest bardziej elastyczny, czytelny i łatwiejszy w utrzymaniu.
+            Stosowanie tych zasad znacznie zmniejsza ryzyko błędów przy rozbudowie aplikacji.
+        </p>
+
+        <h2>Cel</h2>
+        <p>
+            Głównym celem laboratorium jest nauka rozpoznawania wadliwego kodu, który łamie dobre praktyki. Dodatkowo
+            zapoznamy się z praktycznym zastosowaniem refaktoryzacji zgodnie z zasadami <strong>SOLID</strong>.
+        </p>
+
+        <h2>Zasady SOLID</h2>
+        <p>Poniżej przedstawiono opis poszczególnych zasad składających się na akronim SOLID:</p>
+        <ul>
+            <li>
+                <strong>Single Responsibility Principle (SRP)</strong> - Zasada jednej odpowiedzialności:
+                Klasa powinna mieć tylko jedną odpowiedzialność, jeden powód do zmiany.
+            </li>
+            <li>
+                <strong>Open/Closed Principle (OCP)</strong> – Zasada otwarte/zamknięte: Klasy powinny być otwarte na
+                rozszerzenia, ale zamknięte na modyfikacje.
+            </li>
+            <li>
+                <strong>Liskov Substitution Principle (LSP)</strong> – Zasada podstawienia Liskov:
+                Obiekty klasy bazowej powinny być zastępowane obiektami klasy pochodnej bez
+                wpływu na poprawność działania programu.
+            </li>
+            <li>
+                <strong>Interface Segregation Principle (ISP)</strong> – Zasada segregacji interfejsów: Klasy nie
+                powinny
+                zależeć od metod, których nie używają.
+            </li>
+            <li>
+                <strong>Dependency Inversion Principle (DIP)</strong> – Zasada odwrócenia zależności: Moduły
+                wysokopoziomowe nie powinny zależeć od modułów niskopoziomowych. Oba
+                powinny zależeć od abstrakcji.
+            </li>
+        </ul>
+
+        <h2>Refaktoryzacja</h2>
+        <p>Pobierz wszystkie skrypty i postaraj się je poprawić tak, aby nie naruszały zasad SOLID.</p>
+        <ul>
+            <li>Naruszona zasada <a href="./source-code/solid/srp.py"
+                    style="display: inline-flex; align-items: center; gap: 4px;"><span>⬇️</span> SRP</a> (zamówienia).
+                <br><em><small>Czy nasza klasa nie ma zbyt wielu odpowiedzialności? Jak to sprytnie
+                        rozdzielić?</small></em>
+            </li>
+            <li>Naruszona zasada <a href="./source-code/solid/ocp.py"
+                    style="display: inline-flex; align-items: center; gap: 4px;"><span>⬇️</span> OCP</a> (figury
+                geometryczne). <br><em><small>Co się stanie, gdy dodamy nową figurę? Czy zostaniesz zmuszony(a) do
+                        modyfikacji już działającego kodu?</small></em></li>
+            <li>Naruszona zasada <a href="./source-code/solid/lsp.py"
+                    style="display: inline-flex; align-items: center; gap: 4px;"><span>⬇️</span> LSP</a> (konta
+                bankowe). <br><em><small>Czy dziedziczenie to na pewno dobry pomysł? Jak zadbać o odpowiedni
+                        kontrakt?</small></em></li>
+            <li>Naruszona zasada <a href="./source-code/solid/isp.py"
+                    style="display: inline-flex; align-items: center; gap: 4px;"><span>⬇️</span> ISP</a> (pracownicy).
+                <br><em><small>Dlaczego zmuszamy obiekty do wdrażania metod, których nigdy nie użyją? Jak rozbić ten
+                        pękaty interfejs?</small></em>
+            </li>
+            <li>Naruszona zasada <a href="./source-code/solid/dip.py"
+                    style="display: inline-flex; align-items: center; gap: 4px;"><span>⬇️</span> DIP</a> (urządzenia).
+                <br><em><small>Czy zwykły włącznik światła musi być połączony na sztywno z konkretną żarówką? A co jak
+                        zechcesz podpiąć do niego wentylator?</small></em>
+            </li>
+        </ul>
+
+        <h2>Podsumowanie</h2>
+        <p>
+            Zrozumienie i umiejętne stosowanie zasad <strong>SOLID</strong> to klucz do bycia profesjonalnym inżynierem
+            oprogramowania. Kod oparty na dobrych praktykach ułatwia pracę nie tylko twórcy, ale całemu zespołowi.
+            Regularna praktyka poprzez analizę i poprawę architektury prowadzi do
+            pisania czystego, niezawodnego kodu (clean code).
+        </p>
+
+        <a href="../index.html" class="glass-button" style="display: inline-flex; margin-top: 1rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            Strona główna
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tomasz Gądek. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Programowanie obiektowe (OOP) to paradygmat oparty na obiektach. W tym laboratorium poznamy najważniejsze koncepcje, w tym hermetyzację, kopię defensywną oraz podstawy refaktoryzacji z wykorzystaniem OOP.">
+    <meta name="keywords" content="testowanie, oop, programowanie obiektowe, python, tijo, jakość oprogramowania">
+    <meta name="author" content="Tomasz Gądek">
+    <title>TiJO | OOP</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+    <div class="glass-container">
+        <h1>Testowanie i Jakość Oprogramowania</h1>
+        <p><strong>L#08:</strong> OOP.</p>
+
+        <h2>Wprowadzenie</h2>
+        <p>
+            <strong>Programowanie obiektowe</strong> (ang. <em>Object-Oriented Programming</em>)
+            to paradygmat programowania,
+            który opiera się na koncepcji obiektów. Obiekty są instancjami klas, które
+            definiują ich właściwości i zachowanie. Programowanie obiektowe
+            umożliwia tworzenie bardziej złożonych i elastycznych aplikacji poprzez
+            organizację kodu w moduły.
+        </p>
+
+        <p>
+            Programowanie obiektowe opiera się na kilku kluczowych koncepcjach:
+        </p>
+        <ul>
+            <li>
+                <strong>Abstrakcja</strong>: Proces ukrywania szczegółów implementacji i
+                przedstawiania tylko istotnych cech obiektu.
+            </li>
+            <li>
+                <strong>Enkapsulacja</strong>: Proces grupowania danych i metod w jedną
+                jednostkę (klasę) oraz ograniczania dostępu do niektórych jej
+                elementów.
+            </li>
+            <li>
+                <strong>Dziedziczenie</strong>: Mechanizm, który pozwala na tworzenie
+                nowych klas na podstawie istniejących, dziedzicząc ich właściwości i
+                metody.
+            </li>
+            <li>
+                <strong>Polimorfizm</strong>: Zdolność różnych klas do implementacji
+                tych samych metod, co pozwala na użycie tych samych interfejsów w
+                różnych kontekstach.
+            </li>
+        </ul>
+
+        <h2>Cel</h2>
+        <p>
+            Głównym celem tego laboratorium jest zrozumienie i praktyczne zastosowanie mechanizmów programowania
+            obiektowego.
+            Nauczysz się tworzyć bezpieczne metody dostępowe (gettery i settery), stosować mechanizm kopii defensywnej w
+            celu ochrony
+            integralności obiektów, a także przeprowadzisz refaktoryzację aplikacji webowej we Flasku do struktury
+            zorientowanej obiektowo.
+        </p>
+
+        <h2>Zadanie - setter()</h2>
+
+        <p>
+            <strong>setter()</strong> jest odpowiedzialny za zmianę "wnętrza" obiektu.
+            Jeśli zaimplementujesz go niedbale, może narobić bałaganu. Weryfikuj, czy
+            podajesz sensowne dane, pilnuj, aby wszystko w obiekcie do siebie pasowało po zmianie.
+            Możesz łatwo "zepsuć" swój obiekt i wprowadzić go w zły stan.
+        </p>
+
+        <p>
+            Prosty przykład: Wyobraź sobie setter <strong>set_age()</strong>. Jeśli pozwala ci wpisać
+            <strong>-5</strong> lat, to coś jest nie tak z Twoim obiektem <strong>user</strong>. Masz
+            okazję poprawić implementację poniższej klasy.
+        </p>
+
+        <pre>
+            <code class="language-python">class User:
+    def __init__(self, name, age):
+        self._name = name
+        self._age = age
+        self._is_adult = self._age >= 18
+
+    def get_name(self):
+        return self._name
+
+    def get_age(self):
+        return self._age
+
+    def set_age(self, new_age):
+        # Problem!
+        self._age = new_age
+
+user = User("Jan", 30)
+print(f"Poczatkowy wiek: {user.get_age()}")
+
+user.set_age(-5)
+print(f"Wiek po ustawieniu nieprawidlowej wartosci: {user.get_age()}")
+
+user.set_age(200)
+print(f"Wiek po ustawieniu absurdalnie duzej wartosci: {user.get_age()}")</code>
+        </pre>
+
+        <p>Porady dotyczące tworzenia metod ustawiających.</p>
+        <ul>
+            <li>
+                <strong>Sprawdzaj, co wpisujesz</strong>: Upewnij się, że wiek
+                nie jest ujemny.
+            </li>
+            <li>
+                <strong>Pilnuj porządku</strong>: Jeśli zmiana wieku wpływa na inne atrybuty (np. status pełnoletności
+                <code>is_adult</code>),
+                setter wieku powinien również zaktualizować ten stan.
+            </li>
+            <li>
+                <strong>Pomyśl dwa razy</strong>: Czy naprawdę potrzebujesz tylu setterów?
+                Może zamiast zmieniać wszystko po kawałku, lepiej zrobić jedną akcję, która
+                logicznie zmienia stan obiektu.
+            </li>
+        </ul>
+
+        <h2>Zadanie - getter()</h2>
+
+        <p>
+            <strong>getter()</strong> jest odpowiedzialny za bezpieczny odczyt danych z "wnętrza" obiektu.
+            Jeśli zaimplementujesz go niedbale, możesz ujawnić zbyt wiele.
+            Getter powinien być prosty, ale przemyślany – upewnij się, że zwraca dane w odpowiedniej formie
+            i nie zdradza więcej, niż powinien.
+        </p>
+
+        <p>
+            Klasa <strong>Transfer</strong> posiada niebezpieczny getter(). Zobacz, jak łatwo można naruszyć
+            integralność
+            kluczowej operacji finansowej z zewnątrz. Obiekt, reprezentujący gotówkę klienta, jest uszkodzony.
+            Napraw go stosując <strong>kopię defensywną</strong>.
+        </p>
+
+        <pre>
+            <code class="language-python">class TimeOfTransfer:
+    def __init__(self, hour, minute):
+        self.hour = hour
+        self.minute = minute
+
+    def __str__(self):
+        return f"{self.hour:02d}:{self.minute:02d}"
+
+class Transfer:
+    def __init__(self, amount, transfer_time):
+        self._amount = amount
+        self._transfer_time = transfer_time
+
+    def get_transfer_time(self):
+        # Problem!
+        return self._transfer_time
+
+    def get_amount(self):
+        return self._amount
+
+    def execute_transfer(self):
+        print(f"Wykonuje przelew na kwote {self._amount} o godzinie {self._transfer_time}")
+
+scheduled_time = TimeOfTransfer(14, 30)
+my_transfer = Transfer(100.00, scheduled_time)
+
+print(f"Poczatkowy czas przelewu: {my_transfer.get_transfer_time()}")
+my_transfer.execute_transfer()
+
+# Ups! Ktoś dobrał się do czasu przelewu...
+time_from_getter = my_transfer.get_transfer_time()
+time_from_getter.hour = 16
+time_from_getter.minute = 0
+
+print(f"\nCzas przelewu PO ZEWNETRZNEJ INGERENCJI: {my_transfer.get_transfer_time()}")
+my_transfer.execute_transfer()
+
+print("\nUps! Kluczowy czas obiektu przelewu zostal zmanipulowany z zewnatrz. ")
+print("Ot tak, integralnosc obiektu została naruszona, a to byly czyjes ciezko zarobione pieniadze. ")
+print("To tylko zwykly getter(), a jak wiele moze zepsuc")</code>
+        </pre>
+
+        <h2>Zadanie - OOP i Flask</h2>
+
+        <p>
+            Pobierz aplikację: <a href="./source-code/oop/flask-figure-app.zip" download>flask-figure-app</a>,
+            skopiuj ją do katalogu źródłowego <strong>src</strong> i uruchom moduł <strong>app.py</strong>.
+        </p>
+
+        <img src="./img/tijo-lab08-figure-app.png" alt="Flask Figure App">
+
+        <p>
+            Aplikacja jest prostą aplikacją webową, która pozwala na zmianę kolorów figur geometrycznych.
+            Używa Flask do obsługi żądań HTTP i renderowania szablonu HTML.
+        </p>
+
+        <p>Wykonaj refaktoryzację kodu i spełnij wymagania:</p>
+
+        <ul>
+            <li>Zdefiniuj klasy (Figure, Square, Circle, Triangle) reprezentujące figury z atrybutami i metodami.</li>
+            <li>Utwórz kolekcję (np. słownik <b>figures</b>) przechowującą instancje figur.</li>
+            <li>Utwórz dedykowaną klasę (serwis) odpowiedzialną za zarządzanie stanem figur.</li>
+            <li>Zaimplementuj w serwisie metody do pobierania stanu kolorów figur w spójnym formacie (np. słownik).</li>
+            <li>
+                Użyj serwisu w module <strong>app.py</strong>. Zmodyfikuj funkcje obsługi żądań HTTP, aby
+                korzystały z metod utworzonego serwisu do interakcji z figurami.
+            </li>
+        </ul>
+
+        <h2>Podsumowanie</h2>
+        <p>
+            Odpowiednio zaimplementowane mechanizmy enkapsulacji są niezbędne do zachowania kontroli nad stanem obiektu.
+            Używanie getterów i setterów w sposób świadomy (z weryfikacją poprawności oraz kopiami defensywnymi)
+            zapobiega wstrzykiwaniu nieprawidłowych danych.
+            Refaktoryzacja na paradygmat obiektowy ułatwia zarządzanie i skalowanie aplikacji, co jest szczególnie
+            istotne w projektach webowych.
+        </p>
+
+        <a href="../index.html" class="glass-button" style="display: inline-flex; margin-top: 1rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                style="margin-right: 0.5rem;">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            Strona główna
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tomasz Gądek. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+
+</html>

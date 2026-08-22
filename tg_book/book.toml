@@ -1,0 +1,9 @@
+[book]
+title = "tgadek.pl"
+authors = ["Tomasz Gądek"]
+language = "pl"
+src = "src"
+
+[output.html]
+theme = "theme"
+# Można tu dodać ustawienia np. dodatkowe style lub składniki
