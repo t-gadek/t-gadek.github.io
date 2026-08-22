@@ -3,7 +3,7 @@
 Wykłady obejmują wprowadzenie do testowania, praktyki programistyczne, wzorce projektowe, TDD, testy automatyczne oraz zasady jakości oprogramowania. W tabeli poniżej znajdują się główne materiały w formacie PDF.
 
 | Nr | Temat | PDF |
-|---:|------|-----|
+|:---|:---|:---|
 | W#01 | Wprowadzenie | [tijo-lecture01.pdf](../static/tijo/lecture/tijo-lecture01.pdf)
 | W#02 | Python | [tijo-lecture02.pdf](../static/tijo/lecture/tijo-lecture02.pdf)
 | W#03 | Podstawy Scrum | [tijo-lecture03.pdf](../static/tijo/lecture/tijo-lecture03.pdf)

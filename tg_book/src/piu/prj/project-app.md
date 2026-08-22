@@ -22,7 +22,7 @@ zewnętrznego API.
 Projekt jest podzielony na trzy etapy.
 
 | Etap/Termin | Opis |
-|---|---|
+|:---|:---|
 | Mockupy. Do 15 kwietnia. | Opracowanie makiet w programie dedykowanym (np. [Figma](https://www.figma.com), [Balsamiq](https://balsamiq.com)) dla wersji desktop, tablet i mobile. |
 | Implementacja. Do 15 maja. | Implementacja interfejsu użytkownika, wykorzystanie API, przygotowanie responsywności. |
 | Dokumentacja i testy. Do 15 czerwca. | Przygotowanie dokumentacji w [Markdown](https://www.markdownguide.org), testy aplikacji w przeglądarkach (Chrome, Edge, Safari, Firefox, Opera) na trzech rozdzielczościach. |
@@ -36,7 +36,7 @@ Aplikacja powinna składać się z minimum pięciu podstron. Każda podstrona
 powinna zawierać menu, treść i stopkę.
 
 | Widok/Podstrona | Wymagania funkcjonalne i wizualne |
-|---|---|
+|:---|:---|
 | Strona główna | Powinna zawierać logo, menu nawigacyjne, stopkę oraz krótki opis. |
 | Lista danych | Wyświetlanie listy elementów. Możliwość paginacji / sortowania / filtrowania wyników. Różne układy listy w zależności od ekranu (np. tabela na desktopie, karty na mobile). Dane można pobrać z publicznego API (np. [JSONPlaceholder](https://jsonplaceholder.typicode.com/)). |
 | Szczegóły | Widok pojedynczego elementu (np. użytkownik, post, produkt). Dynamiczne pobieranie szczegółowych danych po kliknięciu na element listy. Przyciski **Wróć** i **Edytuj** (jeśli aplikacja to umożliwi). |
