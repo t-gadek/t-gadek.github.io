@@ -1,6 +1,6 @@
 # Zrealizowane prace inżynierskie
 
-Najnowsze prace dyplomowe pierwsze.
+Lista prac inżynierskich zrealizowanych pod moim kierownictwem.
 
 | Rok | Data | Tytuł | Materiały |
 |:---|:---|:---|:---|
