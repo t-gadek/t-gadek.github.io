@@ -1,6 +1,6 @@
 # Zrealizowane prace inżynierskie
 
-Lista prac inżynierskich zrealizowanych pod moim kierownictwem.
+Lista prac inżynierskich zrealizowanych pod moim kierunkiem.
 
 | Rok | Data | Tytuł | Materiały |
 |:---|:---|:---|:---|
