@@ -4,7 +4,7 @@ Lista prac inżynierskich zrealizowanych pod moim kierunkiem.
 
 | Rok | Data | Tytuł | Materiały |
 |:---|:---|:---|:---|
-| 2026 | 16.04.2026 | Projekt i implementacja gry typu Tower Defense | [PDF](./static/diploma-pdf/2026/35819.pdf) |
+| 2026 | 16.04.2026 | Projekt i implementacja gry typu Tower Defense | PDF |
 | 2026 | 16.04.2026 | Projekt i implementacja gry komputerowej z dynamicznym systemem walki opartym o muzykę | [PDF](./static/diploma-pdf/2026/36369.pdf) |
 | 2026 | 16.04.2026 | Projekt i implementacja programu narzędziowego do testowania API aplikacji webowych | [PDF](./static/diploma-pdf/2026/36393.pdf) |
 | 2026 | 13.03.2026 | Projekt i implementacja gry strategicznej z systemem zarządzania zasobami i ekwipunkiem | [PDF](./static/diploma-pdf/2026/35202.pdf) |
