@@ -5,6 +5,7 @@
   - [Wskazówki dla autorów prac dyplomowych - Struktura](ld/lab/guidelines-structure.md)
   - [Wskazówki dla autorów prac dyplomowych - Formatowanie](ld/lab/guidelines-formatting.md)
   - [Lista prac dyplomowych](ld/lab/diploma-list.md)
+- [Testowanie i Jakość Oprogramowania II](tijo2/tijo2.md)
 <!--
 - [Narzędzia i środowiska programistyczne](nisp/nisp.md)
 - [Testowanie i jakość oprogramowania](tijo/tijo.md)

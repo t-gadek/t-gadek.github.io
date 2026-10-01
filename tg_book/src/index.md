@@ -15,12 +15,13 @@ aplikacji mobilnych oraz testowania i jakości oprogramowania. Na tej stronie zn
 - [Projektowanie interfejsów użytkownika](piu/piu.md)
 - [Technologia informacyjna](ti/ti.md)
 -->
-- [Laboratorium dyplomowe](ld/ld.md)
+- [Laboratorium Dyplomowe](ld/ld.md)
+- [Testowanie i Jakość Oprogramowania II](tijo2/tijo2.md)
 
 
 ## Konsultacje i kontakt
 
-Jeśli masz pytania lub potrzebujesz wyjaśnień, zapraszam na konsultacje (stacjonarnie lub zdalnie) Proszę o wcześniejsze ustalenie terminu drogą mailową.
+Jeśli masz pytania lub potrzebujesz wyjaśnień, zapraszam na konsultacje (stacjonarnie lub zdalnie). Proszę o wcześniejsze ustalenie terminu drogą mailową.
 
 Kontakt: [t_gadek@atar.edu.pl](mailto:t_gadek@atar.edu.pl)
 
