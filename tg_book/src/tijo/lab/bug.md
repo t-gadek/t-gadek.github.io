@@ -2,7 +2,7 @@
 
 **L#11:** Test Case & Bug Report.
 
-## Wprowadzenie
+**Wprowadzenie**
 
 **Test Case (Przypadek Testowy)** to dokument służący do weryfikacji,
 czy system w odpowiedzi na konkretne akcje działa zgodnie z założeniami.
@@ -16,13 +16,13 @@ programiście sprawnie odtworzyć i usunąć usterkę.
 
 ![bug report](./static/img/tijo-lab11-bug-report.png)
 
-## Cel
+**Cel**
 
 Celem laboratorium jest zapoznanie się z procesem dokumentowania
 przypadków testowych oraz tworzenia raportów o błędach z wykorzystaniem
 narzędzia Trello.
 
-## Zadanie - Test Case & Bug Reports (Trello)
+**Zadanie - Test Case & Bug Reports (Trello)**
 
 Masz do dyspozycji dwie aplikacje w wersji DEV (do testowania) i PROD
 (jako dokumentacja referencyjna):
@@ -49,7 +49,7 @@ W każdej tablicy utwórz kolumny (jedna tablica = jeden projekt):
 - Zgłoszenia w trakcie - Kolumna bez kart.
 - Zgłoszenia zweryfikowane - Kolumna bez kart.
 
-## Podsumowanie
+**Podsumowanie**
 
 Testy pozwalają wykryć błędy i upewnić się, że produkt działa zgodnie z
 oczekiwaniami użytkowników. Rzetelne dokumentowanie przypadków testowych

@@ -2,7 +2,7 @@
 
 **L#08:** OOP.
 
-## Wprowadzenie
+**Wprowadzenie**
 
 **Programowanie obiektowe** (ang. *Object-Oriented Programming*) to
 paradygmat programowania, który opiera się na koncepcji obiektów.
@@ -22,7 +22,7 @@ Programowanie obiektowe opiera się na kilku kluczowych koncepcjach:
   metod, co pozwala na użycie tych samych interfejsów w różnych
   kontekstach.
 
-## Cel
+**Cel**
 
 Głównym celem tego laboratorium jest zrozumienie i praktyczne
 zastosowanie mechanizmów programowania obiektowego. Nauczysz się tworzyć
@@ -31,7 +31,7 @@ kopii defensywnej w celu ochrony integralności obiektów, a także
 przeprowadzisz refaktoryzację aplikacji webowej we Flasku do struktury
 zorientowanej obiektowo.
 
-## Zadanie - setter()
+**Zadanie - setter()**
 
 **setter()** jest odpowiedzialny za zmianę "wnętrza" obiektu. Jeśli
 zaimplementujesz go niedbale, może narobić bałaganu. Weryfikuj, czy
@@ -79,7 +79,7 @@ Porady dotyczące tworzenia metod ustawiających.
   zamiast zmieniać wszystko po kawałku, lepiej zrobić jedną akcję, która
   logicznie zmienia stan obiektu.
 
-## Zadanie - getter()
+**Zadanie - getter()**
 
 **getter()** jest odpowiedzialny za bezpieczny odczyt danych z "wnętrza"
 obiektu. Jeśli zaimplementujesz go niedbale, możesz ujawnić zbyt wiele.
@@ -134,7 +134,7 @@ print("Ot tak, integralność obiektu została naruszona, a to były czyjeś ci�
 print("To tylko zwykły getter(), a jak wiele może zepsuć.")
 ```
 
-## Zadanie - OOP i Flask
+**Zadanie - OOP i Flask**
 
 Pobierz aplikację: [flask-figure-app](../prj/static/source-code/oop/flask-figure-app.zip), skopiuj ją do katalogu źródłowego
 **src** i uruchom moduł **app.py**.
@@ -159,7 +159,7 @@ Wykonaj refaktoryzację kodu i spełnij wymagania:
   HTTP, aby korzystały z metod utworzonego serwisu do interakcji z
   figurami.
 
-## Podsumowanie
+**Podsumowanie**
 
 Odpowiednio zaimplementowane mechanizmy enkapsulacji są niezbędne do
 zachowania kontroli nad stanem obiektu. Używanie getterów i setterów w

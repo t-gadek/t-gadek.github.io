@@ -2,7 +2,7 @@
 
 **L#09:** Testy manualne.
 
-## Wprowadzenie
+**Wprowadzenie**
 
 **Testy manualne** to proces testowania oprogramowania, w którym tester
 ręcznie wykonuje testy, aby sprawdzić, czy aplikacja zachowuje się
@@ -10,14 +10,14 @@ zgodnie z oczekiwaniami. W testach manualnych tester wykonuje konkretne
 kroki, aby zweryfikować funkcjonalność aplikacji, identyfikować błędy i
 oceniać ogólną jakość produktu.
 
-## Cel
+**Cel**
 
 Głównym celem laboratorium jest zapoznanie się z procesem testowania
 manualnego w praktyce. Nauczysz się weryfikować działanie aplikacji,
 analizować jej zachowanie. Dodatkowo przeprowadzisz implementację
 brakujących funkcji na podstawie analizy wyników testów manualnych.
 
-## Aplikacja Chess
+**Aplikacja Chess**
 
 Pobierz aplikację [chess.zip](../prj/static/source-code/chess/flask-chess-app.zip) i dobrze przeanalizuj kod. Po
 uruchomieniu aplikacji gra będzie dostępna pod adresem
@@ -35,7 +35,7 @@ przemieściła.
 
 ![move after](./static/img/tijo-lab09-move-after.png)
 
-## Twoje zadanie
+**Twoje zadanie**
 
 Bardzo proszę dokończyć implementację logiki ruchów figurek na planszy
 szachowej (ruchy figur szachowych:
@@ -48,7 +48,7 @@ uwagę na wielokrotne instrukcje warunkowe realizujące poszczególne
 ruchy. Czy da się zaimplementować to inaczej? (*Podpowiedź: Wykorzystaj
 polimorfizm*).
 
-## Podsumowanie
+**Podsumowanie**
 
 Testy manualne są kluczowym elementem zapewniania jakości
 oprogramowania, zwłaszcza na wczesnych etapach rozwoju oprogramowania

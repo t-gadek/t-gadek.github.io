@@ -2,7 +2,7 @@
 
 **L#04:** Pokrycie kodu testami.
 
-## Wprowadzenie
+**Wprowadzenie**
 
 Pokrycie kodu testami (*ang. code coverage*) to mierzalna metryka
 stosowana w inżynierii oprogramowania, która określa, jaki procent linii
@@ -11,7 +11,7 @@ automatyczne. Narzędzia do mierzenia pokrycia kodu pomagają
 zidentyfikować obszary aplikacji, które nie są jeszcze chronione przed
 potencjalnymi błędami.
 
-## Cel
+**Cel**
 
 Głównym celem tego laboratorium jest poznanie technik analizy i
 zwiększania pokrycia kodu testami. Nauczymy się generować powiązane
@@ -19,7 +19,7 @@ raporty w środowisku programistycznym (IDE) oraz interpretować ich
 wyniki. Wykonując ćwiczenia praktyczne postaramy się osiągnąć maksymalne
 (100%) pokrycie dla wybranych algorytmów.
 
-## Pokrycie kodu testami w praktyce
+**Pokrycie kodu testami w praktyce**
 
 Istnieje kilka rodzajów metryk oceniających pokrycie – można sprawdzać
 pokrycie linii (czy dana linijka została wykonana), jak i pokrycie
@@ -27,7 +27,7 @@ rozgałęzień (czy sprawdzono wszystkie ścieżki warunków logicznych takich
 jak if/else). W naszym przypadku skupimy się na podstawowej analizie
 pokrycia bezpośrednio w IDE.
 
-## Implementacja
+**Implementacja**
 
 Utwórz nowy projekt w **PyCharm** i umieść w pakiecie produkcyjnym
 implementację klasy **QuadraticEquation**.
@@ -78,7 +78,7 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
-## Testy z raportem
+**Testy z raportem**
 
 Postaraj się uruchomić testy z raportem pokrycia kodu testami. Przejedź
 do skryptu z testami i kliknij w zieloną strzałkę (obok klasy) i wybierz
@@ -86,7 +86,7 @@ opcję widoczną na poniższym rysunku.
 
 ![run coverage](./static/img/tijo-lab04-run-coverage.png)
 
-## Analiza
+**Analiza**
 
 Po uruchomieniu testów zwróć uwagę na statystyki pokrycia kodu w kodzie
 klasy **QuadraticEquation**. Kolor **czerwony** wskazuje linie, które
@@ -98,7 +98,7 @@ zostały pokryte testami.
 Mamy **33%** pokrycia kodu testami. Dopisz pozostałe testy i zwiększ
 pokrycie kodu.
 
-## Zadanie do wykonania
+**Zadanie do wykonania**
 
 Twoje zadanie będzie polegało na implementacji operacji na bankomacie.
 Skorzystaj z przygotowanej poniżej struktury klasy (wraz z dokumentacją
@@ -156,7 +156,7 @@ class ATM:
         pass
 ```
 
-## Podsumowanie
+**Podsumowanie**
 
 Dążenie do wysokiego stopnia pokrycia kodu testami zwiększa jakość
 całego systemu informatycznego. Warto jednak pamiętać, że nawet 100%

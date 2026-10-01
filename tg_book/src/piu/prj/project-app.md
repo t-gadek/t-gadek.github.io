@@ -2,14 +2,14 @@
 
 **P#01:** Wymagania.
 
-## Wprowadzenie
+**Wprowadzenie**
 
 Poniższy dokument przedstawia wymagania dotyczące realizacji projektu z
 przedmiotu **Projektowanie Interfejsów Użytkownika**. Projekt polega na
 stworzeniu responsywnego interfejsu, składającego się z minimum pięciu
 podstron, opartych o technologie HTML, CSS i JavaScript.
 
-## Cel
+**Cel**
 
 Głównym celem projektu jest praktyczne zastosowanie wiedzy nabytej
 podczas zajęć poprzez samodzielne skonstruowanie nowoczesnego,
@@ -17,7 +17,7 @@ estetycznego i spójnego interfejsu. Projekt sprawdza umiejętności
 dotyczące tworzenia responsywnych układów oraz wykorzystania
 zewnętrznego API.
 
-## Etapy realizacji
+**Etapy realizacji**
 
 Projekt jest podzielony na trzy etapy.
 
@@ -30,7 +30,7 @@ Projekt jest podzielony na trzy etapy.
 **Uwaga:** Niedotrzymanie terminów skutkuje obniżeniem oceny końcowej o
 1 stopień.
 
-## Wymagania dla poszczególnych widoków
+**Wymagania dla poszczególnych widoków**
 
 Aplikacja powinna składać się z minimum pięciu podstron. Każda podstrona
 powinna zawierać menu, treść i stopkę.
@@ -43,7 +43,7 @@ powinna zawierać menu, treść i stopkę.
 | Podstrona z 3 kolumnami | Desktop: 3 kolumny obok siebie. Tablet: 2 kolumny + 1 poniżej. Mobile: układ jednokolumnowy. Zawartość powinna mieć konsekwentny układ i spójne nagłówki. |
 | Dodatkowa podstrona | Może zawierać np. formularz kontaktowy, galerię zdjęć. |
 
-## Responsywność
+**Responsywność**
 
 Projekt musi być w pełni responsywny.
 
@@ -56,13 +56,13 @@ wiodących rozdzielczościach.
 
 ![devtools](./static/dev-tools.png)
 
-## Dodatkowe wymagania
+**Dodatkowe wymagania**
 
 Użyj **GitHub** / **Bitbucket** do wersjonowania kodu. Proponuje użyć
 **GitHub Pages** do hostowania projektu. Mile widziane stosowanie
 metodologii **BEM** w CSS.
 
-## Dokumentacja
+**Dokumentacja**
 
 Dokumentacja projektu powinna zawierać:
 
@@ -72,7 +72,7 @@ Dokumentacja projektu powinna zawierać:
 - Testy.
 - Podsumowanie.
 
-## Podsumowanie
+**Podsumowanie**
 
 Zrealizowanie wszystkich założeń projektowych jest niezbędne do
 zaliczenia przedmiotu. Stosowanie dobrych praktyk projektowych (np.

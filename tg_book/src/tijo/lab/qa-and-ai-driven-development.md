@@ -2,7 +2,7 @@
 
 **L#13:** QA & AI-Driven Development
 
-## Wprowadzenie
+**Wprowadzenie**
 
 Rola inżyniera jakości (QA) dynamicznie ewoluuje. Dziś nowoczesny tester
 nie tylko manualnie weryfikuje oprogramowanie, ale przede wszystkim
@@ -10,7 +10,7 @@ projektuje zautomatyzowane procesy z wykorzystaniem AI. Podczas tego
 laboratorium dowiesz się, jak sprawnie tworzyć własne, inteligentne
 narzędzia i asystentów znacząco przyspieszających codzienną pracę.
 
-## Cel
+**Cel**
 
 Praktyczne opanowanie środowiska Gemini (przejdź do
 [Gemini](https://gemini.google.com)) w celu
@@ -18,7 +18,7 @@ tworzenia dedykowanych botów (Gems) generujących testy automatyczne.
 Kolejnym etapem będzie błyskawiczna budowa własnego, przeglądarkowego
 klienta API z wykorzystaniem interaktywnego panelu Gemini Canvas.
 
-## Słownik pojęć
+**Słownik pojęć**
 
 - **Data-Driven Testing (DDT):** Technika automatyzacji polegająca na
   oddzieleniu skryptów testowych od danych (zapisywanych w zewnętrznym
@@ -34,7 +34,7 @@ klienta API z wykorzystaniem interaktywnego panelu Gemini Canvas.
   Gemini, pozwalający na programowanie, testowanie i edycję kodu
   bezpośrednio obok okna czatu.
 
-## Automatyzacja tworzenia testów z Gemini Gems
+**Automatyzacja tworzenia testów z Gemini Gems**
 
 **Gemini Gem** to spersonalizowany asystent AI działający w oparciu o
 stałe instrukcje. Dzięki nim bot staje się wyspecjalizowanym narzędziem,
@@ -63,7 +63,7 @@ promptach (instrukcjach Gema) rygorystycznego zwracania **wyłącznie kodu
 źródłowego** (bez opisów). Zmusza to model do wygenerowania gotowego do
 wdrożenia kodu testów, eliminując niepotrzebny szum informacyjny.
 
-## Zadania do wykonania
+**Zadania do wykonania**
 
 **Zadanie 1: Budowa bota odpowiedzialnego za tworzenie testów**\
 Utwórz Gema **Senior QA Test Generator**, którego wyłącznym celem jest
@@ -105,7 +105,7 @@ testami](code-coverage.html)**, **[L#06: Code
 Smells](code-smell.html)**). To doskonała okazja, aby porównać kod
 testów napisany manualnie z rozwiązaniami od GenAI.*
 
-## Klient API w środowisku Gemini Canvas
+**Klient API w środowisku Gemini Canvas**
 
 **Gemini Canvas** to zaawansowany edytor pozwalający na błyskawiczne
 prototypowanie, modyfikowanie i uruchamianie aplikacji webowych (np.
@@ -114,7 +114,7 @@ instalacji lokalnego IDE czy frameworków.
 
 ![Gemini Canvas](./static/img/tijo-lab13-canvas.png)
 
-## Zadania do wykonania
+**Zadania do wykonania**
 
 **Zadanie 3: Prototypowanie klienta API**\
 Zleć w Gemini (wykorzystując Canvas) zaprojektowanie nowoczesnego,
@@ -140,7 +140,7 @@ narzędzia, uruchom kolekcję jednym kliknięciem i zweryfikuj, czy klient
 poprawnie odczytał specyfikację, wykonał żądania oraz wygenerował
 czytelny raport z informacją o sukcesach i błędach.
 
-## Podsumowanie
+**Podsumowanie**
 
 Sztuczna inteligencja rewolucjonizuje szybkość budowania oprogramowania
 i automatyzacji, lecz to na inżynierze QA spoczywa obowiązek

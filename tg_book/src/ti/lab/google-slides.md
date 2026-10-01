@@ -2,15 +2,15 @@
 
 **Laboratorium 5:** Google Slides.
 
-## Wprowadzenie
+**Wprowadzenie**
 
 Umiejętność przejrzystego i estetycznego prezentowania wiedzy jest kluczowa w dzisiejszym świecie. **Google Slides** to intuicyjne i potężne narzędzie, które pozwala na szybkie tworzenie atrakcyjnych wizualnie prezentacji.
 
-## Cel laboratorium
+**Cel laboratorium**
 
 Celem zajęć jest zapoznanie się z narzędziem Google Slides poprzez stworzenie własnej prezentacji tematycznej. Dodatkowo utrwalisz wiedzę z Google Sheets, w szczególności w zakresie wykorzystania formuły **JEŻELI (IF)** do przetwarzania wyników sportowych.
 
-## Zadanie 1: Projekt systemu turniejowego
+**Zadanie 1: Projekt systemu turniejowego**
 
 Zanim rozpoczniesz pracę z prezentacją, powtórzmy jedną z użytecznych formuł: **JEŻELI (ang. IF)**. Pozwala ona na wykonanie testu logicznego i zwrócenie jednej z dwóch wartości (w zależności od tego czy test jest prawdziwy lub fałszywy).
 
@@ -32,7 +32,7 @@ Twoim zadaniem będzie uzupełnienie grup mistrzostw świata oraz faz play-off w
 
 Fazy play-off (zakładki w arkuszu) należy wypełnić w taki sposób, aby drużyny wyświetlały się dynamicznie w zależności od wyników z poprzednich meczów. Wyniki drużyn znajdziesz na [Wikipedii](https://pl.wikipedia.org/wiki/Mistrzostwa_Świata_w_Piłce_Nożnej_1998).
 
-## Zadanie 2: Tańce sportowe
+**Zadanie 2: Tańce sportowe**
 
 [Google Slides](https://docs.google.com/presentation/u/0/) to narzędzie do tworzenia prezentacji online. W ramach drugiego zadania stworzysz prezentację na temat tańców sportowych. Prezentacja powinna zawierać opisy i zdjęcia najpopularniejszych tańców, takich jak: walc angielski (standardowy), tango (standardowy), walc wiedeński (standardowy), foxtrot (standardowy), samba (latynoamerykański), cha-cha (latynoamerykański), rumba (latynoamerykański), jive (latynoamerykański).
 
@@ -49,6 +49,6 @@ Jeśli masz problem z dodawaniem slajdów, skorzystaj z poniższego filmu instru
   Twoja przeglądarka nie obsługuje wideo.
 </video>
 
-## Podsumowanie
+**Podsumowanie**
 
 Potrafisz wykorzystać w praktyce formułę JEŻELI oraz stworzyć estetyczną prezentację multimedialną w Google Slides.

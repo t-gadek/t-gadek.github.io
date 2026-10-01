@@ -2,7 +2,7 @@
 
 **L#07:** Atrapy.
 
-## Wprowadzenie
+**Wprowadzenie**
 
 Atrapy są to obiekty zastępcze, które ułatwiają testowanie projektów.
 Pozwalają wydzielić kod od zawiłych zależności, takich jak bazy danych
@@ -32,7 +32,7 @@ Dummy, Stub, czy Spy). Dlatego na potrzeby tego laboratorium i
 zachowania czytelności kodu, wykluczyłem niektóre z nich i skupimy się
 na nauce oraz praktycznym wykorzystaniu **Dummy, Fake oraz Mock**.
 
-## Cel
+**Cel**
 
 Celem laboratorium jest zapoznanie się z atrapami i ich zastosowaniem w
 testach.
@@ -57,7 +57,7 @@ Oto zadania dla Ciebie:
 - **Analiza atrap:** Przeanalizuj kod i zwróć uwagę, w jaki sposób
   wykorzystywane są atrapy.
 
-## Wzorzec MVC
+**Wzorzec MVC**
 
 [Wzorzec MVC (Model-View-Controller)](https://pl.wikipedia.org/wiki/Model-View-Controller) to wzorzec
 architektoniczny, który polega na podziale kodu programu na trzy
@@ -65,7 +65,7 @@ oddzielne moduły. Model reprezentuje dane i logikę biznesową. View to
 interfejs użytkownika. Controller to pośrednik między modelem a
 widokiem.
 
-## Aplikacja - szyfr Cezara
+**Aplikacja - szyfr Cezara**
 
 ``` python
 # main.py

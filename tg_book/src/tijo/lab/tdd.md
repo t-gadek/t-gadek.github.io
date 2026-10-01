@@ -2,7 +2,7 @@
 
 **L#03:** TDD.
 
-## Wprowadzenie
+**Wprowadzenie**
 
 Testowanie oprogramowania to nie tylko weryfikacja gotowego kodu. W
 nowoczesnym podejściu proces ten potrafi dyktować architekturę samej
@@ -10,14 +10,14 @@ aplikacji, gwarantując, że każdy napisany fragment kodu bezpośrednio
 realizuje założone odgórnie wymagania biznesowe i jest od samego
 początku pokryty testami.
 
-## Cel
+**Cel**
 
 Głównym celem laboratorium jest opanowanie techniki **Test-Driven
 Development (TDD)** oraz wdrożenie w praktyce cyklu wytwarzania
 oprogramowania **Red-Green-Refactor**. Będziemy trenować krok po kroku
 pisanie testów przed kodem produkcyjnym i refaktoryzację rozwiązań.
 
-## Technika TDD
+**Technika TDD**
 
 **TDD**, czyli **Test-Driven Development** jest to technika tworzenia
 oprogramowania, w której najpierw tworzone są testy dla nowej
@@ -52,7 +52,7 @@ implementację (GREEN), która sprawia, że test przechodzi. Na koniec
 refaktoryzujemy kod (REFACTOR), aby poprawić jego jakość, nie zmieniając
 jego funkcjonalności.
 
-## Zadanie do wykonania
+**Zadanie do wykonania**
 
 **System zarządzania studentami AT**
 
@@ -135,7 +135,7 @@ class StudentManagement:
         pass  # Implementacja obliczania średniej ocen
 ```
 
-## Podsumowanie
+**Podsumowanie**
 
 Dzięki technice TDD twój kod zyska na jakości, będzie lepiej
 przetestowany, a Ty nabierzesz pewności, dodając nowe funkcjonalności

@@ -2,13 +2,13 @@
 
 **L#12:** Selenium.
 
-## Wprowadzenie
+**Wprowadzenie**
 
 **Selenium** to biblioteka języka Python służąca do automatyzacji
 przeglądarek internetowych. Pozwala na sterowanie przeglądarką,
 symulowanie działań użytkownika oraz testowanie aplikacji webowych.
 
-### Do czego wykorzystujemy Selenium?
+**Do czego wykorzystujemy Selenium?**
 
 - Automatyzacja testów aplikacji webowych.
 - Symulowanie interakcji użytkownika z przeglądarką.
@@ -16,7 +16,7 @@ symulowanie działań użytkownika oraz testowanie aplikacji webowych.
 - Web scraping (pobieranie danych ze stron internetowych).
 - Tworzenie botów do wykonywania powtarzalnych czynności online.
 
-### Co można testować przy pomocy Selenium?
+**Co można testować przy pomocy Selenium?**
 
 - **Formularze**: Testowanie obsługi formularzy, wprowadzania i
   przesyłania danych.
@@ -26,17 +26,17 @@ symulowanie działań użytkownika oraz testowanie aplikacji webowych.
   drop), alerty.
 - **Responsywność**: Testy dla różnych rozdzielczości.
 
-### Instalacja potrzebnych paczek
+**Instalacja potrzebnych paczek**
 
 ``` bash
 pip install selenium webdriver-manager
 ```
 
-### Przydatne zasoby
+**Przydatne zasoby**
 
 - [Selenium with Python (dokumentacja)](https://selenium-python.readthedocs.io/).
 
-## Cel
+**Cel**
 
 Celem laboratorium jest zapoznanie się z biblioteką Selenium oraz
 procesem automatyzacji testów webowych w języku Python. Zdobędziesz
@@ -44,7 +44,7 @@ praktyczne umiejętności pozwalające na tworzenie skryptów, które
 automatycznie weryfikują działanie aplikacji w przeglądarce, bazując na
 wcześniej przygotowanych przypadkach testowych.
 
-## Zadanie - Selenium
+**Zadanie - Selenium**
 
 Na podstawie zaprezentowanych poniżej przykładów kodu napisz testy
 automatyczne dla aplikacji udostępnionych na poprzednim laboratorium.
@@ -63,12 +63,12 @@ poprzedniego laboratorium.
 - Przetestuj swoje rozwiązanie (zweryfikuj, jak zachowują się testy po
   przełączeniu na środowisko DEV).
 
-## Przykłady implementacji testów automatycznych
+**Przykłady implementacji testów automatycznych**
 
 Poniżej znajdziesz gotowe skrypty, które pomogą Ci zrozumieć podstawowe
 mechanizmy i rozpocząć pracę.
 
-### Weryfikacja nagłówka strony
+**Weryfikacja nagłówka strony**
 
 Prosty test weryfikujący obecność i treść nagłówka **H1** na
 przykładowej stronie.
@@ -117,7 +117,7 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
-### Obsługa formularza kalkulatora
+**Obsługa formularza kalkulatora**
 
 Test wprowadzający dane do formularza i weryfikujący wynik działania
 kalkulatora.
@@ -170,7 +170,7 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
-## Podsumowanie
+**Podsumowanie**
 
 Automatyzacja testów za pomocą narzędzi takich jak Selenium znacznie
 przyspiesza proces weryfikacji oprogramowania, szczególnie przy

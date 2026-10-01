@@ -2,15 +2,15 @@
 
 **Laboratorium 2:** Google Workspace (Gemini, Keep i Forms).
 
-## Wprowadzenie
+**Wprowadzenie**
 
 W dobie cyfrowej transformacji narzędzia chmurowe ułatwiają codzienne i zawodowe zadania. Integracja wszechstronnych rozwiązań pozwala na wygodniejszą edukację. Na szczególną uwagę zasługuje wsparcie sztucznej inteligencji (**Google Gemini**), intuicyjne budowanie formularzy czy ankiet (**Google Forms**) oraz efektywne zarządzanie informacjami przez cyfrowe notatki i zadania (**Google Keep**).
 
-## Cel laboratorium
+**Cel laboratorium**
 
 Głównym celem zajęć jest praktyczne opanowanie i płynne posługiwanie się nowoczesnymi usługami z rodziny **Google Workspace**. W trakcie laboratorium wykorzystamy asystenta AI do szybkiego generowania i parafrazowania treści, utworzymy logiczny formularz do zbierania istotnych opinii, jak i zorganizujemy plan dnia za pomocą list do zrobienia (TO-DO). Wymienione umiejętności to kluczowe elementy nowoczesnej produktywności.
 
-## Organizacja plików
+**Organizacja plików**
 
 Zaloguj się na swoje konto **Google**, otwórz **Google Drive** (<https://drive.google.com/>) oraz uporządkuj swoje pliki. Postępuj zgodnie z poniższym filmikiem.
 
@@ -19,7 +19,7 @@ Zaloguj się na swoje konto **Google**, otwórz **Google Drive** (<https://drive
   Twoja przeglądarka nie obsługuje wideo.
 </video>
 
-## Generowanie treści w Google Gemini
+**Generowanie treści w Google Gemini**
 
 **Google Gemini** to bardzo zaawansowany [model językowy](https://pl.wikipedia.org/wiki/Duży_model_językowy). Wyobraź sobie go jako inteligentnego asystenta, który potrafi: rozumieć i generować tekst, przetwarzać informacje, uczyć się i dostosowywać.
 
@@ -38,7 +38,7 @@ Więcej wskazówek na temat tego, jak efektywnie konstruować zapytania, znajdzi
 
 Skopiuj wygenerowany tekst i wklej go do nowego dokumentu **Google Docs**. Edytuj treść tak, aby miała dla Ciebie sens. Możesz zmienić przykłady, dodać swoje doświadczenia lub usunąć niepotrzebne fragmenty. Plik powinien posiadać odpowiednią nazwę: **Wpływ aktywności fizycznej na zdrowie**.
 
-## Formatowanie dokumentu
+**Formatowanie dokumentu**
 
 Sformatuj dokument według poniższych zasad:
 
@@ -52,7 +52,7 @@ Sformatuj dokument według poniższych zasad:
 
 Zapisz dokument w folderze **lab02**.
 
-## Google Forms
+**Google Forms**
 
 **Google Forms** to bezpłatne narzędzie online, które umożliwia tworzenie profesjonalnych ankiet, testów, formularzy rejestracyjnych oraz innych interaktywnych kwestionariuszy. Dzięki intuicyjnemu interfejsowi użytkownika, nawet osoby bez specjalistycznej wiedzy technicznej mogą z łatwością projektować i rozpowszechniać formularze, a następnie analizować zebrane odpowiedzi.
 
@@ -70,7 +70,7 @@ Dodaj następujące pytania:
 
 Udostępnij formularz koledze / koleżance w grupie. Następnie przeanalizuj wyniki.
 
-## Google Keep
+**Google Keep**
 
 **Google Keep** to cyfrowy notes, który pozwala szybko zapisywać myśli, tworzyć listy zadań, dodawać zdjęcia. Służy do organizacji codziennych spraw, przypominania o ważnych zadaniach i łatwego dostępu do notatek z dowolnego urządzenia.
 
@@ -128,6 +128,6 @@ Tytuł: "Zdrowe posiłki na cały dzień"
 
 **Kolor tła:** Niebieski.
 
-## Podsumowanie
+**Podsumowanie**
 
 Znajomość przydatnych narzędzi, takich jak **Google Gemini**, **Google Forms** czy **Google Keep**, po prostu ułatwia życie. Pomagają one szybciej komunikować się z innymi i uporządkować naszą cyfrową przestrzeń. Kiedy potrafisz sobie ułatwić i zautomatyzować pracę, sprawnie szukać informacji i efektywnie zbierać dane, wyrabiasz w sobie świetny nawyk. Dzięki niemu codzienna nauka lub praca stają się o wiele bardziej wydajne i przyjemniejsze.

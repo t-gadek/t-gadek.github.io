@@ -2,15 +2,15 @@
 
 **Laboratorium 4:** Google Sheets.
 
-## Wprowadzenie
+**Wprowadzenie**
 
 Praca nauczyciela WF, trenera czy organizatora zawodów to nie tylko bezpośredni kontakt z zawodnikami, ale też mnóstwo "papierkowej" roboty. **Google Sheets** to Twój osobisty, wirtualny asystent, który automatycznie przeliczy stawki za treningi personalne, błyskawicznie wskaże najszybszego sprintera w klasie i wyłoni zwycięzców turnieju piłkarskiego. Narzędzia informatyczne oszczędzają Twój czas, pozwalając Ci skupić się na tym, co najważniejsze — na sporcie.
 
-## Cel laboratorium
+**Cel laboratorium**
 
 Dowiesz się, jak zautomatyzować codzienną pracę trenera i organizatora zawodów. Nauczysz się blokować komórki w formułach (adresacja bezwzględna). Przećwiczysz sortowanie i filtrowanie list zawodników. Zbudujesz powiązane ze sobą arkusze wyników.
 
-## Zadanie 1: Karta pracy trenera personalnego
+**Zadanie 1: Karta pracy trenera personalnego**
 
 Jako trener personalny, musisz sprawnie zarządzać rozliczeniami ze swoimi podopiecznymi. Obecnie prowadzisz 3 stałych klientów, z których każdy trenuje w innym trybie: jeden codziennie, drugi raz w tygodniu, a trzeci wpada na salę sporadycznie.
 
@@ -24,7 +24,7 @@ Oto przykładowy rezultat. Pamiętaj, że wprowadzenie nowych danych powinno aut
 
 ![Dynamiczna karta pracy trenera](./static/ti-lab04-job.png)
 
-## Zadanie 2: Tabela skoczków narciarskich
+**Zadanie 2: Tabela skoczków narciarskich**
 
 Podczas zawodów w skokach narciarskich gromadzisz dziesiątki pomiarów. Przeanalizowanie ich "na oko" i ręczne szukanie lidera bywa uciążliwe i sprzyja pomyłkom. Twoim zadaniem jest przepisanie poniższych danych do arkusza. Zrób to dokładnie w takiej kolejności, w jakiej są podane (dane są celowo nieposortowane).
 
@@ -62,7 +62,7 @@ Oto przykładowy rezultat:
 
 ![Tabela skoczków narciarskich](./static/ti-lab04-ski-table.png)
 
-## Zadanie 3: Wyniki biegu na 60m
+**Zadanie 3: Wyniki biegu na 60m**
 
 Na lekcji WF sprawdzasz czasy swoich uczniów w sprincie na 60 metrów. Chcesz szybko obliczyć i pokazać młodzieży, ile sekund stracili do najszybszego zawodnika. Aby zrobić to sprawnie, musisz zrozumieć **mechanizm blokowania komórek**, czyli różnicę między adresacją względną a bezwzględną.
 
@@ -80,6 +80,6 @@ Wyobraź sobie, że symbol dolara (`$`) to solidna kłódka. To, co stoi bezpoś
 3. Wykorzystaj odwołanie bezwzględne do komórki z najlepszym czasem.
 4. Przeciągnij formułę w dół i sprawdź poprawność wyników.
 
-## Podsumowanie
+**Podsumowanie**
 
 Google Sheets jest przydatnym narzędziem do automatyzacji obliczeń, analizy danych, budowania tabel i zarządzania wynikami. Umożliwia oszczędność czasu oraz sprawniejszą pracę z informacjami w praktyce szkolnej i zawodowej.

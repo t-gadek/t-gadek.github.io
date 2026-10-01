@@ -3,13 +3,13 @@
 **Temat:** Zebrane informacje na temat wymogów edytorskich i
 formatowania tekstu w pracy dyplomowej.
 
-## Wprowadzenie
+**Wprowadzenie**
 
 Pisanie pracy dyplomowej to proces, który wymaga nie tylko wiedzy
 merytorycznej, ale również odpowiedniej organizacji i przestrzegania
 ustalonych wytycznych edytorskich.
 
-## Cel
+**Cel**
 
 Celem tych zaleceń jest dostarczenie dyplomantom kompleksowego standardu
 dotyczącego formatowania tekstu, tworzenia spisu treści, bibliografii, a
@@ -17,12 +17,12 @@ także wstawiania rysunków, tabel i wzorów matematycznych. Przestrzeganie
 tych wskazówek gwarantuje, że Twoja praca będzie czytelna, profesjonalna
 i zgodna z wymogami uczelni.
 
-## Wymogi edytorskie i formatowanie
+**Wymogi edytorskie i formatowanie**
 
 Poniżej przedstawiono zasady formatowania tekstu, umieszczania wzorów,
 tabel i rysunków w pracy dyplomowej.
 
-### Czcionka i odstępy
+**Czcionka i odstępy**
 
 Cały tekst pracy należy pisać czcionką Times New Roman w rozmiarze 12.
 Odstępy pomiędzy wierszami – 1,5. W tabelach **można** stosować
@@ -30,7 +30,7 @@ Odstępy pomiędzy wierszami – 1,5. W tabelach **można** stosować
 tabeli na stronie). Pomiędzy akapitami należy zostawiać 1 pusty wiersz.
 Tytuły rozdziałów i podrozdziałów pogrubione.
 
-### Wzory matematyczne
+**Wzory matematyczne**
 
 Przed i po wzorze należy zostawić jeden pusty wiersz. Sam wzór ma być
 wycentrowany. Jeżeli jest na niego powołanie w tekście, to musi on
@@ -45,9 +45,9 @@ Powołanie na wzór w tekście ma zawierać odniesienie do odpowiedniego
 numeru. Należy unikać zwrotów takich jak **w poniższym wzorze...**,
 ponieważ po dodaniu nowych tekstów układ strony może się przesunąć.
 
-![Prezentacja przykładowego wzoru](./static/formula.png)
+![Prezentacja przykładowego wzoru](../../static/ld/lab/formula.png)
 
-### Rysunki
+**Rysunki**
 
 W tekście pracy jako rysunki należy traktować i tym samym stylem
 opisywać również:
@@ -73,9 +73,9 @@ przy wzorach, nie należy stosować zwrotów wskazujących położenie: np.
 numer.
 
 ![Zastosowanie poprawnie opisanego i wycentrowanego rysunku względem
-osi](./static/picture.png)
+osi](../../static/ld/lab/picture.png)
 
-### Tabele
+**Tabele**
 
 Przed podpisem tabeli zostawiamy jeden pusty wiersz. Podpis zawsze
 umieszczamy przed (nad) tabelą. Można go dosunąć do lewego marginesu - i
@@ -91,23 +91,23 @@ Odwołuj się do danych powołując się w tekście jednoznacznie na konkretny
 numer tabeli.
 
 ![Wymiary poprawnego podpisu tabeli i umiejscowienie na
-stronicy](./static/table.png)
+stronicy](../../static/ld/lab/table.png)
 
-### Numeracja stron
+**Numeracja stron**
 
 Strony należy numerować, sugerowane miejsce na numery: na dole na
 środku.
 
-### Nagłówek i stopka
+**Nagłówek i stopka**
 
 Mogą być zdefiniowane zgodnie z upodobaniami, ale jest to element
 opcjonalny, nie powinny one zaburzać czytelności strony.
 
-### Marginesy
+**Marginesy**
 
 Powinny umożliwiać oprawę lub zbindowanie pracy.
 
-## Podsumowanie
+**Podsumowanie**
 
 Stosowanie się do zaproponowanych reguł pozwoli Ci w łatwy i spójny
 sposób zaprojektować strukturę pracy dyplomowej. Przejrzyste

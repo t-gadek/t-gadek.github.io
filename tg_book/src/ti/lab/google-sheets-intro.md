@@ -2,15 +2,15 @@
 
 **Laboratorium 3:** Wprowadzenie do Google Sheets.
 
-## Wprowadzenie
+**Wprowadzenie**
 
 **Google Sheets** (Arkusze Google) to internetowy arkusz kalkulacyjny, umożliwiający tworzenie i analizę danych w tabelach. Działa w chmurze, umożliwiając współpracę wielu użytkowników w czasie rzeczywistym. Jest to darmowe narzędzie będące częścią pakietu **Google Workspace**, które łatwo integruje się z innymi aplikacjami.
 
-## Cel laboratorium
+**Cel laboratorium**
 
 Celem zajęć jest zapoznanie się z aplikacją **Google Sheets** oraz opanowanie podstawowej analizy danych. Podczas pracy poznasz pojęcia arkusza, komórki i formuł, będziesz w stanie formatować dane, używać podstawowych funkcji do prostych kalkulacji oraz tworzyć wykresy, by podnieść czytelność prezentowanych parametrów.
 
-## Podstawowe pojęcia
+**Podstawowe pojęcia**
 
 **Arkusz**: Pojedyncza strona w pliku Google Sheets, składająca się z siatki wierszy i kolumn.
 
@@ -22,13 +22,13 @@ Celem zajęć jest zapoznanie się z aplikacją **Google Sheets** oraz opanowani
 
 ![Google Sheets intro](./static/ti-lab03-intro.png)
 
-## Tutorial: Jak dodać nowy arkusz?
+**Tutorial: Jak dodać nowy arkusz?**
 
 W lewym dolnym rogu ekranu znajduje się przycisk **"+"** (Dodaj arkusz).
 
 ![Add sheet](./static/ti-lab03-add-sheet.png)
 
-## Tutorial: Formatowanie warunkowe
+**Tutorial: Formatowanie warunkowe**
 
 To narzędzie, które pozwala automatycznie formatować komórki (np. zmieniać kolor tła lub tekstu) na podstawie określonych warunków. Przydaje się na przykład do oznaczania na zielono komórek z wynikami powyżej 2.0.
 
@@ -37,7 +37,7 @@ To narzędzie, które pozwala automatycznie formatować komórki (np. zmieniać 
   Twoja przeglądarka nie obsługuje wideo.
 </video>
 
-## Tutorial: Format danych
+**Tutorial: Format danych**
 
 Format danych pozwala określić, jak dane są wyświetlane w komórkach (np. jako liczby z dwoma miejscami po przecinku, daty w odpowiednim i oczekiwanym formacie lub waluty).
 
@@ -46,7 +46,7 @@ Format danych pozwala określić, jak dane są wyświetlane w komórkach (np. ja
   Twoja przeglądarka nie obsługuje wideo.
 </video>
 
-## Tutorial: Formuły
+**Tutorial: Formuły**
 
 Formuły to wyrażenia wykonujące obliczenia na danych w arkuszu. Formuła zawsze zaczyna się od znaku równości (**=**). Można używać wbudowanych funkcji (np. **SUM()**) oraz operatorów matematycznych (np. **+**, **-**, **\***, **/**).
 
@@ -63,7 +63,7 @@ Sumuje wartości w komórkach od C3 do C5.
   Twoja przeglądarka nie obsługuje wideo.
 </video>
 
-## Tutorial: Funkcja COUNTIF()
+**Tutorial: Funkcja COUNTIF()**
 
 Funkcja **COUNTIF()** zlicza komórki w danym zakresie, które spełniają określone z góry kryteria.
 
@@ -86,7 +86,7 @@ Zlicza, ile razy w zadanym zakresie od C2 do C5 wynik jest większy od 2.
   Twoja przeglądarka nie obsługuje wideo.
 </video>
 
-## Tutorial: Tworzenie wykresów
+**Tutorial: Tworzenie wykresów**
 
 Zaznacz dane, które chcesz zaprezentować na wykresie. Kliknij **Wstaw** w górnym obszarze menu, a następnie wybierz **Wykres**. Później, w **Edytorze wykresów** po prawej stronie, po prostu wybierz typ odpowiadającego ci wykresu i dodatkowo dostosuj jego ogólny wygląd.
 
@@ -95,7 +95,7 @@ Zaznacz dane, które chcesz zaprezentować na wykresie. Kliknij **Wstaw** w gór
   Twoja przeglądarka nie obsługuje wideo.
 </video>
 
-## Tutorial: Funkcja IF()
+**Tutorial: Funkcja IF()**
 
 Funkcja **IF()** zwraca jedną wartość, jeśli dany zadeklarowany warunek logiczny jest spełniony, oraz inną docelową wartość, jeśli ten nie jest spełniony.
 
@@ -120,7 +120,7 @@ Jeżeli wartość wskazana w komórce C3 jest wyższa niż 2, nastąpi zwróceni
 
 Zwróć uwagę, że wystarczy wprowadzić formułę do jednej komórki, a następnie przeciągnąć ją do pozostałych a formuła dostosuje się do każdej komórki.
 
-## Zadanie 1: Rekordy biegowe (wprowadzanie i edycja danych)
+**Zadanie 1: Rekordy biegowe (wprowadzanie i edycja danych)**
 
 **Dane:** Lista 10 zawodników, ich imiona, nazwiska i czasy uzyskane w biegu na 100 metrów.
 
@@ -140,7 +140,7 @@ Ewa;Szymańska;11,3
 
 **Polecenie:** Utwórz nowy arkusz i wprowadź dane do nowego arkusza. Użyj klawiszy Enter (przenosi do następnego wiersza), Tab (przenosi do następnej kolumny) i F2 (edytuj komórkę) do nawigacji i edycji danych.
 
-## Zadanie 2: Analiza wyników skoku w dal (formatowanie danych)
+**Zadanie 2: Analiza wyników skoku w dal (formatowanie danych)**
 
 **Dane:** Wyniki 15 zawodników w skoku w dal (w metrach).
 
@@ -165,7 +165,7 @@ Adam;Rutkowski;7,22
 
 **Polecenie:** Utwórz nowy arkusz i wprowadź dane. Sformatuj komórki, aby wyświetlały wyniki z dokładnością do dwóch miejsc po przecinku. Zastosuj formatowanie warunkowe, aby wyróżnić wyniki powyżej 7 metrów.
 
-## Zadanie 3: Obliczanie BMI (podstawowe funkcje)
+**Zadanie 3: Obliczanie BMI (podstawowe funkcje)**
 
 **Dane:** Lista 20 osób, ich waga (w kilogramach) i wzrost (w metrach).
 
@@ -195,6 +195,6 @@ Sylwia;Kozłowska;69;1,69
 
 **Polecenie:** Utwórz nowy arkusz i wprowadź dane. Użyj formuły do obliczenia BMI dla każdej osoby na podstawie wzoru: waga / wzrost². Zastosuj formatowanie do wyświetlania wyników z dokładnością do 2 miejsc po przecinku.
 
-## Podsumowanie
+**Podsumowanie**
 
 Google Sheets to narzędzie, które pozwala na organizację danych, obliczenia i wizualizację wyników. Dzięki prostym funkcjom i automatycznym formułom łatwo przygotować raporty, zestawienia i analizy nawet bez specjalistycznej wiedzy technicznej.

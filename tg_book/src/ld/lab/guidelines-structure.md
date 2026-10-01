@@ -3,39 +3,39 @@
 **Temat:** Zebrane informacje na temat układu merytorycznego i struktury
 pracy dyplomowej.
 
-## Wprowadzenie
+**Wprowadzenie**
 
 Pisanie pracy dyplomowej to proces, który wymaga nie tylko wiedzy
 merytorycznej, ale również odpowiedniej organizacji układu pracy i 
 przestrzegania ustalonych wytycznych dotyczących jej struktury.
 
-## Cel
+**Cel**
 
 Przedstawione poniżej wskazówki mają
 na celu ujednolicenie struktury i formy prac inżynierskich realizowanych
 w Katedrze Informatyki.
 
-## Struktura pracy dyplomowej
+**Struktura pracy dyplomowej**
 
 Poniżej przedstawiono poszczególne elementy, które powinna zawierać
 praca dyplomowa, wraz z krótkim opisem ich charakteru.
 
-### Karta tytułowa
+**Karta tytułowa**
 
 Powinna być zgodna z zaleceniami z Dziekanatu.
 
-### Spis treści
+**Spis treści**
 
 Spis poszczególnych części z odniesieniami do stron. Zwracać uwagę na
 jego aktualizowanie podczas nanoszenia poprawek w pracy.
 
-### Uwagi wstępne
+**Uwagi wstępne**
 
 Powinny zawierać opis celu, przedmiotu i zakresu pracy oraz krótko
 informować, co jest omówione w poszczególnych rozdziałach. Objętość tego
 rozdziału to około 2–3 strony.
 
-### Część teoretyczno-opisowa
+**Część teoretyczno-opisowa**
 
 W przypadku prac praktyczno-aplikacyjnych powinna zawierać krótki opis
 sprzętu i oprogramowania użytego do realizacji pracy z uwypukleniem
@@ -63,7 +63,7 @@ między zdania:
 
 Sugerowana objętość tej części to około 15–25 stron.
 
-### Opis realizacji zadania postawionego w pracy
+**Opis realizacji zadania postawionego w pracy**
 
 Jest to **najważniejsza** część pracy, gdyż zawiera opis tego, co
 dyplomant wykonał podczas jej realizacji. Należy tu podać dokładny opis
@@ -79,7 +79,7 @@ części pracy.
 Objętość tej części pracy nie może być mniejsza niż objętość części
 opisowej.
 
-### Testy poprawności realizacji zadania
+**Testy poprawności realizacji zadania**
 
 W tej części należy zawrzeć opis prowadzonych badań testowych
 sprawdzających poprawność realizacji zadania. Mogą tu znaleźć się np.
@@ -88,7 +88,7 @@ aplikacji.
 
 Objętość tej części to około 10–15 stron.
 
-### Uwagi końcowe
+**Uwagi końcowe**
 
 Powinny zawierać podsumowanie i wnioski, jakie nasunęły się po
 zakończeniu realizacji pracy. Przykładowo, można tu opisać, co udało się
@@ -98,7 +98,7 @@ kierunki dalszego rozwoju zagadnień poruszonych na łamach pracy.
 
 Objętość: około 2–4 strony.
 
-### Bibliografia
+**Bibliografia**
 
 Musi zawierać alfabetyczny (według nazwisk Autorów) spis pozycji
 źródłowych użytych do przygotowania pracy. Pozycje, przy których nie da
@@ -116,12 +116,12 @@ stosować go konsekwentnie):
 **Minimalna** liczba pozycji w bibliografii to około 6–7. Maksymalna, co
 do zasady, pozostaje bez ograniczeń.
 
-### Dodatki
+**Dodatki**
 
 Stanowią część opcjonalną na załączniki, kody źródłowe oraz obszerną
 dokumentację zewnętrzną.
 
-## Podsumowanie
+**Podsumowanie**
 
 Stosowanie się do zaproponowanych reguł pozwoli Ci w łatwy i spójny
 sposób zaprojektować strukturę pracy dyplomowej. Przejrzyste

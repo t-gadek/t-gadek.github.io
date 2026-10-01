@@ -2,21 +2,21 @@
 
 **L#01:** Asercja, Arrange-Act-Assert (AAA).
 
-## Wprowadzenie
+**Wprowadzenie**
 
 W trakcie tego laboratorium zapoznamy się z fundamentalnymi mechanizmami
 weryfikacji poprawności oprogramowania. Zrozumienie działania asercji
 oraz poprawnej struktury testu jest kluczowe dla tworzenia
 oprogramowania wysokiej jakości.
 
-## Cel
+**Cel**
 
 Głównym celem laboratorium jest opanowanie umiejętności pisania testów
 jednostkowych przy użyciu asercji oraz wdrożenie standardu
 **Arrange-Act-Assert (AAA)** aby poprawić czytelność i organizację kodu
 testowego.
 
-## Asercja
+**Asercja**
 
 Jest to forma zdaniowa w danym języku, która zwraca prawdę lub fałsz.
 Asercja wskazuje, że programista zakłada, że ów predykat jest w danym
@@ -46,7 +46,7 @@ if __name__ == "__main__":
 Postaraj się uruchomić skrypt, następnie zmodyfikuj warunek w taki
 sposób, aby asercja zwróciła fałsz. Obserwuj co się dzieje w terminalu.
 
-## Zadanie do wykonania
+**Zadanie do wykonania**
 
 Zaimplementuj funkcję **def max(digits)**, która wyszuka największy
 element z kolekcji liczb całkowitych (digits). Zaproponuj dobre testy /
@@ -61,7 +61,7 @@ asercje:
 - Test4: Obsługa kolekcji wieloelementowej (metoda zwraca największy
   element).
 
-## Arrange-Act-Assert (AAA)
+**Arrange-Act-Assert (AAA)**
 
 **Arrange-Act-Assert (AAA)** to technika opisu testów, która pomaga w
 tworzeniu klarownych, czytelnych i zrozumiałych przypadków testowych.
@@ -89,7 +89,7 @@ def test_addition():
     assert result == 3, "add(1, 2) should return 3"
 ```
 
-## Zadanie do wykonania
+**Zadanie do wykonania**
 
 Podziel swój kod z poprzedniego zadania na kod produkcyjny (lokalizacja
 **src**) i testowy (lokalizacja **test**). Asercje powinny znaleźć się w
@@ -98,14 +98,14 @@ zapisane zgodnie z konwencją **Arrange-Act-Assert**.
 
 ![tree](./static/img/tijo-lab01-tree.png)
 
-## Zadanie dodatkowe
+**Zadanie dodatkowe**
 
 Zaimplementuj funkcję **def is_pesel_correct(pesel_digits:
 list\[int\])**, która zweryfikuje, czy podany numer PESEL jest poprawny.
 Zaproponuj dobre testy. Zastosuj poznane zagadnienia podczas
 laboratorium.
 
-## Podsumowanie
+**Podsumowanie**
 
 Podczas tych zajęć omówiliśmy pojęcie asercji jako narzędzia do
 przerywania programu w przypadku niespełnienia założeń logicznych.

@@ -2,20 +2,20 @@
 
 **L#05:** SOLID.
 
-## Wprowadzenie
+**Wprowadzenie**
 
 Zasady **SOLID** to pięć kluczowych reguł projektowania obiektowego.
 Dzięki nim kod jest bardziej elastyczny, czytelny i łatwiejszy w
 utrzymaniu. Stosowanie tych zasad znacznie zmniejsza ryzyko błędów przy
 rozbudowie aplikacji.
 
-## Cel
+**Cel**
 
 Głównym celem laboratorium jest nauka rozpoznawania wadliwego kodu,
 który łamie dobre praktyki. Dodatkowo zapoznamy się z praktycznym
 zastosowaniem refaktoryzacji zgodnie z zasadami **SOLID**.
 
-## Zasady SOLID
+**Zasady SOLID**
 
 Poniżej przedstawiono opis poszczególnych zasad składających się na
 akronim SOLID:
@@ -34,7 +34,7 @@ akronim SOLID:
   zależności: Moduły wysokopoziomowe nie powinny zależeć od modułów
   niskopoziomowych. Oba powinny zależeć od abstrakcji.
 
-## Refaktoryzacja
+**Refaktoryzacja**
 
 Pobierz wszystkie skrypty i postaraj się je poprawić tak, aby nie
 naruszały zasad SOLID.
@@ -61,7 +61,7 @@ naruszały zasad SOLID.
   sztywno z konkretną żarówką? A co jak zechcesz podpiąć do niego
   wentylator?*
 
-## Podsumowanie
+**Podsumowanie**
 
 Zrozumienie i umiejętne stosowanie zasad **SOLID** to klucz do bycia
 profesjonalnym inżynierem oprogramowania. Kod oparty na dobrych

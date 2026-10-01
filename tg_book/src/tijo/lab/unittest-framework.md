@@ -2,7 +2,7 @@
 
 **L#02:** Framework unittest.
 
-## Wprowadzenie
+**Wprowadzenie**
 
 Testowanie jednostkowe to fundament tworzenia niezawodnego
 oprogramowania. Framework **unittest** jest standardowym narzędziem do
@@ -11,7 +11,7 @@ uruchamiania testów oraz bogaty zestaw asercji. Pozwala na separację
 logiki testowej od produkcyjnej oraz automatyzację procesu weryfikacji
 zmian w kodzie.
 
-## Cel
+**Cel**
 
 Celem laboratorium jest zapoznanie się z architekturą testów w
 frameworku **unittest**. Skupimy się na izolacji przypadków testowych
@@ -20,7 +20,7 @@ wyjątkowych oraz stosowaniu spójnych konwencji nazewniczych. Na
 przykładzie klasy koszyka zakupowego przećwiczymy projektowanie testów
 dla złożonej logiki biznesowej.
 
-## Framework unittest
+**Framework unittest**
 
 Spójrz na podstawową strukturę testu przy użyciu tego frameworka.
 Postaraj się przeanalizować kod, a następnie dokończyć implementacje
@@ -59,7 +59,7 @@ Zaimplementuj brakujące metody w klasie **Calc** (add(), subtract(),
 multiply(), divide()). Po uruchomieniu testów przeanalizuj logi widoczne
 w konsoli.
 
-## Struktura testów
+**Struktura testów**
 
 - W pierwszej kolejności importujemy bibliotekę **unittest**, która
   zawiera funkcje do testowania.
@@ -83,7 +83,7 @@ w konsoli.
 - Testy uruchamiamy za pomocą **unittest.main()**, co powoduje
   automatyczne wykrycie i uruchomienie wszystkich metod testowych.
 
-## Nazewnictwo testów
+**Nazewnictwo testów**
 
 Poprawne nazywanie plików, klas i metod testowych jest kluczowe dla
 utrzymania porządku w projekcie oraz szybkiej analizy wyników testów.
@@ -108,7 +108,7 @@ przez narzędzia testowe.
 **jednej konwencji** w obrębie całego projektu. Zapewnia to spójność i
 ułatwia pracę innym programistom.
 
-## Uruchomienie testów
+**Uruchomienie testów**
 
 Po poprawnym zaimplementowaniu testów oraz klasy produkcyjnej, możemy
 przystąpić do ich uruchomienia. Poniżej zaprezentowano przykładowy widok
@@ -116,7 +116,7 @@ z konsoli po pomyślnym wykonaniu wszystkich przypadków testowych.
 
 ![Widok uruchomionych testów](./static/img/tijo-lab02-run.png)
 
-## Zadanie do wykonania
+**Zadanie do wykonania**
 
 Twoje zadanie będzie polegało na implementacji koszyka zakupowego oraz
 zestawu testów jednostkowych. Poniżej znajduje się kod źródłowy, który
@@ -175,7 +175,7 @@ test (o technice TDD szerzej opowiemy sobie na kolejnych zajęciach).
 Zastosuj poznaną konwencję **Arrange-Act-Assert** w każdej metodzie
 testowej.
 
-## Podsumowanie
+**Podsumowanie**
 
 Opanowanie frameworka **unittest** pozwala na budowę solidnej siatki
 bezpieczeństwa dla kodu. Kluczowym elementem jest nie tylko sama

@@ -2,20 +2,20 @@
 
 **L#06:** Code Smells.
 
-## Wprowadzenie
+**Wprowadzenie**
 
 **Code Smell** to termin używany w programowaniu do opisywania pewnych
 cech kodu źródłowego, które wskazują na potencjalne problemy z jego
 jakością. Niekoniecznie oznaczają one błędy, ale często prowadzą do
 trudniejszego utrzymania kodu.
 
-## Cel
+**Cel**
 
 Głównym celem laboratorium jest identyfikacja najczęstszych "zapachów"
 kodu (ang. Code Smells) oraz nauka ich eliminowania poprzez odpowiednią
 refaktoryzację struktury kodu.
 
-## Rozrosty
+**Rozrosty**
 
 - **Długa metoda:** Jeżeli metoda jest dłuższa niż 10-20 linii dziel na
   mniejsze metody.
@@ -25,7 +25,7 @@ refaktoryzację struktury kodu.
   prymitywnych zamiast klas. Stwórz klasę / strukturę, która będzie
   agregować te parametry.
 
-## Zbędne elementy
+**Zbędne elementy**
 
 - **Zduplikowany kod:** Powtarzający się kod w kilku miejscach wyciągnij
   do wspólnej metody.
@@ -33,7 +33,7 @@ refaktoryzację struktury kodu.
 - **Leniwa klasa:** Klasa, która nie robi nic szczególnego, połącz ją z
   inną klasą lub usuń.
 
-## Łatwe do wykrycia powiązania
+**Łatwe do wykrycia powiązania**
 
 - **Zbitki danych:** Duplikacja tych samych parametrów w kilku
   miejscach. Stwórz logiczną struktrę, która będzie agregować te
@@ -41,14 +41,14 @@ refaktoryzację struktury kodu.
 - **Zazdrość o funkcje:** Metoda operuje głównie na danych innej klasy.
   Przenieś ją do klasy, których danych używa.
 
-## Nadużycia
+**Nadużycia**
 
 - **Instrukcje warunkowe:** Długi switch/if-else zastąp polimorfizmem
   lub mapą.
 - **Magiczne liczby:** Stałe jak 42 bez wyjaśnienia zdefiniuj jako
   nazwane stałe.
 
-## Zadanie rekrutacyjne
+**Zadanie rekrutacyjne**
 
 Wykorzystaj dotychczas zdobytą wiedzę i postaraj się rozwiązać problem.
 Napisz testy oraz zaimplementuj rozwiązanie.
@@ -73,7 +73,7 @@ pojedynczych elementów reprezentujących wyszukiwane zbiory.
 *Realne zadanie rekrutacyjne do firmy
 [schibsted](https://www.schibsted.pl).*
 
-## Pojazd księżycowy
+**Pojazd księżycowy**
 
 Jako inżynier firmy [NASA](https://www.nasa.gov) zostałeś poproszony o
 zaprojektowanie, przetestowanie oraz implementację ruchu pojazdu
@@ -99,7 +99,7 @@ specyfikacji technicznej. Proszę zaimplementować mechanizm poruszania
 się pojazdu księżycowego. Zachowanie pojazdu powinno być dobrze
 przetestowane przy pomocy modułu **unittest**.
 
-## Podsumowanie
+**Podsumowanie**
 
 Umiejętność rozpoznawania i naprawiania Code Smells jest niezbędna przy
 tworzeniu łatwego w utrzymaniu oprogramowania. Zrozumienie opisanych w
