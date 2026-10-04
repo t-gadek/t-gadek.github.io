@@ -1,6 +1,9 @@
 # Laboratorium dyplomowe
 
-Przedmiot obejmuje przygotowanie projektu dyplomowego, wytyczne formalne, zasady organizacji pracy oraz materiały pomocnicze do realizacji pracy dyplomowej.
+Kurs poświęcony jest przygotowaniu pracy dyplomowej. Udostępniam:
++ wytyczne formalne, 
++ wskazówki dotyczące struktury i formatowania dokumentu,
++ aktualne wymagania uczelni.
 
 ## Laboratorium
 - [Laboratorium dyplomowe - PDF](../static/ld/lab/ld-lab01.pdf)

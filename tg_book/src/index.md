@@ -9,14 +9,10 @@ aplikacji mobilnych oraz testowania i jakości oprogramowania. Na tej stronie zn
 
 ## Materiały dydaktyczne
 
-<!-- 
-- [Narzędzia i środowiska programistyczne](nisp/nisp.md)
-- [Testowanie i jakość oprogramowania](tijo/tijo.md)
-- [Projektowanie interfejsów użytkownika](piu/piu.md)
+- [Laboratorium dyplomowe](ld/ld.md)
+- [Testowanie i jakość oprogramowania II](tijo2/tijo2.md)
+- [Bezpieczeństwo i jakość oprogramowania](bijo/bijo.md)
 - [Technologia informacyjna](ti/ti.md)
--->
-- [Laboratorium Dyplomowe](ld/ld.md)
-- [Testowanie i Jakość Oprogramowania II](tijo2/tijo2.md)
 
 
 ## Konsultacje i kontakt
@@ -29,4 +25,8 @@ Kontakt: [t_gadek@atar.edu.pl](mailto:t_gadek@atar.edu.pl)
 ## Przesyłanie zadań
 
 Rozwiązania zadań można przesłać przez [formularz](https://forms.gle/LVypA9fbRTPns6226).
+
+Komenda:
+
+mdbook serve
 -->
