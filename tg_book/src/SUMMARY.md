@@ -8,6 +8,7 @@
 - [Testowanie i jakość oprogramowania II](tijo2/tijo2.md)
 - [Bezpieczeństwo i jakość oprogramowania](bijo/bijo.md)
 - [Technologia informacyjna](ti/ti.md)
+- [Technologie www](tw/tw.md)
 
 <!--
 - [Narzędzia i środowiska programistyczne](nisp/nisp.md)
