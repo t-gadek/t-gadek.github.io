@@ -1,4 +1,4 @@
-# Technologia Informacyjna
+# Technologia informacyjna
 
 Kurs wprowadza w praktyczne wykorzystanie narzędzi Google Workspace. Studenci uczą się pracy z dokumentami, arkuszami kalkulacyjnymi i prezentacjami, a także zapoznają się z podstawami przechowywania i udostępniania zasobów w chmurze.
 

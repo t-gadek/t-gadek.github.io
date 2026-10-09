@@ -1,4 +1,4 @@
-# Bezpieceństwo i jakość
+# Bezpieczeństwo i jakość oprogramowania
 
 Kurs obejmuje zagadnienia z zakresu:
 + jakości oprogramowania, 
