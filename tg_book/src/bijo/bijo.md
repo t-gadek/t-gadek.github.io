@@ -7,6 +7,11 @@ Kurs obejmuje zagadnienia z zakresu:
 + szyfrowania danych,
 + mechanizmów autoryzacji i uwierzytelniania.
 
+## Wykład
+
+- [Wykład 01: Wprowadzenie.](../static/bijo/lecture/bijo_lecture_01.pdf)
+- [Wykład 02: Architektura aplikacji webowej w Spring Boot.](../static/bijo/lecture/bijo_lecture_02.pdf)
+
 ## Laboratorium
 
 - [Laboratorium 01: Wprowadzenie do Spring Boot.](../static/bijo/lab/bijo_lab_01.pdf)

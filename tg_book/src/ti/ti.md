@@ -5,6 +5,7 @@ Kurs wprowadza w praktyczne wykorzystanie narzędzi Google Workspace. Studenci u
 ## Laboratorium
 
 - [Laboratorium 01: Wprowadzenie do ekosystemu Google Workspace. Praca w chmurze.](../static/ti/ti_lab_01.pdf)
+- [Laboratorium 02: Podstawy przetwarzania tekstu i współpraca w Google Docs.](../static/ti/ti_lab_02.pdf)
 
 <!--
 - [Wprowadzenie do Google Docs](./lab/google-docs.md)
