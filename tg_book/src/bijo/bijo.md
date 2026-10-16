@@ -15,3 +15,4 @@ Kurs obejmuje zagadnienia z zakresu:
 ## Laboratorium
 
 - [Laboratorium 01: Wprowadzenie do Spring Boot.](../static/bijo/lab/bijo_lab_01.pdf)
+- [Laboratorium 02: Strumienie, interfejsy funkcyjne, wyrażenia lambda, optional.](../static/bijo/lab/bijo_lab_02.pdf)
