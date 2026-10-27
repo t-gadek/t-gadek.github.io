@@ -11,7 +11,7 @@ twojej aplikacji z narzędziami AI.
 - [Lekcja 00: Wprowadzenie.](../static/tw/technologie_www_lekcja_00.pdf)
 - [Lekcja 01: Konfiguracja warsztatu pracy.](../static/tw/technologie_www_lekcja_01.pdf)
 - [Lekcja 02: Język Markdown.](../static/tw/technologie_www_lekcja_02.pdf)
-
-<!--
 - [Lekcja 03: Format XML.](../static/tw/technologie_www_lekcja_03.pdf)
--->
+- [Lekcja 04: Format JSON.](../static/tw/technologie_www_lekcja_04.pdf)
+- [Lekcja 05: HTML - Semantyczny szkielet strony i formularze.](../static/tw/technologie_www_lekcja_05.pdf)
+
