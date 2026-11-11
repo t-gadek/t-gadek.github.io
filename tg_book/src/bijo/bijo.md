@@ -11,6 +11,8 @@ Kurs obejmuje zagadnienia z zakresu:
 
 - [Wykład 01: Wprowadzenie.](../static/bijo/lecture/bijo_lecture_01.pdf)
 - [Wykład 02: Architektura aplikacji webowej w Spring Boot.](../static/bijo/lecture/bijo_lecture_02.pdf)
+- [Wykład 03: Wzorce projektowe w Spring.](../static/bijo/lecture/bijo_lecture_03.pdf)
+- [Wykład 04: SOLID i Clean Code.](../static/bijo/lecture/bijo_lecture_04.pdf)
 
 ## Laboratorium
 
