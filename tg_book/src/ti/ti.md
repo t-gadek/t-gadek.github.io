@@ -9,7 +9,7 @@ Kurs wprowadza w praktyczne wykorzystanie narzędzi Google Workspace. Studenci u
 - [Laboratorium 03: Zaawansowane formatowanie i układ dokumentu w Google Docs.](../static/ti/ti_lab_03.pdf)
 - [Laboratorium 04: Style, struktura i automatyzacja w Google Docs.](../static/ti/ti_lab_04.pdf)
 - [Laboratorium 05: Praca z Google Forms oraz integracja z Arkuszami Google.](../static/ti/ti_lab_05.pdf)
-
+- [Laboratorium 06: Wprowadzenie do analizy danych w Google Sheets.](../static/ti/ti_lab_06.pdf)
 <!--
 - [Wprowadzenie do Google Docs](./lab/google-docs.md)
 - [Google Workspace i Gemini](./lab/google-workspace.md)
