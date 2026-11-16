@@ -13,6 +13,8 @@ Kurs obejmuje zagadnienia z zakresu:
 - [Wykład 02: Architektura aplikacji webowej w Spring Boot.](../static/bijo/lecture/bijo_lecture_02.pdf)
 - [Wykład 03: Wzorce projektowe w Spring.](../static/bijo/lecture/bijo_lecture_03.pdf)
 - [Wykład 04: SOLID i Clean Code.](../static/bijo/lecture/bijo_lecture_04.pdf)
+- [Wykład 05: Wprowadzenie do testowania, piramida testów i Spock Framework](../static/bijo/lecture/bijo_lecture_05.pdf)
+- [Wykład 06: Testy integracyjne, atrapy, TDD i E2E](../static/bijo/lecture/bijo_lecture_06.pdf)
 
 ## Laboratorium
 
