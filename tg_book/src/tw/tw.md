@@ -14,4 +14,7 @@ twojej aplikacji z narzędziami AI.
 - [Lekcja 03: Format XML.](../static/tw/technologie_www_lekcja_03.pdf)
 - [Lekcja 04: Format JSON.](../static/tw/technologie_www_lekcja_04.pdf)
 - [Lekcja 05: HTML - Semantyczny szkielet strony i formularze.](../static/tw/technologie_www_lekcja_05.pdf)
+- [Lekcja 06: Kaskadowe arkusze stylów.](../static/tw/technologie_www_lekcja_06.pdf)
+- [Lekcja 07: HTML, CSS i JavaScript - praktyczny projekt.](../static/tw/technologie_www_lekcja_07.pdf)
+- [Lekcja 08: JavaScript.](../static/tw/technologie_www_lekcja_08.pdf)
 
