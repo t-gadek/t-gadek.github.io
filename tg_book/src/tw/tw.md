@@ -17,4 +17,3 @@ twojej aplikacji z narzędziami AI.
 - [Lekcja 06: Kaskadowe arkusze stylów.](../static/tw/technologie_www_lekcja_06.pdf)
 - [Lekcja 07: HTML, CSS i JavaScript - praktyczny projekt.](../static/tw/technologie_www_lekcja_07.pdf)
 - [Lekcja 08: JavaScript.](../static/tw/technologie_www_lekcja_08.pdf)
-
