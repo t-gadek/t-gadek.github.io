@@ -23,3 +23,4 @@ Kurs obejmuje zagadnienia z zakresu:
 - [Laboratorium 03: DI, Builder, dokumentowanie API.](../static/bijo/lab/bijo_lab_03.pdf)
 - [Laboratorium 04: Wzorzec projektowy fasada.](../static/bijo/lab/bijo_lab_04.pdf)
 - [Laboratorium 05: Testy jednostkowe i akceptacyjne.](../static/bijo/lab/bijo_lab_05.pdf)
+- [Laboratorium 06: Testy E2E.](../static/bijo/lab/bijo_lab_06.pdf)
