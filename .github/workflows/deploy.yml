@@ -1,12 +1,19 @@
 name: Deploy mdBook
+
 on:
   push:
-    branches: [ main ] # Upewnij się, że to nazwa Twojej głównej gałęzi (main lub master)
+    branches: [ main ]
+  workflow_dispatch: # Pozwala ręcznie uruchomić deploy z zakładki Actions
 
 permissions:
   contents: read
   pages: write
   id-token: write
+
+# Zapobiega nakładaniu się równoległych wdrożeń
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -15,7 +22,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v2
@@ -26,15 +34,15 @@ jobs:
         run: |
           cd tg_book
           mdbook build
-          
+
       - name: Setup Pages
-        uses: actions/configure-pages@v4
-        
+        uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './tg_book/book'
-          
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
